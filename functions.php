@@ -30,7 +30,7 @@ function dojoconjapan2017_setup() {
 	) ) );
 
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'bathe' ),
+		'header-menu' => esc_html__( 'Header Menu', 'dojoconjapna2017' ),
 	) );
 }
 
