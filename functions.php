@@ -34,6 +34,7 @@ function dojoconjapan2017_setup() {
 		'entry'     => esc_html__( 'Entry',     'dojoconjapna2017' ),
 		'workshop'  => esc_html__( 'Workshop',  'dojoconjapna2017' ),
 		'coderdojo' => esc_html__( 'CoderDojo', 'dojoconjapna2017' ),
+		'footer'    => esc_html__( 'Footer',    'dojoconjapna2017' ),
 	) );
 }
 
