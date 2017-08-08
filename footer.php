@@ -9,7 +9,9 @@
 	) ); ?>
 <?php endif; ?>
 
-<p>© <?php echo esc_html( get_theme_mod( 'copyright' ) ); ?></p>
+<?php if ( get_theme_mod( 'copyright' ) ) : ?>
+	<p>© <?php echo esc_html( get_theme_mod( 'copyright' ) ); ?></p>
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 
