@@ -50,6 +50,15 @@
 		<p class="entry-nav-box-toggle">Entry</p>
 	<?php endif; ?>
 
+	<?php if ( has_nav_menu( 'coderdojo' ) ) : ?>
+		<?php wp_nav_menu( array(
+			'theme_location'  => 'coderdojo',
+			'menu_id'         => 'coderdojo-menu',
+			'container'       => 'nav',
+			'container_class' => 'coderdojo-nav',
+		) ); ?>
+	<?php endif; ?>
+
 </header>
 
 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>

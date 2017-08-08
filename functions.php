@@ -30,9 +30,10 @@ function dojoconjapan2017_setup() {
 	) ) );
 
 	register_nav_menus( array(
-		'global'   => esc_html__( 'Global',   'dojoconjapna2017' ),
-		'entry'    => esc_html__( 'Entry',    'dojoconjapna2017' ),
-		'workshop' => esc_html__( 'Workshop', 'dojoconjapna2017' ),
+		'global'    => esc_html__( 'Global',    'dojoconjapna2017' ),
+		'entry'     => esc_html__( 'Entry',     'dojoconjapna2017' ),
+		'workshop'  => esc_html__( 'Workshop',  'dojoconjapna2017' ),
+		'coderdojo' => esc_html__( 'CoderDojo', 'dojoconjapna2017' ),
 	) );
 }
 
