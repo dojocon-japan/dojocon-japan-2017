@@ -83,3 +83,20 @@ function dojoconjapan2017_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'dojoconjapan2017_scripts' );
+
+/**
+ * Customizer
+ */
+function dojoconjapan2017_customize_register( $wp_customize ) {
+	$wp_customize->add_setting( 'copyright', array(
+		'default'    => 'DojoCon Japan 2017 実行委員会',
+		// 'type'       => 'option',
+		'capability' => 'manage_options',
+	) );
+
+	$wp_customize->add_control( 'copyright', array(
+		'label'      => __( 'Copyright' ),
+		'section'    => 'title_tagline',
+	) );
+}
+add_action( 'customize_register', 'dojoconjapan2017_customize_register' );
