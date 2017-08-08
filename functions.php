@@ -30,7 +30,9 @@ function dojoconjapan2017_setup() {
 	) ) );
 
 	register_nav_menus( array(
-		'header-menu' => esc_html__( 'Header Menu', 'dojoconjapna2017' ),
+		'global'   => esc_html__( 'Global',   'dojoconjapna2017' ),
+		'entry'    => esc_html__( 'Entry',    'dojoconjapna2017' ),
+		'workshop' => esc_html__( 'Workshop', 'dojoconjapna2017' ),
 	) );
 }
 

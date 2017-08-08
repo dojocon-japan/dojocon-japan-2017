@@ -11,13 +11,43 @@
 
 <header class="header">
 
-	<?php if ( has_nav_menu( 'header-menu' ) ) : ?>
-		<?php wp_nav_menu( array(
-			'theme_location'  => 'header-menu',
-			'menu_id'         => 'header-menu',
-			'container'       => 'nav',
-			'container_class' => 'header-nav',
-		) ); ?>
+	<?php if ( has_nav_menu( 'global' ) ) : ?>
+		<div class="global-nav-box">
+			<h1>Menu</h1>
+			<?php wp_nav_menu( array(
+				'theme_location'  => 'global',
+				'menu_id'         => 'global-menu',
+				'container'       => 'nav',
+				'container_class' => 'global-nav',
+			) ); ?>
+		</div>
+	<?php endif; ?>
+
+	<?php if ( has_nav_menu( 'entry' ) || has_nav_menu( 'workshop' ) ) : ?>
+		<div class="entry-nav-box">
+
+			<?php if ( has_nav_menu( 'entry' ) ) : ?>
+				<h1>Entry</h1>
+				<?php wp_nav_menu( array(
+					'theme_location'  => 'entry',
+					'menu_id'         => 'entry-menu',
+					'container'       => 'nav',
+					'container_class' => 'entry-nav',
+				) ); ?>
+			<?php endif; ?>
+
+			<?php if ( has_nav_menu( 'workshop' ) ) : ?>
+				<p>以下は、DojoCon Japan 2017参加登録後、お申込みください。 </p>
+				<?php wp_nav_menu( array(
+					'theme_location'  => 'workshop',
+					'menu_id'         => 'workshop-menu',
+					'container'       => 'nav',
+					'container_class' => 'workshop-nav',
+				) ); ?>
+			<?php endif; ?>
+
+		</div>
+		<p class="entry-nav-box-toggle">Entry</p>
 	<?php endif; ?>
 
 </header>
