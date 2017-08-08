@@ -47,7 +47,7 @@
 			<?php endif; ?>
 
 		</div>
-		<p class="entry-nav-box-toggle">Entry</p>
+		<p class="entry-nav-box-toggle button">Entry</p>
 	<?php endif; ?>
 
 	<?php if ( has_nav_menu( 'coderdojo' ) ) : ?>
