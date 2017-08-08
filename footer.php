@@ -9,6 +9,8 @@
 	) ); ?>
 <?php endif; ?>
 
+<p>© <?php echo esc_html( get_theme_mod( 'copyright' ) ); ?></p>
+
 <?php wp_footer(); ?>
 
 </body>

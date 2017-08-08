@@ -5,7 +5,7 @@ if ( ! function_exists( 'dojoconjapan2017_setup' ) ) {
  * Set up theme defaults and registers support for various WordPress feaures.
  */
 function dojoconjapan2017_setup() {
-	load_theme_textdomain( 'bathe', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'dojocon-japna-2017', get_template_directory() . '/languages' );
 
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
@@ -30,11 +30,11 @@ function dojoconjapan2017_setup() {
 	) ) );
 
 	register_nav_menus( array(
-		'global'    => esc_html__( 'Global',    'dojoconjapna2017' ),
-		'entry'     => esc_html__( 'Entry',     'dojoconjapna2017' ),
-		'workshop'  => esc_html__( 'Workshop',  'dojoconjapna2017' ),
-		'coderdojo' => esc_html__( 'CoderDojo', 'dojoconjapna2017' ),
-		'footer'    => esc_html__( 'Footer',    'dojoconjapna2017' ),
+		'global'    => esc_html__( 'Global',    'dojocon-japna-2017' ),
+		'entry'     => esc_html__( 'Entry',     'dojocon-japna-2017' ),
+		'workshop'  => esc_html__( 'Workshop',  'dojocon-japna-2017' ),
+		'coderdojo' => esc_html__( 'CoderDojo', 'dojocon-japna-2017' ),
+		'footer'    => esc_html__( 'Footer',    'dojocon-japna-2017' ),
 	) );
 }
 
@@ -95,7 +95,7 @@ function dojoconjapan2017_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'copyright', array(
-		'label'      => __( 'Copyright' ),
+		'label'      => __( 'Copyright', 'dojocon-japna-2017' ),
 		'section'    => 'title_tagline',
 	) );
 }
