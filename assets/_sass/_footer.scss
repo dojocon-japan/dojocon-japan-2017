@@ -1,11 +1,45 @@
 .footer {
 	background: $navy;
-}
+	padding: 5px;
 
-.footer-nav {
+	.footer-nav {
+		color: $light-gray;
+		font-size: 14px;
+		margin: 25px auto;
+		opacity: 0.75;
+		text-align: center;
 
-	img {
-		max-height: 32px;
-		width: auto;
+		a {
+			color: $light-gray;
+		}
+
+		img {
+			max-height: 32px;
+			width: auto;
+		}
+
+		.menu {
+
+			.menu-item {
+				display: inline;
+
+				&.code-of-conduct:first-child {
+					margin: 0 24px 0 10px;
+				}
+
+				&.facebook,
+				&.twitter {
+					margin: 0 7px;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		color: $light-gray;
+		font-size: 14px;
+		margin: 25px auto;
+		opacity: 0.75;
+		text-align: center;
 	}
 }

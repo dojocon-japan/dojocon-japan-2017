@@ -1,8 +1,14 @@
 @charset "UTF-8";
+@import "variables";
 @import "bourbon/bourbon";
 @import "neat/neat";
-@import "color";
+@import "fonts";
 @import "button";
 @import "header";
 @import "footer";
 @import "reset";
+
+body {
+	font-family: $noto;
+	line-height: 1.75;
+}
