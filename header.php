@@ -37,7 +37,7 @@
 			<?php endif; ?>
 
 			<?php if ( has_nav_menu( 'workshop' ) ) : ?>
-				<p>以下は、DojoCon Japan 2017参加登録後、お申込みください。 </p>
+				<p class="workshop-note">以下は、DojoCon Japan 2017参加登録後、お申込みください。 </p>
 				<?php wp_nav_menu( array(
 					'theme_location'  => 'workshop',
 					'menu_id'         => 'workshop-menu',
@@ -47,7 +47,7 @@
 			<?php endif; ?>
 
 		</div>
-		<p class="entry-nav-box-toggle button">Entry</p>
+		<p class="entry-nav-box-toggle">Entry</p>
 	<?php endif; ?>
 
 	<?php if ( has_nav_menu( 'coderdojo' ) ) : ?>

@@ -1,4 +1,29 @@
-.button {
+@mixin button() {
+	background: $light-gray;
+	border-radius: 4px;
 	cursor: pointer;
 	display: inline-block;
+	font-size: 14px;
+	font-weight: 300;
+	padding: 8px 1em;
+	text-align: center;
+	text-decoration: none;
+}
+
+@mixin button-primary() {
+	background: $flamingo;
+	color: #fff;
+}
+
+@mixin button-secondary() {
+	background: $navy;
+	color: #fff;
+}
+
+@mixin button-block() {
+	display: block;
+}
+
+.button {
+	@include button;
 }
