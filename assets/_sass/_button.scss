@@ -8,16 +8,28 @@
 	padding: 8px 1em;
 	text-align: center;
 	text-decoration: none;
+
+	&:hover {
+		background: darken($light-gray, 5);
+	}
 }
 
 @mixin button-primary() {
 	background: $flamingo;
 	color: #fff;
+
+	&:hover {
+		background: darken($flamingo, 5);
+	}
 }
 
 @mixin button-secondary() {
 	background: $navy;
 	color: #fff;
+
+	&:hover {
+		background: darken($navy, 5);
+	}
 }
 
 @mixin button-block() {
