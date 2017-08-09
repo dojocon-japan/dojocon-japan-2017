@@ -1,6 +1,12 @@
 .header {
 	background: rgba($mid-night, 0.9);
 	color: #fff;
+	height: 100%;
+	padding: 0 30px;
+	position: fixed;
+	overflow-y: auto;
+	width: 100%;
+	z-index: 999;
 
 	@mixin menu-typo() {
 		font-size: 16px;
@@ -16,7 +22,7 @@
 	}
 
 	.global-nav-box {
-		margin: 20px auto;
+		margin: 15px auto 20px;
 
 		.global-nav {
 			@include menu-typo;
@@ -39,7 +45,7 @@
 	}
 
 	.entry-nav-box {
-		margin: 20px auto;
+		margin: 20px auto 40px;
 
 		.entry-nav {
 			border-bottom: 1px solid $navy;

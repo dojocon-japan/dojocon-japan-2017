@@ -2,17 +2,30 @@
 @import "variables";
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "reset";
 @import "fonts";
 @import "button";
-@import "header";
-@import "footer";
-@import "reset";
+
+html{
+	box-sizing:border-box;
+	height: 100%;
+}
+
+*,
+*:after,
+*:before{
+	box-sizing:inherit;
+}
 
 body {
 	font-family: $noto;
+	height: 100%;
 	line-height: 1.75;
 }
 
 a {
 	color: $flamingo
 }
+
+@import "header";
+@import "footer";
