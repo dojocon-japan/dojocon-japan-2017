@@ -2,10 +2,15 @@ module.exports = {
   'extends': ['eslint:recommended', 'google'],
   'env': {
     // For more environments, see here: http://eslint.org/docs/user-guide/configuring.html#specifying-environments
-    'browser': true
+    'browser': true,
+    'node': true,
+    'jquery': true,
+  },
+  'parserOptions': {
+    'ecmaVersion': 6
   },
   'rules': {
-    // Insert custom rules here
-    // For more rules, see here: http://eslint.org/docs/rules/
+    'quotes': ['error', 'single'],
+    'padded-blocks': 0,
   }
 }

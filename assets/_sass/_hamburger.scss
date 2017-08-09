@@ -15,6 +15,7 @@ $hamburger-border-color: #fff;
 
 	cursor: pointer;
 	display: block;
+	font-size: 0;
 	line-height: 0;
 	padding: 10px;
 
@@ -36,19 +37,19 @@ $hamburger-border-color: #fff;
 
 .hamburger-inner {
 	display: block;
-	top: 50%;
 	margin-top: $hamburger-border / -2;
+	top: 50%;
 
 	&,
 	&::before,
 	&::after {
-		width: $hamburger-width;
-		height: $hamburger-border;
 		background-color: $hamburger-border-color;
+		height: $hamburger-border;
 		position: absolute;
 		transition-property: transform;
 		transition-duration: 0.15s;
 		transition-timing-function: ease;
+		width: $hamburger-width;
 	}
 
 	&::before,

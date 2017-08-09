@@ -59,9 +59,9 @@
 		) ); ?>
 	<?php endif; ?>
 
-	<button class="hamburger-box" type="button">
+	<button class="hamburger-box js-hamburger" type="button">
 		<span class="hamburger">
-			<span class="hamburger-inner"></span>
+			<span class="hamburger-inner">Menu</span>
 		</span>
 	</button>
 
