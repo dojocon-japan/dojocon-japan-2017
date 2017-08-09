@@ -13,7 +13,7 @@
 
 	<?php if ( has_nav_menu( 'global' ) ) : ?>
 		<div class="global-nav-box">
-			<h1>Menu</h1>
+			<h1 class="menu-title">Menu</h1>
 			<?php wp_nav_menu( array(
 				'theme_location'  => 'global',
 				'menu_id'         => 'global-menu',
@@ -27,7 +27,7 @@
 		<div class="entry-nav-box">
 
 			<?php if ( has_nav_menu( 'entry' ) ) : ?>
-				<h1>Entry</h1>
+				<h1 class="menu-title">Entry</h1>
 				<?php wp_nav_menu( array(
 					'theme_location'  => 'entry',
 					'menu_id'         => 'entry-menu',
