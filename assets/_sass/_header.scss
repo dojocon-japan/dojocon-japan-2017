@@ -41,6 +41,10 @@
 				display: block;
 				padding: 6px 1em;
 				text-decoration: none;
+
+				&:hover {
+					opacity: 0.75;
+				}
 			}
 
 			.sub-menu {

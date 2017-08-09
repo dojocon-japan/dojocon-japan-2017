@@ -59,6 +59,12 @@
 		) ); ?>
 	<?php endif; ?>
 
+	<button class="hamburger-box" type="button">
+		<span class="hamburger">
+			<span class="hamburger-inner"></span>
+		</span>
+	</button>
+
 </header>
 
 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
