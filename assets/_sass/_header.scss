@@ -27,6 +27,14 @@
 		.global-nav {
 			@include menu-typo;
 
+			.menu {
+
+				@media (min-width: $wide-menu) {
+					column-count: 2;
+					column-gap: 10px;
+				}
+			}
+
 			a {
 				border-bottom: 1px solid $navy;
 				color: #fff;
@@ -47,32 +55,56 @@
 	.entry-nav-box {
 		margin: 20px auto 40px;
 
-		.entry-nav {
-			border-bottom: 1px solid $navy;
-			margin-bottom: 12px;
-			padding: 8px 0;
+
+		.menu {
 
 			a {
 				@include button;
-				@include button-primary;
 				@include button-block;
-				margin: 10px auto;
+			}
+
+			.menu-item {
+				margin-bottom: 10px;
+			}
+
+			@media (min-width: $wide-menu) {
+
+				$entry-wide-menu: (
+					columns: 2,
+					gutter: 10px,
+				);
+
+				@include grid-container;
+				margin-left: -10px;
+				margin-right: -10px;
+
+				> .menu-item {
+					@include grid-column(1, $entry-wide-menu);
+				}
+			}
+		}
+
+		.entry-nav {
+			border-bottom: 1px solid $navy;
+			margin-bottom: 12px;
+			padding: 20px 0 10px;
+
+			a {
+				@include button-primary;
 			}
 		}
 
 		.workshop-note {
 			font-size: 12px;
 			font-weight: 200;
+			margin-bottom: 10px;
 			text-align: center;
 		}
 
 		.workshop-nav {
 
 			a {
-				@include button;
 				@include button-secondary;
-				@include button-block;
-				margin: 10px auto;
 			}
 		}
 	}
