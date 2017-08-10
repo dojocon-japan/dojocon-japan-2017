@@ -55,9 +55,10 @@ $hamburger-border-color: #fff;
 		background-color: $hamburger-border-color;
 		height: $hamburger-border;
 		position: absolute;
-		transition-property: transform;
-		transition-duration: 0.15s;
-		transition-timing-function: ease;
+		transition: transform 0.15s ease;
+		// transition-property: transform;
+		// transition-duration: 0.15s;
+		// transition-timing-function: ease;
 		width: $hamburger-width;
 	}
 

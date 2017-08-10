@@ -17,8 +17,6 @@
 
 </footer>
 
-<div class="js-menu-screen sliding-panel-fade-screen"></div>
-
 <?php wp_footer(); ?>
 
 </body>
