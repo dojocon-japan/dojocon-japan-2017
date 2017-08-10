@@ -10,7 +10,7 @@
 	text-decoration: none;
 
 	&:hover {
-		background: darken($light-gray, 5);
+		background: shade($light-gray, 5);
 	}
 }
 
@@ -19,7 +19,7 @@
 	color: #fff;
 
 	&:hover {
-		background: darken($flamingo, 5);
+		background: shade($flamingo, 5);
 	}
 }
 
@@ -28,7 +28,7 @@
 	color: #fff;
 
 	&:hover {
-		background: darken($navy, 5);
+		background: shade($navy, 5);
 	}
 }
 

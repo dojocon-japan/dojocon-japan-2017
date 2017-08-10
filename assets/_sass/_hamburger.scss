@@ -22,21 +22,26 @@ $hamburger-border-color: #fff;
 	position: fixed;
 	right: 20px;
 	top: 20px;
+	z-index: 1000;
 
-	transition-property: opacity, filter;
-	transition-duration: 0.15s;
-	transition-timing-function: linear;
+	transition: all, 0.15s linear;
+	// transition-property: opacity, filter;
+	// transition-duration: 0.15s;
+	// transition-timing-function: linear;
 
 	&:hover {
-		opacity: 0.75;
+
+		.hamburger {
+			opacity: 0.75;
+		}
 	}
 }
 
 .hamburger {
-	width: $hamburger-width;
-	height: $hamburger-height;
 	display: inline-block;
+	height: $hamburger-height;
 	position: relative;
+	width: $hamburger-width;
 }
 
 .hamburger-inner {
@@ -71,6 +76,7 @@ $hamburger-border-color: #fff;
 	}
 }
 
+// Animation
 .hamburger-box {
 
 	.hamburger-inner {

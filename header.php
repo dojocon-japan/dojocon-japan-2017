@@ -9,7 +9,7 @@
 
 <body <?php body_class(); ?>>
 
-<header class="header">
+<header class="header sliding-panel-content">
 
 	<?php if ( has_nav_menu( 'global' ) ) : ?>
 		<div class="global-nav-box">
@@ -59,12 +59,12 @@
 		) ); ?>
 	<?php endif; ?>
 
-	<button class="hamburger-box js-hamburger" type="button">
-		<span class="hamburger">
-			<span class="hamburger-inner">Menu</span>
-		</span>
-	</button>
-
 </header>
+
+<button class="hamburger-box js-sliding-panel-toggle" type="button">
+	<span class="hamburger">
+		<span class="hamburger-inner">Menu</span>
+	</span>
+</button>
 
 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
