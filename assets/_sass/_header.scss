@@ -58,6 +58,11 @@
 
 						&:hover {
 
+							a {
+								background: $flamingo;
+								color: #fff;
+							}
+
 							.sub-menu {
 								display: flex;
 							}
@@ -82,9 +87,10 @@
 					color: $flamingo;
 					padding: 6.5px 20px;
 
-					&:hover {
-						color: rgba($flamingo, 0.75);
-					}
+					// &:hover {
+					// 	background: $flamingo;
+					// 	color: #fff;
+					// }
 				}
 			}
 
@@ -96,18 +102,21 @@
 					position: absolute;
 				}
 
-				a {
-					color: $flamingo;
+				.menu-item {
 
-					&:hover {
-						color: rgba($flamingo, 0.75);
-					}
-
-					@media (min-width: $desktop) {
-						color: #fff;
+					a {
+						color: $flamingo;
 
 						&:hover {
-							color: rgba(#fff, 0.75);
+							color: rgba($flamingo, 0.75);
+						}
+
+						@media (min-width: $desktop) {
+							color: #fff;
+
+							&:hover {
+								color: rgba(#fff, 0.75);
+							}
 						}
 					}
 				}
