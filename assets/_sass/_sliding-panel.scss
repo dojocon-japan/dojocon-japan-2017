@@ -10,6 +10,10 @@
 	&.is-active {
 		transform: translateY(0);
 	}
+
+	@media (min-width: $desktop) {
+		transform: translateY(0);
+	}
 }
 
 // .sliding-panel-fade-screen {

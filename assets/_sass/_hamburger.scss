@@ -29,6 +29,10 @@ $hamburger-border-color: #fff;
 	// transition-duration: 0.15s;
 	// transition-timing-function: linear;
 
+	@media (min-width: $desktop) {
+		display: none;
+	}
+
 	&:hover {
 
 		.hamburger {
