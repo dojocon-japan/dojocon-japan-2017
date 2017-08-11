@@ -216,6 +216,7 @@
 		}
 
 		.entry-nav-box-close {
+			@include position(absolute, 32px 30px auto auto);
 		}
 	}
 
