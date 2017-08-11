@@ -7,14 +7,18 @@
 	transition: all 0.15s linear;
 	z-index: 999;
 
-	&.is-active {
-		transform: translateY(0);
-	}
-
 	@media (min-width: $desktop) {
 		@include position(fixed, 0 0 auto 0);
 		@include size(100%, auto);
 		transform: none;
+	}
+
+	&.is-active {
+		transform: translateY(0);
+
+		@media screen {
+			transform: none;
+		}
 	}
 }
 
