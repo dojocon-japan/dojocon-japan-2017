@@ -12,6 +12,6 @@ module.exports = {
   'rules': {
     'quotes': ['error', 'single'],
     'padded-blocks': 0,
-    'max-len': ['error', 120],
+    'max-len': 0,
   }
 }

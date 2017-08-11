@@ -9,4 +9,9 @@ $(function() {
     e.preventDefault();
   });
 
+  $('.js-entry-nav-box-toggle, .js-entry-nav-box-close, .js-entry-nav-fade-screen').on('click touchstart', function(e) {
+    $('.js-entry-nav-box-toggle, .entry-nav-box, .js-entry-nav-fade-screen').toggleClass('is-active');
+    e.preventDefault();
+  });
+
 });

@@ -46,10 +46,11 @@
 				) ); ?>
 			<?php endif; ?>
 
-			<button class="entry-nav-box-close button-close" type="button">Close</button>
+			<button class="entry-nav-box-close button-close js-entry-nav-box-close" type="button">Close</button>
 
 		</div>
-		<button class="entry-nav-box-toggle" type="button">Entry</button>
+		<button class="entry-nav-box-toggle js-entry-nav-box-toggle" type="button">Entry</button>
+		<div class="sliding-panel-fade-screen js-entry-nav-fade-screen"></div>
 	<?php endif; ?>
 
 	<?php if ( has_nav_menu( 'coderdojo' ) ) : ?>
