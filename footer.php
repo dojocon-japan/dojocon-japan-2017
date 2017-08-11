@@ -1,4 +1,4 @@
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 
 <footer class="footer">
 
