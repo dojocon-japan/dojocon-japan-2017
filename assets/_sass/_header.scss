@@ -290,8 +290,12 @@
 		}
 
 		img {
-			height: 40px;
+			max-height: 40px;
 			width: auto;
+
+			&[src$=".svg"] {
+				height: 40px;
+			}
 		}
 	}
 }
