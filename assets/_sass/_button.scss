@@ -1,4 +1,5 @@
 @mixin button() {
+	background: transparent;
 	border: 0;
 	border-radius: 4px;
 	cursor: pointer;
@@ -47,7 +48,61 @@
 	display: block;
 }
 
+@mixin button-reset() {
+	border-radius: 0;
+	padding: 0;
+
+	@media (min-width: $desktop) {
+		padding: 0;
+	}
+}
+
+@mixin button-close() {
+	$button-close-size: 16px;
+	$button-close-padding: 6px;
+	$button-close-border: 2px;
+
+	@include button;
+	@include button-reset;
+	font-size: 0 !important;
+	height: $button-close-size + $button-close-padding * 2;
+	padding: $button-close-padding;
+	position: relative;
+	width: $button-close-size + $button-close-padding * 2;
+
+	&::before,
+	&::after {
+		@include position(absolute, 0 0 0 0);
+		background: $default-font-color;
+		content: "";
+		display: block;
+		height: $button-close-border;
+		margin: auto;
+		width: $button-close-size * 1.414;
+	}
+
+	&::before {
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		transform: rotate(-45deg);
+	}
+
+	&:hover {
+
+		&::before,
+		&::after {
+			opacity: 0.75;
+		}
+	}
+}
+
 button,
 .button {
 	@include button;
+}
+
+.button-close {
+	@include button-close;
 }

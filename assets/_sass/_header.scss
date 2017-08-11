@@ -145,21 +145,6 @@
 			z-index: 999;
 		}
 
-		.entry-nav {
-			border-bottom: 1px solid $navy;
-			margin-bottom: 12px;
-			padding: 20px 0 10px;
-
-			@media (min-width: $desktop) {
-				margin-bottom: 22px;
-				padding-top: 30px;
-			}
-
-			a {
-				@include button-primary;
-			}
-		}
-
 		.menu {
 
 			a {
@@ -196,6 +181,21 @@
 			}
 		}
 
+		.entry-nav {
+			border-bottom: 1px solid $navy;
+			margin-bottom: 12px;
+			padding: 20px 0 10px;
+
+			@media (min-width: $desktop) {
+				margin-bottom: 22px;
+				padding-top: 30px;
+			}
+
+			a {
+				@include button-primary;
+			}
+		}
+
 		.workshop-note {
 			font-size: 12px;
 			font-weight: 300;
@@ -216,28 +216,6 @@
 		}
 
 		.entry-nav-box-close {
-			background: transparent;
-			font-size: 0;
-			padding: 0;
-			position: relative;
-
-			&::before,
-			&::after {
-				background: $default-font-color;
-				content: "";
-				display: block;
-				height: 2px;
-				position: relative;
-				width: 23px;
-			}
-
-			&::before {
-				transform: rotate(45deg);
-			}
-
-			&::after {
-				transform: rotate(-45deg);
-			}
 		}
 	}
 
