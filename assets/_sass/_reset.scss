@@ -37,7 +37,7 @@ sup {top: -0.5em;}
 sub {bottom: -0.25em;}
 
 blockquote, q {quotes: none;}
-blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+blockquote::before, blockquote::after, q:before, q::after {content: ''; content: none;}
 
 table {border-collapse: collapse; border-spacing: 0;}
 

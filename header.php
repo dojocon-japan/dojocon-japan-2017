@@ -46,6 +46,8 @@
 				) ); ?>
 			<?php endif; ?>
 
+			<button class="entry-nav-box-close" type="button">Close</button>
+
 		</div>
 		<button class="entry-nav-box-toggle" type="button">Entry</button>
 	<?php endif; ?>

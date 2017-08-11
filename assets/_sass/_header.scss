@@ -214,6 +214,31 @@
 				@include button-secondary;
 			}
 		}
+
+		.entry-nav-box-close {
+			background: transparent;
+			font-size: 0;
+			padding: 0;
+			position: relative;
+
+			&::before,
+			&::after {
+				background: $default-font-color;
+				content: "";
+				display: block;
+				height: 2px;
+				position: relative;
+				width: 23px;
+			}
+
+			&::before {
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
+		}
 	}
 
 	.entry-nav-box-toggle {
@@ -232,7 +257,7 @@
 			text-transform: uppercase;
 			width: 210px;
 
-			&:before {
+			&::before {
 				content: "▶︎";
 				font-size: 14px;
 				margin-right: 25px;
