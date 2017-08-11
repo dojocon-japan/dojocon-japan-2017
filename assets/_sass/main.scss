@@ -27,7 +27,11 @@ body {
 }
 
 a {
-	color: $flamingo
+	color: $flamingo;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 button {
