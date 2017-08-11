@@ -1,5 +1,4 @@
 @mixin button() {
-	background: $light-gray;
 	border-radius: 4px;
 	cursor: pointer;
 	display: inline-block;
@@ -8,6 +7,17 @@
 	padding: 8px 1em;
 	text-align: center;
 	text-decoration: none;
+
+	@media (min-width: $desktop) {
+		font-size: 18px;
+		font-weight: 300;
+		padding: 4px 25px;
+	}
+}
+
+@mixin button-default() {
+	background: $light-gray;
+	color: $default-font-color;
 
 	&:hover {
 		background: shade($light-gray, 5);
