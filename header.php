@@ -50,7 +50,7 @@
 
 		</div>
 		<button class="entry-nav-box-toggle js-entry-nav-box-toggle" type="button">Entry</button>
-		<div class="sliding-panel-fade-screen js-entry-nav-fade-screen"></div>
+		<div class="entry-nav-fade-screen js-entry-nav-fade-screen"></div>
 	<?php endif; ?>
 
 	<?php if ( has_nav_menu( 'coderdojo' ) ) : ?>

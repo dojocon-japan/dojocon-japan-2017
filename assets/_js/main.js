@@ -9,8 +9,13 @@ $(function() {
     e.preventDefault();
   });
 
-  $('.js-entry-nav-box-toggle, .js-entry-nav-box-close, .js-entry-nav-fade-screen').on('click touchstart', function(e) {
-    $('.js-entry-nav-box-toggle, .entry-nav-box, .js-entry-nav-fade-screen').toggleClass('is-active');
+  $('.js-entry-nav-box-toggle').on('click touchstart', function(e) {
+    $('.entry-nav-box, .js-entry-nav-fade-screen').addClass('is-active');
+    e.preventDefault();
+  });
+
+  $('.js-entry-nav-box-close, .js-entry-nav-fade-screen').on('click touchstart', function(e) {
+    $('.entry-nav-box, .js-entry-nav-fade-screen').removeClass('is-active');
     e.preventDefault();
   });
 
