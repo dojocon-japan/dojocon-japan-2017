@@ -2,12 +2,21 @@
 	background: $navy;
 	padding: 5px;
 
+	@media (min-width: $desktop) {
+		display: flex;
+		padding: 8.75px;
+	}
+
 	.footer-nav {
 		color: $light-gray;
 		font-size: 14px;
 		margin: 25px auto;
 		opacity: 0.75;
 		text-align: center;
+
+		@media (min-width: $desktop) {
+			margin: auto;
+		}
 
 		a {
 			color: $light-gray;
@@ -56,5 +65,10 @@
 		margin: 25px auto;
 		opacity: 0.75;
 		text-align: center;
+
+		@media (min-width: $desktop) {
+			margin: auto;
+			order: -1;
+		}
 	}
 }
