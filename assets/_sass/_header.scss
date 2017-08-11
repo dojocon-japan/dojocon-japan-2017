@@ -6,8 +6,9 @@
 	@media (min-width: $desktop) {
 		background: #fff;
 		color: $default-font-color;
+		display: flex;
 		overflow: visible;
-		padding: 0 20px;
+		padding: 0 30px 0 10px;
 	}
 
 	@mixin menu-typo() {
@@ -36,7 +37,7 @@
 		margin: 15px auto 20px;
 
 		@media (min-width: $desktop) {
-			margin: auto;
+			margin: 0 auto 0 0;
 
 			.menu-title {
 				display: none;
@@ -216,14 +217,44 @@
 	}
 
 	.entry-nav-box-toggle {
+		@include button;
+		@include button-primary;
 		display: none;
+
+		@media (min-width: $desktop) {
+			display: block;
+			font-size: 21px;
+			font-weight: 500;
+			letter-spacing: 0.05em;
+			margin: 5px 25px;
+			padding-top: 2px;
+			padding-bottom: 1px;
+			text-transform: uppercase;
+			width: 210px;
+
+			&:before {
+				content: "▶︎";
+				font-size: 14px;
+				margin-right: 25px;
+				vertical-align: 2px;
+			}
+		}
 	}
 
 	.coderdojo-nav {
 		display: none;
 
+		@media (min-width: $desktop) {
+			display: block;
+			margin: 5px 0;
+
+			&:hover {
+				opacity: 0.75;
+			}
+		}
+
 		img {
-			max-height: 40px;
+			height: 40px;
 			width: auto;
 		}
 	}
