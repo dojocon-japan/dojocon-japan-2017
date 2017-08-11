@@ -140,9 +140,19 @@
 			border-radius: 4px;
 			margin: auto;
 			padding: 10px 30px;
-			transform: translate(-50%, -50%);
+			transform: translate(-50%, -75%);
 			width: 520px;
 			z-index: 999;
+
+			opacity: 0;
+			transition: all 0.15s linear;
+			visibility: hidden;
+
+			&.is-active {
+				opacity: 1;
+				transform: translate(-50%, -50%);
+				visibility: visible;
+			}
 		}
 
 		.menu {
