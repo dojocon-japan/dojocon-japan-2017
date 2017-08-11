@@ -216,7 +216,12 @@
 		}
 
 		.entry-nav-box-close {
-			@include position(absolute, 32px 25px auto auto);
+			display: none;
+
+			@media (min-width: $desktop) {
+				@include position(absolute, 32px 25px auto auto);
+				display: block;
+			}
 		}
 	}
 
