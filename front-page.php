@@ -1,11 +1,34 @@
 <?php get_header(); ?>
 
-<section class="about">
-	<h2>日本最大のCoderDojoの祭典</h2>
-	<p>DojoCon Japanは日本のCoderDojo関係者（見守る大人、学ぶ子供）とその活動に賛同・協賛する人が全国各地から集まる大きなイベントです。</p>
+<main class="main">
 
-	<p>CoderDojoは2011年にアイルランドから始まった子供達にプログラミングを学ぶ場を提供するボランティア主導の世界的な非営利活動です。その数は世界中で1241（2017年4月現在）にも及びます。<br>
-	昨年初めてDojoCon Japanを開催したとき、日本には36の道場しかありませんでした。しかし、開催後にはその数を飛躍的に伸ばし、現在では82の道場が日本で活動しています(2017年5月現在)。</p>
-</section>
+	<?php for ( $i = 1; $i <= 10; $i++ ) : ?>
+
+		<?php if ( get_theme_mod( 'front_page_content_' . $i ) ) : ?>
+
+			<?php
+			$post = get_post( get_theme_mod( 'front_page_content_' . $i ) );
+			setup_postdata( $post );
+			?>
+
+			<section class="front-page-content page-<?php echo esc_attr( $post->post_name ); ?>">
+
+				<h2><?php the_title(); ?></h2>
+
+				<div class="entry-content">
+
+					<?php the_content(); ?>
+
+				</div>
+
+			</section>
+
+		<?php endif; ?>
+
+	<?php endfor; ?>
+
+	<?php wp_reset_postdata(); ?>
+
+</main>
 
 <?php get_footer(); ?>

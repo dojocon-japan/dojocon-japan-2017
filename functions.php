@@ -35,6 +35,8 @@ function dojoconjapan2017_setup() {
 		'coderdojo' => esc_html__( 'CoderDojo', 'dojocon-japan-2017' ),
 		'footer'    => esc_html__( 'Footer',    'dojocon-japan-2017' ),
 	) );
+
+	add_post_type_support( 'page', 'excerpt' );
 }
 
 }
@@ -119,3 +121,8 @@ function dojoconjapan2017_customize_register( $wp_customize ) {
 	}
 }
 add_action( 'customize_register', 'dojoconjapan2017_customize_register' );
+
+function dojoconjapan2017_front_page_template( $template ) {
+	return is_home() ? '' : $template;
+}
+add_filter( 'frontpage_template', 'dojoconjapan2017_front_page_template' );
