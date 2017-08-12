@@ -111,4 +111,22 @@
 			}
 		}
 	}
+
+	.outline-entry {
+		display: block;
+		font-size: 18px;
+		font-weight: 500;
+		margin: auto;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		text-transform: uppercase;
+		width: 180px;
+
+		&::before {
+			content: "▶︎";
+			font-size: 12px;
+			vertical-align: 2px;
+			margin-right: 18px;
+		}
+	}
 }
