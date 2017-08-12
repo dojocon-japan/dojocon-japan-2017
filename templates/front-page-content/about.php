@@ -1,8 +1,9 @@
 <?php if ( is_page( 'about' ) ): ?>
 
 	<?php
-	$photos = get_field( '2016-archive-photos' );
-	$movie  = get_field( '2016-archive-movie' );
+	$photos  = get_field( '2016-archive-photos' );
+	$movie   = get_field( '2016-archive-movie' );
+	$outline = get_field( 'outline' );
 	?>
 
 	<?php if ( $photos || $movie ) : ?>
@@ -34,6 +35,12 @@
 			<?php endif; ?>
 
 		</div>
+
+	<?php endif; ?>
+
+	<?php if ( $outline ) : ?>
+
+		<?php the_field( 'outline' ); ?>
 
 	<?php endif; ?>
 
