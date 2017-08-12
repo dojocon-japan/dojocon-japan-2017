@@ -11,13 +11,49 @@
 	}
 
 	.entry-content {
+		font-size: 14px;
+		font-weight: 200;
 
 		h2 {
 			background: url(../images/about-h2-border.svg) no-repeat center bottom;
 			background-size: 114px 2px;
 			font-size: 20px;
+			margin: 35px 0 30px;
 			padding-bottom: 15px;
 			text-align: center;
+		}
+
+		img {
+
+			&.about-coderdojo-01 {
+				width: 160px;
+			}
+
+			&.about-coderdojo {
+				border-radius: 50%;
+				overflow: hidden;
+				width: 140px;
+			}
+
+			&.about-coderdojo-logo {
+				height: 30px;
+				width: auto;
+			}
+		}
+
+		.about-coderdojo-logo-outer {
+			@include size(140px);
+			background: #fff;
+			border-radius: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			overflow: hidden;
+			position: relative;
+
+			img {
+				@include position(absolute, 0);
+				margin: auto;
+			}
 		}
 	}
 }

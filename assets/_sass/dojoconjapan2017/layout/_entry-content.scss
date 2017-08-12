@@ -1,0 +1,15 @@
+.entry-content {
+
+	p {
+		margin: 1em 0;
+	}
+
+	img {
+
+		&.aligncenter {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
