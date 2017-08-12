@@ -87,6 +87,7 @@ add_action( 'wp_enqueue_scripts', 'dojoconjapan2017_scripts' );
  * Customizer
  */
 function dojoconjapan2017_customize_register( $wp_customize ) {
+	// Copyright
 	$wp_customize->add_setting( 'copyright', array(
 		'default'    => __( 'DojoCon Japan 2017 Organization', 'dojocon-japan-2017' ),
 		'capability' => 'manage_options',
@@ -96,5 +97,25 @@ function dojoconjapan2017_customize_register( $wp_customize ) {
 		'label'   => __( 'Copyright', 'dojocon-japan-2017' ),
 		'section' => 'title_tagline',
 	) );
+
+	// Theme Options
+	$wp_customize->add_section( 'theme_options', array(
+		'title'    => __( 'Theme Options' ),
+		'priority' => 130,
+	) );
+
+	for ( $i = 1; $i <= 10; $i++ ) {
+		$wp_customize->add_setting( 'front_page_content_' . $i, array(
+			'default'           => false,
+			'sanitize_callback' => 'absint',
+		) );
+
+		$wp_customize->add_control( 'front_page_content_' . $i, array(
+			'label'          => 'Front Page Content ' . $i,
+			'section'        => 'theme_options',
+			'type'           => 'dropdown-pages',
+			'allow_addition' => true,
+		) );
+	}
 }
 add_action( 'customize_register', 'dojoconjapan2017_customize_register' );
