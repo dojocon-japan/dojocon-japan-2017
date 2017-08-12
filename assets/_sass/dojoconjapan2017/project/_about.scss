@@ -10,7 +10,14 @@
 		background-size: auto;
 	}
 
-	h2 {
-		font-size: 20px;
+	.entry-content {
+
+		h2 {
+			background: url(../images/about-h2-border.svg) no-repeat center bottom;
+			background-size: 114px 2px;
+			font-size: 20px;
+			padding-bottom: 15px;
+			text-align: center;
+		}
 	}
 }
