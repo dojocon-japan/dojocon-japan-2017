@@ -100,5 +100,15 @@
 
 	.outline-note {
 		font-size: 12px;
+
+		li {
+			text-indent: -1.5em;
+			padding-left: 1.5em;
+
+			&::before {
+				content: "※";
+				margin-right: 0.5em;
+			}
+		}
 	}
 }
