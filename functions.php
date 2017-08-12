@@ -37,6 +37,8 @@ function dojoconjapan2017_setup() {
 	) );
 
 	add_post_type_support( 'page', 'excerpt' );
+
+	add_image_size( '2016-archive-photo', 940, 517, true );
 }
 
 }

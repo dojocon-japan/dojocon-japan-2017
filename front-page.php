@@ -25,6 +25,16 @@
 
 					<?php the_content(); ?>
 
+					<?php if ( is_page( 'about' ) && $photos = get_field( '2016-archive-photo' ) ) : ?>
+
+						<?php foreach ( $photos as $photo ) : ?>
+
+							<img src="<?php echo esc_url( $photo['sizes']['2016-archive-photo'] ); ?>">
+
+						<?php endforeach; ?>
+
+					<?php endif; ?>
+
 				</div>
 
 			</section>
