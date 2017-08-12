@@ -13,7 +13,10 @@
 
 			<section class="front-page-content page-<?php echo esc_attr( $post->post_name ); ?>">
 
-				<h2><?php the_title(); ?></h2>
+				<h2>
+					<span><?php the_title(); ?></span>
+					<?php the_excerpt(); ?>
+				</h2>
 
 				<div class="entry-content">
 
