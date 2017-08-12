@@ -4,40 +4,11 @@
 @import "neat/neat";
 @import "dojoconjapan2017/foundation/reset";
 @import "dojoconjapan2017/foundation/fonts";
+@import "dojoconjapan2017/foundation/base";
 @import "dojoconjapan2017/component/button";
 @import "dojoconjapan2017/component/hamburger";
 @import "dojoconjapan2017/component/sliding-panel";
-
-html{
-	box-sizing:border-box;
-	height: 100%;
-}
-
-*,
-*::after,
-*::before{
-	box-sizing:inherit;
-}
-
-body {
-	background: #293b4b;
-	font-family: $noto;
-	height: 100%;
-	line-height: $default-line-height;
-}
-
-a {
-	color: $flamingo;
-
-	&:hover {
-		text-decoration: none;
-	}
-}
-
-button {
-	line-height: $default-line-height;
-}
-
 @import "dojoconjapan2017/layout/header";
 @import "dojoconjapan2017/layout/footer";
+@import "dojoconjapan2017/layout/page";
 @import "dojoconjapan2017/project/about";

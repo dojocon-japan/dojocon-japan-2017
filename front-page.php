@@ -11,12 +11,15 @@
 			setup_postdata( $post );
 			?>
 
-			<section class="front-page-content page-<?php echo esc_attr( $post->post_name ); ?>">
+			<section class="front-page-content page page-<?php echo esc_attr( $post->post_name ); ?>">
 
-				<h2>
-					<span><?php the_title(); ?></span>
-					<?php the_excerpt(); ?>
-				</h2>
+				<h1 class="page-title"><?php the_title(); ?></h1>
+
+				<?php if ( get_the_excerpt() ) : ?>
+					<div class="page-excerpt">
+						<?php the_excerpt(); ?>
+					</div>
+				<?php endif; ?>
 
 				<div class="entry-content">
 

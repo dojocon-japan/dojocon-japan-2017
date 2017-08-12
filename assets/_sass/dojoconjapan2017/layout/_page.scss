@@ -1,0 +1,16 @@
+.page {
+
+	.page-title {
+		font-family: $helvetica;
+		font-size: 34px;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		transform: scale(0.75, 1);
+
+		+ .page-excerpt {
+			font-size: 14px;
+			text-align: center;
+		}
+	}
+}

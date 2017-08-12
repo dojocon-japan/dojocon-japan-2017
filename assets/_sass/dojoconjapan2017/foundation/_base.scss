@@ -1,0 +1,29 @@
+html{
+	box-sizing:border-box;
+	height: 100%;
+}
+
+*,
+*::after,
+*::before{
+	box-sizing:inherit;
+}
+
+body {
+	background: #293b4b;
+	font-family: $noto;
+	height: 100%;
+	line-height: $default-line-height;
+}
+
+a {
+	color: $flamingo;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+button {
+	line-height: $default-line-height;
+}
