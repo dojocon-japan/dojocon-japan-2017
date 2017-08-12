@@ -34,7 +34,11 @@
 
 						<?php if ( $photos || $movie ) : ?>
 
+							<h2>DojoCon Japan 2016 Archives</h2>
+
 							<?php if ( $photos ) : ?>
+
+								<h3>Photo</h3>
 
 								<?php foreach ( $photos as $photo ) : ?>
 
@@ -45,6 +49,8 @@
 							<?php endif; ?>
 
 							<?php if ( $movie ) : ?>
+
+								<h3>Movie</h3>
 
 								<div class="dojocon-japan-2016-archive-movie">
 									<?php the_field( '2016-archive-movie' ); ?>
