@@ -2,10 +2,15 @@ section.about {
 	background: url(../images/hero.png) no-repeat center top;
 	background-color: $flamingo;
 	background-size: contain;
+	color: #fff;
 	padding-top: 343.75%;
 
 	@media (min-width: $tablet) {
 		background-image: url(../images/hero-1500.png);
 		background-size: auto;
+	}
+
+	h2 {
+		font-size: 20px;
 	}
 }

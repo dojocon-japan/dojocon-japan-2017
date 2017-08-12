@@ -5,9 +5,8 @@ if ( ! function_exists( 'dojoconjapan2017_setup' ) ) {
  * Set up theme defaults and registers support for various WordPress feaures.
  */
 function dojoconjapan2017_setup() {
-	load_theme_textdomain( 'dojocon-japna-2017', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'dojocon-japan-2017', get_template_directory() . '/languages' );
 
-	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'html5', array(
@@ -30,11 +29,11 @@ function dojoconjapan2017_setup() {
 	) ) );
 
 	register_nav_menus( array(
-		'global'    => esc_html__( 'Global',    'dojocon-japna-2017' ),
-		'entry'     => esc_html__( 'Entry',     'dojocon-japna-2017' ),
-		'workshop'  => esc_html__( 'Workshop',  'dojocon-japna-2017' ),
-		'coderdojo' => esc_html__( 'CoderDojo', 'dojocon-japna-2017' ),
-		'footer'    => esc_html__( 'Footer',    'dojocon-japna-2017' ),
+		'global'    => esc_html__( 'Global',    'dojocon-japan-2017' ),
+		'entry'     => esc_html__( 'Entry',     'dojocon-japan-2017' ),
+		'workshop'  => esc_html__( 'Workshop',  'dojocon-japan-2017' ),
+		'coderdojo' => esc_html__( 'CoderDojo', 'dojocon-japan-2017' ),
+		'footer'    => esc_html__( 'Footer',    'dojocon-japan-2017' ),
 	) );
 }
 
@@ -58,7 +57,7 @@ add_action( 'after_setup_theme', 'dojoconjapan2017_content_width', 0 );
  */
 function dojoconjapan2017_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'bathe' ),
+		'name'          => esc_html__( 'Sidebar', 'dojocon-japan-2017' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -74,9 +73,9 @@ add_action( 'widgets_init', 'dojoconjapan2017_widgets_init' );
  */
 function dojoconjapan2017_scripts() {
 
-	wp_enqueue_style( 'bathe-style', get_template_directory_uri() . '/assets/css/main.css' );
+	wp_enqueue_style( 'dojocon-japan-2017-style', get_template_directory_uri() . '/assets/css/main.css' );
 
-	wp_enqueue_script( 'bathe-script', get_template_directory_uri() . '/assets/js/main.js', array(), '', true );
+	wp_enqueue_script( 'dojocon-japan-2017-script', get_template_directory_uri() . '/assets/js/main.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -89,14 +88,13 @@ add_action( 'wp_enqueue_scripts', 'dojoconjapan2017_scripts' );
  */
 function dojoconjapan2017_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'copyright', array(
-		'default'    => 'DojoCon Japan 2017 実行委員会',
-		// 'type'       => 'option',
+		'default'    => __( 'DojoCon Japan 2017 Organization', 'dojocon-japan-2017' ),
 		'capability' => 'manage_options',
 	) );
 
 	$wp_customize->add_control( 'copyright', array(
-		'label'      => __( 'Copyright', 'dojocon-japna-2017' ),
-		'section'    => 'title_tagline',
+		'label'   => __( 'Copyright', 'dojocon-japan-2017' ),
+		'section' => 'title_tagline',
 	) );
 }
 add_action( 'customize_register', 'dojoconjapan2017_customize_register' );
