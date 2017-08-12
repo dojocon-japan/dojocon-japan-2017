@@ -46,7 +46,7 @@
 
 							<?php if ( $movie ) : ?>
 
-								<div class="2016-archive-movie">
+								<div class="dojocon-japan-2016-archive-movie">
 									<?php the_field( '2016-archive-movie' ); ?>
 								</div>
 
