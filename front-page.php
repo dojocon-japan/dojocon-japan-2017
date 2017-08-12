@@ -25,13 +25,34 @@
 
 					<?php the_content(); ?>
 
-					<?php if ( is_page( 'about' ) && $photos = get_field( '2016-archive-photo' ) ) : ?>
+					<?php if ( is_page( 'about' ) ): ?>
 
-						<?php foreach ( $photos as $photo ) : ?>
+						<?php
+						$photos = get_field( '2016-archive-photos' );
+						$movie  = get_field( '2016-archive-movie' );
+						?>
 
-							<img src="<?php echo esc_url( $photo['sizes']['2016-archive-photo'] ); ?>">
+						<?php if ( $photos || $movie ) : ?>
 
-						<?php endforeach; ?>
+							<?php if ( $photos ) : ?>
+
+								<?php foreach ( $photos as $photo ) : ?>
+
+									<img src="<?php echo esc_url( $photo['sizes']['2016-archive-photo'] ); ?>">
+
+								<?php endforeach; ?>
+
+							<?php endif; ?>
+
+							<?php if ( $movie ) : ?>
+
+								<div class="2016-archive-movie">
+									<?php the_field( '2016-archive-movie' ); ?>
+								</div>
+
+							<?php endif; ?>
+
+						<?php endif; ?>
 
 					<?php endif; ?>
 
