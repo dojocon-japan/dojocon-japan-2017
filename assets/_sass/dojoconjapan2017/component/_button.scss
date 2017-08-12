@@ -60,7 +60,7 @@
 @mixin button-close() {
 	$button-close-size: 16px;
 	$button-close-padding: 6px;
-	$button-close-border: 2.5px;
+	$button-close-border: 2px;
 
 	@include button;
 	@include button-reset;
