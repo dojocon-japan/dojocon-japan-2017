@@ -25,42 +25,7 @@
 
 					<?php the_content(); ?>
 
-					<?php if ( is_page( 'about' ) ): ?>
-
-						<?php
-						$photos = get_field( '2016-archive-photos' );
-						$movie  = get_field( '2016-archive-movie' );
-						?>
-
-						<?php if ( $photos || $movie ) : ?>
-
-							<h2>DojoCon Japan 2016 Archives</h2>
-
-							<?php if ( $photos ) : ?>
-
-								<h3>Photo</h3>
-
-								<?php foreach ( $photos as $photo ) : ?>
-
-									<img src="<?php echo esc_url( $photo['sizes']['2016-archive-photo'] ); ?>">
-
-								<?php endforeach; ?>
-
-							<?php endif; ?>
-
-							<?php if ( $movie ) : ?>
-
-								<h3>Movie</h3>
-
-								<div class="dojocon-japan-2016-archive-movie">
-									<?php the_field( '2016-archive-movie' ); ?>
-								</div>
-
-							<?php endif; ?>
-
-						<?php endif; ?>
-
-					<?php endif; ?>
+					<?php get_template_part( 'templates/front-page-content/about' ); ?>
 
 				</div>
 
