@@ -75,4 +75,30 @@
 			height: 100%;
 		}
 	}
+
+	.outline {
+		font-size: 16px;
+		font-weight: 400;
+		margin-bottom: 1.25em;
+		text-align: center;
+
+		dt {
+			@include ribon(#fff, 28px);
+			background: #fff;
+			color: $flamingo;
+			margin: 0 auto 0.5em;
+			width: 90px;
+		}
+
+		dd {
+
+			+ dt {
+				margin-top: 0.75em;
+			}
+		}
+	}
+
+	.outline-note {
+		font-size: 12px;
+	}
 }

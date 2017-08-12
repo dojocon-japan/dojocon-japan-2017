@@ -1,0 +1,15 @@
+@mixin ribon($color, $width) {
+	position: relative;
+	text-align: center;
+
+	&::after {
+		@include position(absolute, 0 auto auto 100%);
+		border-color: $color transparent $color $color;
+		border-style: solid;
+		border-width: ($width / 2) ($width / 2.8) ($width / 2) 0;
+		display: block;
+		content: "";
+		height: 0;
+		width: 0;
+	}
+}
