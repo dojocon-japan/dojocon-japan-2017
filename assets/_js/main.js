@@ -1,6 +1,7 @@
 'use strict';
 
 window.$ = window.jQuery = require('jquery');
+const circleType = require('circletype');
 
 $(function() {
 
@@ -18,5 +19,7 @@ $(function() {
     $('.entry-nav-box, .js-entry-nav-fade-screen').removeClass('is-active');
     e.preventDefault();
   });
+
+  console.log(circleType());
 
 });
