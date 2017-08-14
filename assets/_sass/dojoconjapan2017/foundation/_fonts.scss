@@ -67,3 +67,13 @@
 	     url("../fonts/NotoSansCJKjp-Black.woff") format("woff"),
 	     url("../fonts/NotoSansCJKjp-Black.otf") format("opentype");
 }
+
+@font-face {
+	font-family: "PixelMplus10";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/PixelMplus10-Regular.eot");
+	src: url("../fonts/PixelMplus10-Regular.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/PixelMplus10-Regular.woff") format("woff"),
+	     url("../fonts/PixelMplus10-Regular.ttf") format("truetype");
+}
