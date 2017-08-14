@@ -5,16 +5,16 @@
  *
 */
 
-/* eslint-disable no-var, one-var, no-unused-vars, space-before-function-paren, no-invalid-this, no-console */
+/* eslint-disable no-invalid-this, no-console, no-var */
 
-(function ($, undefined) {
+(function($, undefined) {
 
   'use strict';
 
-  $.fn.circleType = function (options) {
+  $.fn.circleType = function(options) {
 
-    var self = this,
-      settings = {
+    // var self = this;
+    var settings = {
       dir: 1,
       position: 'relative',
     };
@@ -22,18 +22,18 @@
       console.log('Lettering.js is required');
       return;
     }
-    return this.each(function () {
+    return this.each(function() {
 
       if (options) {
         $.extend(settings, options);
       }
-      var elem = this,
-        delta = (180 / Math.PI),
-        fs = parseInt($(elem).css('font-size'), 10),
-        ch = parseInt($(elem).css('line-height'), 10) || fs,
-        txt = elem.innerHTML.replace(/^\s+|\s+$/g, '').replace(/\s/g, '&nbsp;'),
-        letters,
-        center;
+      var elem = this;
+      var delta = (180 / Math.PI);
+      var fs = parseInt($(elem).css('font-size'), 10);
+      var ch = parseInt($(elem).css('line-height'), 10) || fs;
+      var txt = elem.innerHTML.replace(/^\s+|\s+$/g, '').replace(/\s/g, '&nbsp;');
+      var letters;
+      var center;
 
       elem.innerHTML = txt;
       $(elem).lettering();
@@ -43,14 +43,17 @@
       letters = elem.getElementsByTagName('span');
       center = Math.floor(letters.length / 2);
 
-      var layout = function () {
-        var tw = 0,
-          i,
-          offset = 0,
-          minRadius,
-          origin,
-          innerRadius,
-          l, style, r, transform;
+      var layout = function() {
+        var tw = 0;
+        var i;
+        var offset = 0;
+        var minRadius;
+        var origin;
+        var innerRadius;
+        var l;
+        var style;
+        var r;
+        var transform;
 
         for (i = 0; i < letters.length; i++) {
           tw += letters[i].offsetWidth;
@@ -108,7 +111,7 @@
             console.log('FitText.js is required when using the fitText option');
           } else {
             $(elem).fitText();
-            $(window).resize(function () {
+            $(window).resize(function() {
               updateHeight();
             });
           }
@@ -121,9 +124,9 @@
         }
       };
 
-      var getBounds = function (elem) {
-        var docElem = document.documentElement,
-          box = elem.getBoundingClientRect();
+      var getBounds = function(elem) {
+        var docElem = document.documentElement;
+        var box = elem.getBoundingClientRect();
         return {
           top: box.top + window.pageYOffset - docElem.clientTop,
           left: box.left + window.pageXOffset - docElem.clientLeft,
@@ -131,10 +134,10 @@
         };
       };
 
-      var updateHeight = function () {
-        var mid = getBounds(letters[center]),
-          first = getBounds(letters[0]),
-          h;
+      var updateHeight = function() {
+        var mid = getBounds(letters[center]);
+        var first = getBounds(letters[0]);
+        var h;
         if (mid.top < first.top) {
           h = first.top - mid.top + first.height;
         } else {
@@ -144,14 +147,14 @@
       };
 
       if (settings.fluid && !settings.fitText) {
-        $(window).on('resize', function () {
+        $(window).on('resize', function() {
           layout();
         });
       }
 
       if (document.readyState !== 'complete') {
         elem.style.visibility = 'hidden';
-        $(window).on('load', function () {
+        $(window).on('load', function() {
           elem.style.visibility = 'visible';
           layout();
         });

@@ -1,7 +1,10 @@
+/* eslint-disable no-var, no-unused-vars, no-console */
+
 'use strict';
 
-window.$ = window.jQuery = require('jquery');
-const circleType = require('circletype');
+global.$ = global.jQuery = require('jquery');
+var lettring = require('./jquery.lettering.js');
+var circleType = require('./circletype.js');
 
 $(function() {
 
@@ -20,6 +23,8 @@ $(function() {
     e.preventDefault();
   });
 
-  console.log(circleType());
+  $('.page .page-title').circleType({
+    radius: 250,
+  });
 
 });
