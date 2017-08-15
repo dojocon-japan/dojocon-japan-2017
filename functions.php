@@ -77,6 +77,8 @@ add_action( 'widgets_init', 'dojoconjapan2017_widgets_init' );
  */
 function dojoconjapan2017_scripts() {
 
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' );
+
 	wp_enqueue_style( 'dojocon-japan-2017-style', get_template_directory_uri() . '/assets/css/main.css' );
 
 	wp_enqueue_script( 'dojocon-japan-2017-script', get_template_directory_uri() . '/assets/js/main.js', array(), '', true );
