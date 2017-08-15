@@ -5,14 +5,13 @@
 	cursor: pointer;
 	display: inline-block;
 	font-size: 14px;
-	font-weight: 400;
+	font-weight: 500;
 	padding: 8px 1em;
 	text-align: center;
 	text-decoration: none;
 
 	@media (min-width: $desktop) {
 		font-size: 18px;
-		font-weight: 300;
 		padding: 4px 25px;
 	}
 }

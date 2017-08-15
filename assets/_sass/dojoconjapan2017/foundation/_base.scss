@@ -12,6 +12,8 @@ html{
 body {
 	background: #293b4b;
 	font-family: $noto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	height: 100%;
 	line-height: $default-line-height;
 }
