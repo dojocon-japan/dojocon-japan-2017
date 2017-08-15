@@ -8,8 +8,8 @@
 	z-index: 999;
 
 	@media (min-width: $desktop) {
-		@include position(fixed, 0 0 auto 0);
-		@include size(100%, auto);
+		bottom: auto;
+		height: auto;
 		transform: none;
 	}
 
@@ -18,6 +18,16 @@
 
 		@media screen {
 			transform: none;
+		}
+	}
+}
+
+.admin-bar {
+
+	.sliding-panel-content {
+
+		@media (min-width: $desktop) {
+			top: 32px;
 		}
 	}
 }
