@@ -5,16 +5,23 @@
 		font-size: 33.6px;
 		font-weight: bold;
 		letter-spacing: -0.125em;
+		margin-bottom: 45px;
 		text-align: center;
 		text-transform: uppercase;
 
-		span {
-			transform: scale(0.75, 1);
+		&::after {
+			@include position(absolute, 100% 0 auto 0);
+			@include size(144px, auto);
+			content: url(../images/pixel-fumas.svg);
+			display: block;
+			line-height: 40px;
+			margin: 0 auto;
 		}
 
 		+ .page-excerpt {
 			font-family: $pixelmplus10;
 			font-size: 14px;
+			margin-top: 45px;
 			text-align: center;
 		}
 	}
