@@ -122,6 +122,28 @@
 		margin: 20px auto 5px;
 		text-align: center;
 		text-transform: uppercase;
+
+		&::before {
+			display: block;
+			height: auto;
+			line-height: 1;
+			margin: auto;
+			width: 40px;
+		}
+	}
+
+	.dojocon-japan-2016-archive-photo-title {
+
+		&::before {
+			content: url(../images/icon-photo.svg);
+		}
+	}
+
+	.dojocon-japan-2016-archive-movie-title {
+
+		&::before {
+			content: url(../images/icon-movie.svg);
+		}
 	}
 
 	.dojocon-japan-2016-archive-movie {
