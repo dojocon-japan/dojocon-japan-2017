@@ -83,16 +83,16 @@
 
 		&::before {
 			top: 10px;
-			right: auto;
+			right: 230 - 43 + 25px;
 			bottom: auto;
-			left: -30px;
+			left: auto;
 		}
 
 		&::after {
 			top: 12px;
-			right: auto;
+			right: 230 - 43 + 25 + 2px;
 			bottom: auto;
-			left: -26px;
+			left: auto;
 		}
 
 		> span {
