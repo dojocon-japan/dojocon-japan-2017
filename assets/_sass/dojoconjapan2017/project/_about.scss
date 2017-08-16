@@ -58,21 +58,59 @@
 		}
 	}
 
+	.dojocon-japan-2016-archive {
+		border-bottom: 2px dashed #fff;
+		border-top: 2px dashed #fff;
+		margin: 60px -20px 0;
+		padding: 0 20px 30px;
+	}
+
 	.dojocon-japan-2016-archive-title {
-		@include ribon(#fff, 28px);
+		$ribon: (
+			color: $flamingo,
+			height: 24px,
+			width: 43px,
+			border-color: #fff,
+			border-width: 2px,
+		);
+		@include ribon-bordered($ribon, left);
 		font-size: 14px;
 		font-weight: 700;
-		margin: auto;
-		width: 235px;
+		margin: -20px auto 0;
+		width: 230px;
+		z-index: 5;
+
+		&::before {
+			top: 10px;
+			right: auto;
+			bottom: auto;
+			left: -30px;
+		}
+
+		&::after {
+			top: 12px;
+			right: auto;
+			bottom: auto;
+			left: -26px;
+		}
 
 		> span {
-			@include ribon($flamingo, 24px, 2);
-			@include position(absolute, 0);
+			$ribon: (
+				color: $flamingo,
+				height: 24px,
+				width: 240px,
+				border-color: #fff,
+				border-width: 2px,
+			);
+			@include ribon-bordered($ribon);
 			display: block;
 			line-height: 22px;
 			margin: auto;
 			padding-bottom: 2px;
-			width: 230px;
+			position: relative;
+			text-align: center;
+			z-index: 5;
+
 		}
 	}
 

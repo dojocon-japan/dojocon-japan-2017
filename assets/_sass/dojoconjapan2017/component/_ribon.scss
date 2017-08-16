@@ -18,3 +18,56 @@
 		width: 0;
 	}
 }
+
+@mixin ribon-bordered($args: (
+	color: transparent,
+	height: 0,
+	width: 0,
+	border-color: transparent,
+	border-width: 0,
+), $ribon-direction: right) {
+	position: relative;
+
+	$color: map-get($args, color);
+	$height: map-get($args, height);
+	$width: map-get($args, width);
+	$border-color: map-get($args, border-color);
+	$border-width: map-get($args, border-width);
+
+	$direction: right;
+	$opposition: left;
+
+	@if $ribon-direction == left {
+		$direction: left;
+		$opposition: right;
+	}
+
+	&::before{
+		@include position(absolute, 0);
+		#{$opposition}: - $border-width;
+		border: (($height + $border-width * 2) / 2) solid $border-color;
+		border-#{$direction}-color: transparent;
+		border-#{$direction}-width: (($height + $border-width * 2) / 2.8);
+		border-#{$opposition}-width: ($width - ($height / 2.8) + $border-width * 2) + 1px;
+		content: "";
+		display: block;
+		height: 0;
+		margin: auto;
+		width: 0;
+		z-index: -1;
+	}
+
+	&::after {
+		@include position(absolute, 0);
+		border: ($height / 2) solid $color;
+		border-#{$direction}-color: transparent;
+		border-#{$direction}-width: ($height / 2.8);
+		border-#{$opposition}-width: $width - ($height / 2.8);
+		content: "";
+		display: block;
+		height: 0;
+		margin: auto;
+		width: 0;
+		z-index: -1;
+	}
+}
