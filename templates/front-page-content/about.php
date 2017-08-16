@@ -14,7 +14,7 @@
 
 			<?php if ( $photos ) : ?>
 
-				<h4>Photo</h4>
+				<h4 class="dojocon-japan-2016-archive-photo-title">Photo</h4>
 
 				<?php foreach ( $photos as $photo ) : ?>
 
@@ -26,7 +26,7 @@
 
 			<?php if ( $movie ) : ?>
 
-				<h4>Movie</h4>
+				<h4 class="dojocon-japan-2016-archive-movie-title">Movie</h4>
 
 				<div class="dojocon-japan-2016-archive-movie">
 					<?php the_field( '2016-archive-movie' ); ?>

@@ -77,7 +77,7 @@
 		font-size: 14px;
 		font-weight: 700;
 		left: 5px;
-		margin: -20px auto 0;
+		margin: -20px auto 30px;
 		width: 230px;
 		z-index: 5;
 
@@ -113,6 +113,15 @@
 			z-index: 5;
 
 		}
+	}
+
+	.dojocon-japan-2016-archive-photo-title,
+	.dojocon-japan-2016-archive-movie-title {
+		font-size: 18px;
+		font-weight: 500;
+		margin: 20px auto 5px;
+		text-align: center;
+		text-transform: uppercase;
 	}
 
 	.dojocon-japan-2016-archive-movie {
