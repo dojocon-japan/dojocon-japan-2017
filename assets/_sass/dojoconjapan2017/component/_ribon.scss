@@ -1,12 +1,17 @@
-@mixin ribon($color, $width) {
+@mixin ribon($color, $height, $z-index: false) {
+	background-color: $color;
+	height: $height;
 	position: relative;
 	text-align: center;
+	@if $z-index {
+		z-index: $z-index;
+	}
 
 	&::after {
 		@include position(absolute, 0 auto auto 100%);
 		border-color: $color transparent $color $color;
 		border-style: solid;
-		border-width: ($width / 2) ($width / 2.8) ($width / 2) 0;
+		border-width: ($height / 2) ($height / 2.8) ($height / 2) 0;
 		display: block;
 		content: "";
 		height: 0;

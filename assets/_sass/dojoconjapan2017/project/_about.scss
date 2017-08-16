@@ -58,6 +58,24 @@
 		}
 	}
 
+	.dojocon-japan-2016-archive-title {
+		@include ribon(#fff, 28px);
+		font-size: 14px;
+		font-weight: 700;
+		margin: auto;
+		width: 235px;
+
+		> span {
+			@include ribon($flamingo, 24px, 2);
+			@include position(absolute, 0);
+			display: block;
+			line-height: 22px;
+			margin: auto;
+			padding-bottom: 2px;
+			width: 230px;
+		}
+	}
+
 	.dojocon-japan-2016-archive-movie {
 		height: 0;
 		overflow: hidden;
@@ -85,7 +103,6 @@
 
 		dt {
 			@include ribon(#fff, 28px);
-			background: #fff;
 			color: $flamingo;
 			margin: 0 auto 0.5em;
 			width: 90px;

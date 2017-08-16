@@ -10,7 +10,7 @@
 
 		<div class="dojocon-japan-2016-archive">
 
-			<h3 class="dojocon-japan-2016-archive-title">DojoCon Japan 2016 Archives</h3>
+			<h3 class="dojocon-japan-2016-archive-title"><span>DojoCon Japan 2016 Archives</span></h3>
 
 			<?php if ( $photos ) : ?>
 
