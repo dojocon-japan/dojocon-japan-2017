@@ -41,20 +41,31 @@
 				width: auto;
 			}
 		}
+	}
 
-		.about-coderdojo-logo-outer {
-			@include size(140px);
-			background: #fff;
-			border-radius: 50%;
-			margin-left: auto;
-			margin-right: auto;
-			overflow: hidden;
-			position: relative;
+	.japan-map {
+		margin-left: -20px;
+		margin-right: -20px;
+		margin-bottom: 0;
+		width: auto;
 
-			img {
-				@include position(absolute, 0);
-				margin: auto;
-			}
+		+ h2 {
+			margin-top: 0;
+		}
+	}
+
+	.about-coderdojo-logo-outer {
+		@include size(140px);
+		background: #fff;
+		border-radius: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			@include position(absolute, 0);
+			margin: auto;
 		}
 	}
 

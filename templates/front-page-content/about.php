@@ -1,4 +1,6 @@
-<?php if ( is_page( 'about' ) ): ?>
+<div class="entry-content">
+
+	<?php the_content(); ?>
 
 	<?php
 	$photos  = get_field( '2016-archive-photos' );
@@ -44,4 +46,10 @@
 
 	<?php endif; ?>
 
-<?php endif;
+</div>
+
+<?php if ( has_post_thumbnail() ) : ?>
+	<div class="post-thumbnail">
+		<?php the_post_thumbnail(); ?>
+	</div>
+<?php endif; ?>
