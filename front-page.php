@@ -21,7 +21,15 @@
 					</div>
 				<?php endif; ?>
 
-				<?php get_template_part( 'templates/front-page-content/about' ); ?>
+				<?php if ( is_page( 'about' ) ) : ?>
+
+					<?php get_template_part( 'templates/front-page-content/about' ); ?>
+
+				<?php elseif ( is_page( 'news' ) ) : ?>
+
+					<?php get_template_part( 'templates/front-page-content/news' ); ?>
+
+				<?php endif; ?>
 
 			</section>
 
