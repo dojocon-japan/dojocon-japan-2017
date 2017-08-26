@@ -1,0 +1,98 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M950.857 219.429h73.143v-73.143h-804.571v73.143h-73.143v73.143h-73.143v73.143h-73.143v365.714h73.143v73.143h73.143v73.143h731.429v-73.143h73.143v-73.143h73.143v-365.714h-73.143v-146.286zM804.571 731.429v73.143h-585.143v-73.143h-73.143v-219.429h73.143v-73.143h73.143v-73.143h438.857v73.143h73.143v73.143h73.143v219.429h-73.143z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "bit-fuma"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 188,
+        "id": 1,
+        "name": "bit-fuma",
+        "prevSize": 28,
+        "code": 59648
+      },
+      "setIdx": 0,
+      "setId": 22,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M292.572 365.714h438.857v73.143h-438.857v-73.143z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "bit-hachimaki"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 189,
+        "id": 0,
+        "name": "bit-hachimaki",
+        "prevSize": 28,
+        "code": 59649
+      },
+      "setIdx": 0,
+      "setId": 22,
+      "iconIdx": 1
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "icomoon"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 512,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "color": 0,
+      "height": 32,
+      "columns": 16,
+      "margin": 16,
+      "prefix": "icon-"
+    },
+    "historySize": 100,
+    "showCodes": true,
+    "search": "",
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "gridSize": 16
+  }
+}
