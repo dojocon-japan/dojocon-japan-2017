@@ -17,4 +17,8 @@
 	.googlemaps-container {
 		@include embed-container(100%);
 	}
+
+	*:last-child {
+		margin-bottom: 0;
+	}
 }
