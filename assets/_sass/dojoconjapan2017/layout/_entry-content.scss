@@ -13,4 +13,8 @@
 			margin-right: auto;
 		}
 	}
+
+	.googlemaps-container {
+		@include embed-container(100%);
+	}
 }

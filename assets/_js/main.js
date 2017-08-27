@@ -8,6 +8,9 @@ require('./circletype.js');
 
 $(function() {
 
+  /**
+   * Menu
+   */
   $('.js-sliding-panel-toggle').on('click touchstart', function(e) {
     $('.js-sliding-panel-toggle, .sliding-panel-content').toggleClass('is-active');
     e.preventDefault();
@@ -23,8 +26,10 @@ $(function() {
     e.preventDefault();
   });
 
+  /**
+   * Warp page titles
+   */
   $('.page .page-title').circleType({
     radius: 160,
   });
-
 });
