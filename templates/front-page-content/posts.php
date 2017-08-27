@@ -25,7 +25,7 @@ if ( $blog_posts->have_posts() ) : ?>
 					<a href="<?php the_permalink(); ?>">
 						<div class="post-thumbnail">
 							<?php if ( has_post_thumbnail() ) : ?>
-								<?php the_post_thumbnail( 'thumbnail' ); ?>
+								<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 							<?php else : ?>
 								<img src="//via.placeholder.com/300x200/eee">
 							<?php endif; ?>

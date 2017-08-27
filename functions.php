@@ -28,6 +28,8 @@ function dojoconjapan2017_setup() {
 		'default-image' => '',
 	) ) );
 
+	add_image_size( 'post-thumbnail', 300, 200, true );
+
 	register_nav_menus( array(
 		'global'    => esc_html__( 'Global',    'dojocon-japan-2017' ),
 		'entry'     => esc_html__( 'Entry',     'dojocon-japan-2017' ),
