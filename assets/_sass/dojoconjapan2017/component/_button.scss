@@ -27,7 +27,7 @@
 
 @mixin button-primary() {
 	background: $flamingo;
-	color: #fff;
+	color: $white;
 
 	&:hover {
 		background: shade($flamingo, 5);
@@ -36,7 +36,7 @@
 
 @mixin button-secondary() {
 	background: $navy;
-	color: #fff;
+	color: $white;
 
 	&:hover {
 		background: shade($navy, 5);

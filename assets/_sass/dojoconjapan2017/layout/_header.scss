@@ -1,10 +1,10 @@
 .header {
 	background: rgba($mid-night, 0.9);
-	color: #fff;
+	color: $white;
 	padding: 0 30px;
 
 	@media (min-width: $desktop) {
-		background: #fff;
+		background: $white;
 		color: $default-font-color;
 		display: flex;
 		overflow: visible;
@@ -24,7 +24,7 @@
 
 	.menu-title {
 		@include menu-typo;
-		border-bottom: 1px solid #fff;
+		border-bottom: 1px solid $white;
 		padding: 8px 1em;
 
 		@media (min-width: $desktop) {
@@ -67,7 +67,7 @@
 
 							a {
 								background: $flamingo;
-								color: #fff;
+								color: $white;
 							}
 
 							.sub-menu {
@@ -125,7 +125,7 @@
 						}
 
 						&:hover > a::before {
-							color: #fff;
+							color: $white;
 						}
 					}
 				}
@@ -133,24 +133,19 @@
 
 			a {
 				border-bottom: 1px solid $navy;
-				color: #fff;
+				color: $white;
 				display: block;
 				padding: 6px 1em;
 				text-decoration: none;
 
 				&:hover {
-					color: rgba(#fff, 0.75);
+					color: rgba($white, 0.75);
 				}
 
 				@media (min-width: $desktop) {
 					border: 0;
 					color: $flamingo;
 					padding: 7px 20px;
-
-					// &:hover {
-					// 	background: $flamingo;
-					// 	color: #fff;
-					// }
 				}
 			}
 
@@ -172,10 +167,10 @@
 						}
 
 						@media (min-width: $desktop) {
-							color: #fff;
+							color: $white;
 
 							&:hover {
-								color: rgba(#fff, 0.75);
+								color: rgba($white, 0.75);
 							}
 						}
 					}
@@ -189,7 +184,7 @@
 
 		@media (min-width: $desktop) {
 			@include position(fixed, 50% auto auto 50%);
-			background: #fff;
+			background: $white;
 			border-radius: 4px;
 			margin: auto;
 			padding: 10px 30px;

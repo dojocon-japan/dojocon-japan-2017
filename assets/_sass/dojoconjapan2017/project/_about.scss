@@ -2,7 +2,7 @@
 	background: url(../images/hero.png) no-repeat center top;
 	background-color: $flamingo;
 	background-size: contain;
-	color: #fff;
+	color: $white;
 	padding-top: 185%;
 
 	@media (min-width: $tablet) {
@@ -56,7 +56,7 @@
 
 	.about-coderdojo-logo-outer {
 		@include size(140px);
-		background: #fff;
+		background: $white;
 		border-radius: 50%;
 		margin-left: auto;
 		margin-right: auto;
@@ -70,8 +70,8 @@
 	}
 
 	.dojocon-japan-2016-archive {
-		border-bottom: 2px dashed #fff;
-		border-top: 2px dashed #fff;
+		border-bottom: 2px dashed $white;
+		border-top: 2px dashed $white;
 		margin: 60px -20px 0;
 		padding: 0 20px 30px;
 	}
@@ -81,7 +81,7 @@
 			color: $flamingo,
 			height: 24px,
 			width: 43px,
-			border-color: #fff,
+			border-color: $white,
 			border-width: 2px,
 		);
 		@include ribon-bordered($ribon, left);
@@ -111,7 +111,7 @@
 				color: $flamingo,
 				height: 24px,
 				width: 240px,
-				border-color: #fff,
+				border-color: $white,
 				border-width: 2px,
 			);
 			@include ribon-bordered($ribon);
@@ -183,7 +183,7 @@
 		text-align: center;
 
 		dt {
-			@include ribon(#fff, 28px);
+			@include ribon($white, 28px);
 			color: $flamingo;
 			margin: 0 auto 0.5em;
 			width: 90px;
