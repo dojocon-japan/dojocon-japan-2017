@@ -12,35 +12,39 @@
 			set_query_var( 'front_page_content', $id );
 			?>
 
-			<section class="front-page-content page page-<?php echo esc_attr( $post->post_name ); ?>">
+			<?php if ( get_the_ID() === (int) get_option( 'page_for_posts' ) ) :
+				get_template_part( 'templates/front-page-content/posts' );
+			else : ?>
 
-				<h1 class="page-title"><?php the_title(); ?></h1>
+				<section class="front-page-content page page-<?php echo esc_attr( $post->post_name ); ?>">
 
-				<?php if ( get_the_excerpt() ) : ?>
-					<div class="page-excerpt">
-						<?php the_excerpt(); ?>
-					</div>
-				<?php endif; ?>
+					<h1 class="page-title"><?php the_title(); ?></h1>
 
-				<?php if ( get_the_ID() === (int) get_option( 'page_for_posts' ) ) :
-					get_template_part( 'templates/front-page-content/posts' );
-				elseif ( locate_template( 'templates/front-page-content/' . $post->post_name . '.php' ) ) :
-					get_template_part( 'templates/front-page-content/' . $post->post_name );
-				else : ?>
-
-					<?php if ( has_post_thumbnail() ) : ?>
-						<div class="post-thumbnail">
-							<?php the_post_thumbnail(); ?>
+					<?php if ( get_the_excerpt() ) : ?>
+						<div class="page-excerpt">
+							<?php the_excerpt(); ?>
 						</div>
 					<?php endif; ?>
 
-					<div class="entry-content">
-						<?php the_content(); ?>
-					</div>
+					<?php if ( locate_template( 'templates/front-page-content/' . $post->post_name . '.php' ) ) :
+						get_template_part( 'templates/front-page-content/' . $post->post_name );
+					else : ?>
 
-				<?php endif; ?>
+						<?php if ( has_post_thumbnail() ) : ?>
+							<div class="post-thumbnail">
+								<?php the_post_thumbnail(); ?>
+							</div>
+						<?php endif; ?>
 
-			</section>
+						<div class="entry-content">
+							<?php the_content(); ?>
+						</div>
+
+					<?php endif; ?>
+
+				</section>
+
+			<?php endif; ?>
 
 		<?php endif; ?>
 
