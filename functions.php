@@ -134,7 +134,7 @@ function dojoconjapan2017_front_page_template( $template ) {
 add_filter( 'frontpage_template', 'dojoconjapan2017_front_page_template' );
 
 function dojoconjapan2017_auto_embed_container( $content ) {
-	$content = preg_replace( '!<p>(\s*<iframe\s*src=["\'](https?:)?//www\.google\.com/maps/embed\?)!', '<p class="googlemaps-container">$1', $content );
+	$content = preg_replace( '#<p>(\s*<iframe[^>]+src=["\'](https?:)?//www\.google\.com/maps/embed\?)#', '<p class="googlemaps-container">$1', $content );
 	return $content;
 }
 add_filter( 'the_content', 'dojoconjapan2017_auto_embed_container' );
