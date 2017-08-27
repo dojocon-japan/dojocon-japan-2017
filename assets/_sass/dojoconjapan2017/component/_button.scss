@@ -21,7 +21,7 @@
 	color: $default-font-color;
 
 	&:hover {
-		background: shade($light-gray, 5);
+		background: shade($light-gray, 10);
 	}
 }
 
@@ -30,7 +30,7 @@
 	color: $white;
 
 	&:hover {
-		background: shade($flamingo, 5);
+		background: shade($flamingo, 10);
 	}
 }
 
@@ -39,7 +39,7 @@
 	color: $white;
 
 	&:hover {
-		background: shade($navy, 5);
+		background: shade($navy, 10);
 	}
 }
 
