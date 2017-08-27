@@ -7,7 +7,7 @@ $blog_posts = new WP_Query( array(
 
 if ( $blog_posts->have_posts() ) : ?>
 
-	<section class="front-page-content page page-<?php echo esc_attr( $post->post_name ); ?>">
+	<section class="front-page-content page page-posts">
 
 		<h1 class="page-title"><?php the_title(); ?></h1>
 
@@ -17,7 +17,7 @@ if ( $blog_posts->have_posts() ) : ?>
 			</div>
 		<?php endif; ?>
 
-		<ul>
+		<ul class="posts">
 
 			<?php while ( $blog_posts->have_posts() ) : $blog_posts->the_post(); ?>
 

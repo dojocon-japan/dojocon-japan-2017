@@ -1,0 +1,37 @@
+.page-posts {
+	background: $navy;
+	color: #fff;
+
+	.posts {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin: 0 20px;
+		padding: 30px 0;
+
+		> li {
+			width: 48%;
+
+			a {
+				color: $white;
+				text-decoration: none;
+
+				&:hover {
+
+					h2 {
+						text-decoration: none;
+					}
+				}
+			}
+
+			time {
+				font-size: 14px;
+			}
+
+			h2 {
+				font-size: 14px;
+				text-decoration: underline;
+			}
+		}
+	}
+}
