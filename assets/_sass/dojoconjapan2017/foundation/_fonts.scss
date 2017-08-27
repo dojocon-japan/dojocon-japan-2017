@@ -89,19 +89,23 @@
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+@mixin bit-fuma() {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: "8 Bit Fuma" !important;
-	speak: none;
 	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
 	text-transform: none;
-	line-height: 1;
+	font-variant: normal;
+	font-weight: normal;
+	speak: none;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	@include bit-fuma;
+	line-height: 1;
 }
 
 .icon-bit-fuma:before {

@@ -87,20 +87,11 @@
 
 							&::before,
 							&::after {
+								@include bit-fuma;
 								@include position(absolute, 11px auto auto 20px);
 								display: block;
-								font-family: "8 Bit Fuma";
 								font-size: 28px;
-								font-style: normal;
-								text-transform: none;
-								font-variant: normal;
-								font-weight: normal;
 								line-height: 28px;
-								speak: none;
-
-								/* Better Font Rendering =========== */
-								-webkit-font-smoothing: antialiased;
-								-moz-osx-font-smoothing: grayscale;
 							}
 
 							&::before {

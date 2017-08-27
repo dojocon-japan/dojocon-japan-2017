@@ -9,13 +9,27 @@
 		text-align: center;
 		text-transform: uppercase;
 
+		&::before,
 		&::after {
-			@include position(absolute, 100% 0 auto 0);
-			@include size(144px, auto);
-			content: url(../images/8bit-fumas.svg);
+			@include position(absolute, auto 0 -32px 0);
 			display: block;
-			line-height: 40px;
+			font-size: 24px;
+			height: 24px;
+			line-height: 24px;
 			margin: 0 auto;
+			overflow: hidden;
+			width: 144px;
+		}
+
+		&::before {
+			@include bit-fuma;
+			content: "\e900\e900\e900\e900\e900";
+			letter-spacing: 6px;
+			white-space: nowrap;
+		}
+
+		&::after {
+			content: url(../images/8-bit-hachimakis.svg);
 		}
 
 		+ .page-excerpt {
