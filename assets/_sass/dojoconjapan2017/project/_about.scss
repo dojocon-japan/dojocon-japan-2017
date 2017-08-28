@@ -4,6 +4,7 @@
 	background-size: contain;
 	color: $white;
 	padding-top: 185%;
+	padding-bottom: 0;
 
 	@media (min-width: $tablet) {
 		background-image: url(../images/hero-1500.png);
@@ -234,6 +235,26 @@
 				vertical-align: 2px;
 				margin-right: 18px;
 			}
+		}
+	}
+
+	.background-image {
+		margin-top: 60px;
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			background: $flamingo;
+			border-radius: 50%;
+			bottom: 75%;
+			content: "";
+			display: block;
+			height: 400vw;
+			left: 50%;
+			position: absolute;
+			overflow: hidden;
+			transform: translateX(-50%);
+			width: 400vw;
 		}
 	}
 }
