@@ -43,6 +43,15 @@
 	}
 }
 
+@mixin button-white() {
+	background: $white;
+	color: $default-font-color;
+
+	&:hover {
+		background: shade($white, 10);
+	}
+}
+
 @mixin button-block() {
 	display: block;
 }
