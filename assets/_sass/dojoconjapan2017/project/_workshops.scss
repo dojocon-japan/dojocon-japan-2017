@@ -1,4 +1,4 @@
 .page-workshops {
-	background: $flamingo;
+	@include merlon($flamingo, 12px);
 	color: $white;
 }
