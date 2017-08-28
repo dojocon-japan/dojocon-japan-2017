@@ -44,4 +44,21 @@
 			width: 25%;
 		}
 	}
+
+	.sponsorship.button {
+		display: block;
+		padding-bottom: 18px;
+		padding-left: 75px;
+		padding-top: 18px;
+		position: relative;
+		text-align: left;
+
+		&::before {
+			content: "▶︎";
+			left: 40px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
 }

@@ -52,6 +52,16 @@
 	}
 }
 
+@mixin button-bordered() {
+	background: $white;
+	border: 1px solid $default-font-color;
+	color: $default-font-color;
+
+	&:hover {
+		background: shade($white, 10);
+	}
+}
+
 @mixin button-block() {
 	display: block;
 }
@@ -117,6 +127,14 @@ button,
 
 .button-secondary {
 	@include button-secondary;
+}
+
+.button-white {
+	@include button-white;
+}
+
+.button-bordered {
+	@include button-bordered;
 }
 
 .button-close {
