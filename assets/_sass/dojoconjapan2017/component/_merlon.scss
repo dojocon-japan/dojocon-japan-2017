@@ -1,0 +1,17 @@
+@mixin merlon($background-color, $size) {
+	position: relative;
+	background: $background-color;
+
+	&::before {
+		background: linear-gradient(90deg, $background-color, $background-color 50%, transparent 50%, transparent);
+		background-size: ($size * 2) $size;
+		background-repeat: repeat-x;
+		background-position: center top;
+		content: "";
+		display: block;
+		height: $size;
+		position: absolute;
+		top: - $size;
+		width: 100%;
+	}
+}
