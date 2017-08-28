@@ -1,3 +1,52 @@
 .page-sns {
 	color: $navy;
+
+	.page-title {
+
+		+ .follow-us,
+		+ .follow-us + .page-excerpt {
+			font-family: $pixelmplus10;
+			font-size: 14px;
+			text-align: center;
+		}
+
+		+ .follow-us {
+			border: 2px solid $navy;
+			border-radius: 4px;
+			line-height: 21px;
+			margin: 45px auto 10px;
+			position: relative;
+			text-transform: uppercase;
+			width: 110px;
+
+			&::before {
+				border: 7px solid $navy;
+				border-top: 0;
+				border-left-color: transparent;
+				border-right-color: transparent;
+				bottom: 100%;
+				content: "";
+				display: block;
+				height: 0;
+				left: 50%;
+				position: absolute;
+				transform: translateX(-50%);
+				width: 0;
+			}
+		}
+	}
+
+	.fb-tw-widgets {
+
+		li {
+
+			+ li {
+				margin-top: 20px;
+
+				&.tw-widget {
+					border: 1px solid #e2e9ec;
+				}
+			}
+		}
+	}
 }
