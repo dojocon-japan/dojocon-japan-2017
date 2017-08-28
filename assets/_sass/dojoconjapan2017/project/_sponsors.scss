@@ -1,3 +1,47 @@
 .page-sponsors {
 	color: $navy;
+
+	h2 {
+		background: rgba($navy, 0.2);
+		border-radius: 40px;
+		font-size: 18px;
+		margin: auto;
+		padding: 4.5px 0;
+		text-align: center;
+		width: 260px;
+	}
+
+	[class*="-sponsors"] {
+		display: flex;
+		flex-flow: row wrap;
+		padding: 20px;
+	}
+
+	.gold-sponsors {
+
+		> li {
+			width: 100%;
+		}
+	}
+
+	.silver-sponsors {
+
+		> li {
+			width: 50%;
+		}
+	}
+
+	.bronze-sponsors {
+
+		> li {
+			width: 33.33%;
+		}
+	}
+
+	.inkind-sponsors {
+
+		> li {
+			width: 25%;
+		}
+	}
 }
