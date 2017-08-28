@@ -1,4 +1,29 @@
 .page-contact {
 	@include merlon(#fff, 12px);
 	color: $flamingo;
+
+	.open-contact-form-outer {
+		background: url(../images/8-bit-heart.svg) no-repeat center center;
+		background-size: 280px 224px;
+		height: 224px;
+		margin: auto;
+		padding-top: 75px;
+		width: 280px;
+	}
+
+	.open-contact-form.button {
+		display: block;
+		font-size: 15px;
+		font-weight: 700;
+		margin: 0 auto;
+		padding-bottom: 3px;
+		padding-top: 3px;
+		width: 190px;
+
+		&::before {
+			content: "▶︎";
+			font-size: 12px;
+			margin-right: 15px;
+		}
+	}
 }
