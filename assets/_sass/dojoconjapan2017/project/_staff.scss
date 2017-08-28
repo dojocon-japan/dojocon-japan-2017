@@ -1,3 +1,31 @@
 .page-staff {
 	color: $navy;
+
+	.staff {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin: 0 auto -30px;
+		padding-top: 10px;
+		width: 87.5%;
+
+		> li {
+			font-size: 14px;
+			margin-bottom: 30px;
+			text-align: center;
+			width: 50%;
+
+			a {
+				color: inherit;
+			}
+
+			figure {
+				border-radius: 50%;
+				height: 100px;
+				margin: 0 auto 5px;
+				overflow: hidden;
+				width: 100px;
+			}
+		}
+	}
 }
