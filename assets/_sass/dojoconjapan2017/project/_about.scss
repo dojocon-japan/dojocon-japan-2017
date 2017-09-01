@@ -75,6 +75,10 @@
 		border-top: 2px dashed $white;
 		margin: 60px -20px 0;
 		padding: 0 20px 30px;
+
+		.dojocon-japan-2016-archive-photos {
+			margin: 0 -20px;
+		}
 	}
 
 	.dojocon-japan-2016-archive-title {
@@ -156,6 +160,77 @@
 		&::before {
 			content: url(../images/icon-movie.svg);
 		}
+	}
+
+	.dojocon-japan-2016-archive-photos {
+
+		.slick-prev,
+		.slick-next {
+			background: rgba($navy, 0.8) no-repeat center center;
+			border-radius: 0;
+			bottom: 0;
+			font-size: 0;
+			overflow: hidden;
+			position: absolute;
+			padding: 0;
+			top: 0;
+			width: 20px;
+			z-index: 9999;
+
+			&::before {
+				background-repeat: no-repeat;
+				background-size: contain;
+				content: "";
+				display: block;
+				height: 17px;
+				left: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 10px;
+			}
+		}
+
+		.slick-prev {
+			left: 0;
+
+			&::before {
+				background-image: url(../images/slick-arrow-left.svg);
+			}
+		}
+
+		.slick-next {
+			right: 0;
+
+			&::before {
+				background-image: url(../images/slick-arrow-right.svg);
+
+			}
+		}
+
+		// .slick-slide {
+		// 	position: relative;
+
+		// 	&::before {
+		// 		background: rgba($navy, 0.8);
+		// 		content: "";
+		// 		display: block;
+		// 		height: 100%;
+		// 		left: 0;
+		// 		position: absolute;
+		// 		top: 0;
+		// 		// transition: all 0.3s;
+		// 		width: 100%;
+		// 	}
+
+		// 	&.slick-current {
+
+		// 		&::before {
+		// 			content: none;
+		// 			// background: rgba($navy, 0);
+		// 		}
+		// 	}
+		// }
 	}
 
 	.dojocon-japan-2016-archive-movie {

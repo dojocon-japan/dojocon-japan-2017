@@ -37,5 +37,20 @@ $(function() {
   /**
    * Slick
    */
-  $('.js-dojocon-japan-2016-archive-photos').slick();
+  $('.js-dojocon-japan-2016-archive-photos').slick({
+    centerMode: true,
+    centerPadding: '20px',
+    mobileFirst: true,
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: true,
+          slidesToShow: 2,
+          variableWidth: true,
+        },
+      },
+    ],
+  });
 });
