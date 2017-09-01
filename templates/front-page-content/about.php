@@ -28,11 +28,11 @@
 
 					<h4 class="dojocon-japan-2016-archive-photo-title">Photo</h4>
 
-					<?php foreach ( $photos as $photo ) : ?>
-
-						<img src="<?php echo esc_url( $photo['sizes']['2016-archive-photo'] ); ?>">
-
-					<?php endforeach; ?>
+					<ul class="dojocon-japan-2016-archive-photos js-dojocon-japan-2016-archive-photos">
+						<?php foreach ( $photos as $photo ) : ?>
+							<li><img src="<?php echo esc_url( $photo['sizes']['2016-archive-photo'] ); ?>"></li>
+						<?php endforeach; ?>
+					</ul>
 
 				<?php endif; ?>
 

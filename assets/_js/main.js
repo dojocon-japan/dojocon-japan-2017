@@ -3,8 +3,9 @@
 'use strict';
 
 global.$ = global.jQuery = require('jquery');
-require('./jquery.lettering.js');
-require('./circletype.js');
+require('./lib/slick.js');
+require('./lib/jquery.lettering.js');
+require('./lib/circletype.js');
 
 $(function() {
 
@@ -32,4 +33,9 @@ $(function() {
   $('.page .page-title').circleType({
     radius: 160,
   });
+
+  /**
+   * Slick
+   */
+  $('.js-dojocon-japan-2016-archive-photos').slick();
 });
