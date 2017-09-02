@@ -4,7 +4,7 @@
 	.staff {
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: space-between;
+		// justify-content: space-between;
 		margin: 0 auto -30px;
 		padding-top: 10px;
 		width: 87.5%;
@@ -21,10 +21,11 @@
 
 			figure {
 				border-radius: 50%;
-				height: 100px;
+				// height: auto;
 				margin: 0 auto 5px;
 				overflow: hidden;
 				width: 100px;
+				max-width: 80%;
 			}
 		}
 	}
