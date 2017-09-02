@@ -15,7 +15,11 @@
 	[class*="-sponsors"] {
 		display: flex;
 		flex-flow: row wrap;
-		padding: 20px;
+		padding: 15px;
+
+		> li {
+			padding: 5px;
+		}
 	}
 
 	.gold-sponsors {

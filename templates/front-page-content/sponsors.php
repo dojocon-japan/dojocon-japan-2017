@@ -24,8 +24,8 @@
 
 	<?php $silver_sponsors = get_field( 'silver-sponsors' );
 	if ( $silver_sponsors ) : ?>
-		<h2 class="silver-sponsors">Silver Sponsors</h2>
-		<ul>
+		<h2>Silver Sponsors</h2>
+		<ul class="silver-sponsors">
 			<?php foreach ( $silver_sponsors as $key => $sponsor ) : ?>
 				<li>
 					<a href="<?php echo esc_url( $sponsor['url'] ); ?>">
