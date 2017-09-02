@@ -77,56 +77,68 @@
 					}
 				}
 
-				@media (min-width: $desktop) {
 
-					> .menu-item {
+				> .menu-item {
 
-						> a {
-							position: relative;
-							padding-left: 20 + 28 + 16px;
+					> a {
 
-							&::before,
-							&::after {
-								@include bit-fuma;
-								@include position(absolute, 11px auto auto 20px);
-								display: block;
+						&::before,
+						.menu-image-title::before {
+							@include bit-fuma;
+							display: inline-block;
+							font-size: 20px;
+							line-height: 20px;
+							vertical-align: -2px;
+
+							@media (min-width: $desktop) {
 								font-size: 28px;
 								line-height: 28px;
+								vertical-align: -4px;
 							}
+						}
 
-							&::before {
+						&::before {
+							content: "\e900";
+							margin-right: -20px;
+
+							@media (min-width: $desktop) {
 								color: $navy;
-								content: "\e900";
-							}
-
-							&::after {
-								content: "\e901";
+								margin-right: -28px;
 							}
 						}
 
-						&.yellow > a::after {
-							color: $yellow;
-						}
+						.menu-image-title::before {
+							content: "\e901";
+							margin-right: 14px;
 
-						&.blue > a::after {
-							color: $blue;
+							@media (min-width: $desktop) {
+								margin-right: 16px;
+							}
 						}
+					}
 
-						&.red > a::after {
-							color: $red;
-						}
+					&.yellow > a .menu-image-title::before {
+						color: $yellow;
+					}
 
-						&.green > a::after {
-							color: $green;
-						}
+					&.blue > a .menu-image-title::before {
+						color: $blue;
+					}
 
-						&.magenta > a::after {
-							color: $magenta;
-						}
+					&.red > a .menu-image-title::before {
+						color: $red;
+					}
 
-						&:hover > a::before {
-							color: $white;
-						}
+					&.green > a .menu-image-title::before {
+						color: $green;
+					}
+
+					&.magenta > a .menu-image-title::before {
+						color: $magenta;
+					}
+
+					&:hover > a::before {
+						color: $white;
 					}
 				}
 			}
