@@ -47,7 +47,7 @@
 		setup_postdata( $post );
 		?>
 
-		<a href="<?php the_permalink(); ?>" class="button button-white">More</a>
+		<a href="<?php the_permalink(); ?>" class="button button-white main-event-more-button">More</a>
 
 		<?php $args = array(
 			'numberposts' => -1,
@@ -67,7 +67,7 @@
 								<span class="label-<?php echo esc_attr( $label['value'] ); ?>"><?php echo esc_html( $label['label'] ); ?></span>
 							<?php endforeach; ?>
 						</p>
-						<a href="<?php the_permalink(); ?>" class="button button-white">More</a>
+						<a href="<?php the_permalink(); ?>" class="button button-white workshop-more-button">More</a>
 					</li>
 				<?php endforeach; wp_reset_postdata(); ?>
 			</ul>
@@ -80,7 +80,7 @@
 
 		$timetable = get_page_by_path( 'timetable' );
 		if ( $timetable ) : ?>
-			<a href="<?php echo esc_url( get_the_permalink( $timetable ) ); ?>" class="button button-white timetable-button"></a>
+			<a href="<?php echo esc_url( get_the_permalink( $timetable ) ); ?>" class="button button-white timetable-button">Timetable</a>
 		<?php endif; ?>
 
 	</div>
