@@ -27,8 +27,7 @@
 
 			<ul class="main-events">
 				<?php foreach ( $main_events as $post ) : setup_postdata( $post );
-					$labels = get_field( 'labels' );
-					?>
+					$labels = get_field( 'labels' ); ?>
 					<li>
 						<p class="event-time">[<?php the_field( 'start-time' ); ?>−<?php the_field( 'ending-time' ); ?>]</p>
 						<h2 class="event-title"><?php the_title(); ?></h2>
@@ -49,6 +48,40 @@
 		?>
 
 		<a href="<?php the_permalink(); ?>" class="button button-white">More</a>
+
+		<?php $args = array(
+			'numberposts' => -1,
+			'post_type'   => 'workshop',
+		);
+		$workshops = get_posts( $args );
+
+		if ( $workshops ) : ?>
+
+			<ul class="workshops">
+				<?php foreach ( $workshops as $post ) : setup_postdata( $post );
+					$labels = get_field( 'labels' ); ?>
+					<li>
+						<h2 class="workshop-title"><?php the_title(); ?></h2>
+						<p class="labels">
+							<?php foreach ( $labels as $label ) : ?>
+								<span class="label-<?php echo esc_attr( $label['value'] ); ?>"><?php echo esc_html( $label['label'] ); ?></span>
+							<?php endforeach; ?>
+						</p>
+						<a href="<?php the_permalink(); ?>" class="button button-white">More</a>
+					</li>
+				<?php endforeach; wp_reset_postdata(); ?>
+			</ul>
+
+		<?php endif; ?>
+
+		<?php
+		$post = $_post;
+		setup_postdata( $post );
+
+		$timetable = get_page_by_path( 'timetable' );
+		if ( $timetable ) : ?>
+			<a href="<?php echo esc_url( get_the_permalink( $timetable ) ); ?>" class="button button-white timetable-button"></a>
+		<?php endif; ?>
 
 	</div>
 
