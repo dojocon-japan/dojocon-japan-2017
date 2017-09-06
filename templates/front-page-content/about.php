@@ -1,5 +1,22 @@
 <section class="front-page-content page page-<?php echo esc_attr( $post->post_name ); ?>">
 
+	<div class="hero">
+		<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+		<?php if ( get_theme_mod( 'dojocon_date' ) && get_theme_mod( 'dojocon_day' ) ) : ?>
+			<p class="dojocon-day">
+				<span class="date"><?php echo esc_html( get_theme_mod( 'dojocon_date' ) ); ?></span>
+				<span class="day"><?php echo esc_html( get_theme_mod( 'dojocon_date' ) ); ?></span>
+			</p>
+		<?php endif; ?>
+		<?php if ( get_theme_mod( 'dojocon_venue' ) ) : ?>
+			<p class="dojocon-venue">
+				<span class="preposition">in</span>
+				<span class="venue"><?php echo esc_html( get_theme_mod( 'dojocon_venue' ) ); ?></span>
+			</p>
+		<?php endif; ?>
+	</div>
+
 	<h1 class="page-title"><?php the_title(); ?></h1>
 
 	<?php if ( get_the_excerpt() ) : ?>
