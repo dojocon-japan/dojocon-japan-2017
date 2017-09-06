@@ -31,11 +31,13 @@
 					<li>
 						<p class="event-time">[<?php the_field( 'start-time' ); ?>−<?php the_field( 'ending-time' ); ?>]</p>
 						<h2 class="event-title"><?php the_title(); ?></h2>
-						<p class="labels">
-							<?php foreach ( $labels as $label ) : ?>
-								<span class="label-<?php echo esc_attr( $label['value'] ); ?>"><?php echo esc_html( $label['label'] ); ?></span>
-							<?php endforeach; ?>
-						</p>
+						<?php if ( $labels ) : ?>
+							<p class="labels">
+								<?php foreach ( $labels as $label ) : ?>
+									<span class="label-<?php echo esc_attr( $label['value'] ); ?>"><?php echo esc_html( $label['label'] ); ?></span>
+								<?php endforeach; ?>
+							</p>
+						<?php endif; ?>
 					</li>
 				<?php endforeach; wp_reset_postdata(); ?>
 			</ul>
@@ -62,11 +64,13 @@
 					$labels = get_field( 'labels' ); ?>
 					<li>
 						<h2 class="workshop-title"><?php the_title(); ?></h2>
-						<p class="labels">
-							<?php foreach ( $labels as $label ) : ?>
-								<span class="label-<?php echo esc_attr( $label['value'] ); ?>"><?php echo esc_html( $label['label'] ); ?></span>
-							<?php endforeach; ?>
-						</p>
+						<?php if ( $labels ) : ?>
+							<p class="labels">
+								<?php foreach ( $labels as $label ) : ?>
+									<span class="label-<?php echo esc_attr( $label['value'] ); ?>"><?php echo esc_html( $label['label'] ); ?></span>
+								<?php endforeach; ?>
+							</p>
+						<?php endif; ?>
 						<a href="<?php the_permalink(); ?>" class="button button-white workshop-more-button">More</a>
 					</li>
 				<?php endforeach; wp_reset_postdata(); ?>
