@@ -23,7 +23,11 @@
 			&.access-icon-train {
 
 				&::before {
+					background-repeat: no-repeat;
+					background-size: contain;
+					content: "";
 					display: block;
+					height: 54px;
 					line-height: 1;
 					margin: 0 auto 10px;
 					width: 54px;
@@ -33,7 +37,7 @@
 			&.access-icon-venue {
 
 				&::before {
-					content: url(../images/access-icon-venue.svg);
+					background-image: url(../images/access-icon-venue.svg);
 				}
 
 			}
@@ -41,7 +45,7 @@
 			&.access-icon-pin {
 
 				&::before {
-					content: url(../images/access-icon-pin.svg);
+					background-image: url(../images/access-icon-pin.svg);
 				}
 
 			}
@@ -49,7 +53,7 @@
 			&.access-icon-train {
 
 				&::before {
-					content: url(../images/access-icon-train.svg);
+					background-image: url(../images/access-icon-train.svg);
 				}
 
 			}

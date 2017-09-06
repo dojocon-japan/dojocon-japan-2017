@@ -1,5 +1,5 @@
 .page-contact {
-	@include merlon(#fff, 12px);
+	@include merlon($white, 12px);
 	color: $flamingo;
 
 	.open-contact-form-outer {
