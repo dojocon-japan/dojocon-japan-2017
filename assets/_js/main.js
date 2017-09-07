@@ -6,6 +6,8 @@ global.$ = global.jQuery = require('jquery');
 require('./lib/slick.js');
 require('./lib/jquery.lettering.js');
 require('./lib/circletype.js');
+require('jquery.easing');
+require('jquery.smoothscroll.js');
 
 $(function() {
 
@@ -14,6 +16,11 @@ $(function() {
    */
   $('.js-sliding-panel-toggle').on('click touchstart', function(e) {
     $('.js-sliding-panel-toggle, .sliding-panel-content').toggleClass('is-active');
+    e.preventDefault();
+  });
+
+  $('.sliding-panel-content a').on('click touchstart', function(e) {
+    $('.js-sliding-panel-toggle, .sliding-panel-content').removeClass('is-active');
     e.preventDefault();
   });
 
@@ -56,5 +63,12 @@ $(function() {
         },
       },
     ],
+  });
+
+  /**
+   * Smooth Scroll
+   */
+  $('a[href*="#"]').smoothscroll({
+    easing: 'easeOutExpo',
   });
 });
