@@ -22,7 +22,7 @@
 		}
 
 		&::before {
-			@include bit-fuma;
+			@include dojocon8bit;
 			content: "\e900\e900\e900\e900\e900";
 			letter-spacing: 6px;
 			white-space: nowrap;

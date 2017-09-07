@@ -79,19 +79,19 @@
 }
 
 @font-face {
-	font-family: "8 Bit Fuma";
-	src: url("../fonts/8-bit-fuma.eot?7va55");
-	src: url("../fonts/8-bit-fuma.eot?7va55#iefix") format("embedded-opentype"),
-	     url("../fonts/8-bit-fuma.ttf?7va55") format("truetype"),
-	     url("../fonts/8-bit-fuma.woff?7va55") format("woff"),
-	     url("../fonts/8-bit-fuma.svg?7va55#8bit-fuma") format("svg");
+	font-family: "DojoCon 8 Bit";
+	src: url("../fonts/dojocon8bit.eot?6qrjwi");
+	src: url("../fonts/dojocon8bit.eot?6qrjwi#iefix") format("embedded-opentype"),
+	     url("../fonts/dojocon8bit.ttf?6qrjwi") format("truetype"),
+	     url("../fonts/dojocon8bit.woff?6qrjwi") format("woff"),
+	     url("../fonts/dojocon8bit.svg?6qrjwi#dojocon8bit") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 
-@mixin bit-fuma() {
+@mixin dojocon8bit() {
 	/* use !important to prevent issues with browser extensions that change fonts */
-	font-family: "8 Bit Fuma" !important;
+	font-family: "DojoCon 8 Bit" !important;
 	font-style: normal;
 	text-transform: none;
 	font-variant: normal;
@@ -103,14 +103,17 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-	@include bit-fuma;
+[class^="icon-dojocon8bit-"], [class*=" icon-dojocon8bit-"] {
+	@include dojocon8bit;
 	line-height: 1;
 }
 
-.icon-bit-fuma:before {
+.icon-dojocon8bit-fuma:before {
 	content: "\e900";
 }
-.icon-bit-hachimaki:before {
+.icon-dojocon8bit-hachimaki:before {
 	content: "\e901";
+}
+.icon-dojocon8bit-arrow-right:before {
+	content: "\25b6";
 }

@@ -7,6 +7,7 @@
 <font-face units-per-em="512" ascent="480" descent="-32" />
 <missing-glyph horiz-adv-x="512" />
 <glyph unicode="&#x20;" horiz-adv-x="256" d="" />
+<glyph unicode="&#x25b6;" glyph-name="bit-arrow-right" d="M128-36.571v512h73.143v-73.143h73.143v-73.143h73.143v-73.143h73.143v-73.143h-73.143v-73.143h-73.143v-73.143h-73.143v-73.143h-73.143z" />
 <glyph unicode="&#xe900;" glyph-name="bit-fuma" d="M475.428 365.714h36.572v36.572h-402.286v-36.572h-36.572v-36.571h-36.572v-36.572h-36.572v-182.857h36.572v-36.572h36.572v-36.572h365.714v36.572h36.572v36.572h36.572v182.857h-36.572v73.143zM402.286 109.714v-36.572h-292.572v36.572h-36.572v109.714h36.572v36.572h292.572v-36.572h36.572v-109.714h-36.572z" />
 <glyph unicode="&#xe901;" glyph-name="bit-hachimaki" d="M146.286 292.572h219.429v-36.571h-219.429v36.572z" />
 </font></defs></svg>
