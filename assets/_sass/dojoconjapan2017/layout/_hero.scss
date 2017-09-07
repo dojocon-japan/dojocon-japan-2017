@@ -32,6 +32,72 @@
 		width: 400vw;
 	}
 
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.hero-text {
+		position: relative;
+		z-index: 10;
+	}
+
+	.site-title {
+		font-family: $roboto-condensed;
+		font-size: 37.8px;
+		font-weight: bold;
+		letter-spacing: -0.125em;
+		text-align: center;
+	}
+
+	.site-description {
+		font-family: $pixelmplus10;
+		font-size: 17.4px;
+		letter-spacing: -0.02em;
+		margin: -20px auto 0;
+		position: relative;
+		text-align: center;
+		width: 120px;
+		z-index: 5;
+
+		&::before {
+			content: "▶";
+			font-family: $pixelmplus10;
+			font-size: 16px;
+			margin-right: 20px;
+		}
+	}
+
+	.dojocon-day {
+		color: $flamingo;
+		font-family: $pixelmplus10;
+		letter-spacing: -0.03em;
+		text-align: center;
+
+		.date {
+			font-size: 34px;
+		}
+
+		.day {
+			font-size: 19px;
+		}
+	}
+
+	.dojocon-venue {
+		font-family: $pixelmplus10;
+		font-size: 14px;
+		margin: auto;
+		line-height: 22px;
+		padding: 4px 0;
+		text-align: center;
+		width: 16.5em;
+
+		.preposition {
+			display: block;
+			font-size: 14px;
+		}
+	}
+
 	.hero-image {
 		left: 0;
 		position: absolute;
@@ -87,60 +153,6 @@
 			transform: translateX(-50%);
 			width: 86px;
 
-		}
-	}
-
-	.site-title {
-		font-family: $roboto-condensed;
-		font-size: 37.8px;
-		font-weight: bold;
-		letter-spacing: -0.125em;
-		text-align: center;
-	}
-
-	.site-description {
-		font-family: $pixelmplus10;
-		font-size: 17.4px;
-		letter-spacing: -0.02em;
-		margin: -20px auto 0;
-		text-align: center;
-		width: 120px;
-
-		&::before {
-			content: "▶";
-			font-family: $pixelmplus10;
-			font-size: 16px;
-			margin-right: 20px;
-		}
-	}
-
-	.dojocon-day {
-		color: $flamingo;
-		font-family: $pixelmplus10;
-		letter-spacing: -0.03em;
-		text-align: center;
-
-		.date {
-			font-size: 34px;
-		}
-
-		.day {
-			font-size: 19px;
-		}
-	}
-
-	.dojocon-venue {
-		font-family: $pixelmplus10;
-		font-size: 14px;
-		margin: auto;
-		line-height: 22px;
-		padding: 4px 0;
-		text-align: center;
-		width: 16.5em;
-
-		.preposition {
-			display: block;
-			font-size: 14px;
 		}
 	}
 }
