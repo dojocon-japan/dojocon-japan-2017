@@ -30,6 +30,10 @@ $(function() {
   /**
    * Warp page titles
    */
+  $('.hero .site-title').circleType({
+    radius: 180,
+  });
+
   $('.page .page-title').circleType({
     radius: 160,
   });

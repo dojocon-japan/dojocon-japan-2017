@@ -8,7 +8,9 @@ function dojoconjapan2017_setup() {
 	load_theme_textdomain( 'dojocon-japan-2017', get_template_directory() . '/languages' );
 
 	add_theme_support( 'title-tag' );
+
 	add_theme_support( 'post-thumbnails' );
+
 	add_theme_support( 'html5', array(
 		'search-form',
 		'comment-form',
@@ -16,6 +18,7 @@ function dojoconjapan2017_setup() {
 		'gallery',
 		'caption',
 	) );
+
 	add_theme_support( 'post-formats', array(
 		'aside',
 		'image',
@@ -23,6 +26,13 @@ function dojoconjapan2017_setup() {
 		'quote',
 		'link',
 	) );
+
+	add_theme_support( 'custom-logo' );
+
+	add_theme_support( 'custom-header', array(
+		'default-image' => get_theme_file_uri( 'assets/images/big-top.svg' ),
+	) );
+
 	add_theme_support( 'custom-background', apply_filters( 'dojoconjapan2017_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
@@ -168,3 +178,25 @@ function dojoconjapan2017_auto_embed_container( $content ) {
 	return $content;
 }
 add_filter( 'the_content', 'dojoconjapan2017_auto_embed_container' );
+
+function dojoconjapan2017_custom_logo() {
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+
+	if ( $custom_logo_id ) {
+		$custom_logo_attr = array(
+			'class'    => 'custom-logo',
+			'itemprop' => 'logo',
+		);
+
+		/*
+		 * If the logo alt attribute is empty, get the site title and explicitly
+		 * pass it to the attributes used by wp_get_attachment_image().
+		 */
+		$image_alt = get_post_meta( $custom_logo_id, '_wp_attachment_image_alt', true );
+		if ( empty( $image_alt ) ) {
+			$custom_logo_attr['alt'] = get_bloginfo( 'name', 'display' );
+		}
+
+		echo wp_get_attachment_image( $custom_logo_id, 'full', false, $custom_logo_attr );
+	}
+}
