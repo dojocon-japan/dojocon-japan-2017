@@ -1,6 +1,8 @@
 <section class="front-page-content page page-<?php echo esc_attr( $post->post_name ); ?>">
 
-	<div class="hero">
+	<div class="hero" <?php if ( get_header_image() ) : ?>
+		style="background-image: <?php header_image(); ?>;"
+	<?php endif; ?>>
 		<div class="hero-text">
 			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
@@ -17,15 +19,18 @@
 				</p>
 			<?php endif; ?>
 		</div>
-		<div class="hero-image">
-			<img class="neon" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-neon.svg' ) ); ?>" alt="DojoCon Japan">
-			<div class="shadow">
-				<img class="bigtop-shadow" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-bigtop-shadow.svg' ) ); ?>">
-				<img class="people-shadow" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-people-shadow.svg' ) ); ?>">
+		<?php if ( ! get_header_image() ) : ?>
+			<div class="hero-image">
+				<img class="neon" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-neon.svg' ) ); ?>" alt="DojoCon Japan">
+				<div class="shadow">
+					<img class="bigtop-shadow" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-bigtop-shadow.svg' ) ); ?>">
+					<img class="people-shadow" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-people-shadow.svg' ) ); ?>">
+				</div>
+				<img class="bigtop" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-bigtop.svg' ) ); ?>">
+				<img class="people" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-people.svg' ) ); ?>">
+				<img class="andyou" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-andyou.svg' ) ); ?>">
 			</div>
-			<img class="bigtop" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-bigtop.svg' ) ); ?>">
-			<img class="people" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-people.svg' ) ); ?>">
-		</div>
+		<?php endif; ?>
 	</div>
 
 	<h1 class="page-title"><?php the_title(); ?></h1>
