@@ -1,0 +1,146 @@
+.hero {
+	background: url(../images/hero-nightsky.svg) no-repeat;
+	background-size: cover;
+	background-position: 60% 0;
+	color: $white;
+	min-height: calc(328.2px + 75.5625vw);
+	overflow: hidden;
+	padding-top: 15px;
+	position: relative;
+
+	&::before {
+		background: url(../images/hero-stars.svg) no-repeat;
+		background-size: cover;
+		content: "";
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	&::after {
+		background: $flamingo;
+		border-radius: 50%;
+		content: "";
+		height: 400vw;
+		left: 50%;
+		position: absolute;
+		top: calc(328.2px + 41vw);
+		transform: translateX(-50%);
+		width: 400vw;
+	}
+
+	.hero-image {
+		left: 0;
+		position: absolute;
+		top: calc(328.2px + 24vw);
+		width: 100vw;
+		z-index: 5;
+
+		img {
+			left: 0;
+			max-width: none;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.neon {
+			width: 44vw;
+			left: 7vw;
+			top: -24vw;
+		}
+
+		.bigtop,
+		.bigtop-shadow {
+			left: -6vw;
+			width: 130vw;
+		}
+
+		.people,
+		.people-shadow {
+			left: 3vw;
+			top: 3vw;
+			width: 108vw;
+		}
+
+		.andyou {
+			width: 150vw;
+			left: -40vw;
+			top: -4vw;
+		}
+
+		.shadow {
+			opacity: 0.4;
+		}
+
+		&::after {
+			content: "";
+			background: url(../images/coderdojo-logo.svg) no-repeat center center;
+			background-size: contain;
+			height: 25px;
+			left: 50%;
+			position: absolute;
+			top: 40vw;
+			transform: translateX(-50%);
+			width: 86px;
+
+		}
+	}
+
+	.site-title {
+		font-family: $roboto-condensed;
+		font-size: 37.8px;
+		font-weight: bold;
+		letter-spacing: -0.125em;
+		text-align: center;
+	}
+
+	.site-description {
+		font-family: $pixelmplus10;
+		font-size: 17.4px;
+		letter-spacing: -0.02em;
+		margin: -20px auto 0;
+		text-align: center;
+		width: 120px;
+
+		&::before {
+			content: "▶";
+			font-family: $pixelmplus10;
+			font-size: 16px;
+			margin-right: 20px;
+		}
+	}
+
+	.dojocon-day {
+		color: $flamingo;
+		font-family: $pixelmplus10;
+		letter-spacing: -0.03em;
+		text-align: center;
+
+		.date {
+			font-size: 34px;
+		}
+
+		.day {
+			font-size: 19px;
+		}
+	}
+
+	.dojocon-venue {
+		font-family: $pixelmplus10;
+		font-size: 14px;
+		margin: auto;
+		line-height: 22px;
+		padding: 4px 0;
+		text-align: center;
+		width: 16.5em;
+
+		.preposition {
+			display: block;
+			font-size: 14px;
+		}
+	}
+}

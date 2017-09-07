@@ -18,7 +18,7 @@
 				get_template_part( 'templates/front-page-content/' . $post->post_name );
 			else : ?>
 
-				<section class="front-page-content page page-<?php echo esc_attr( $post->post_name ); ?>">
+				<section id="front-page-<?php echo esc_attr( $post->post_name ); ?>" class="front-page-content page page-<?php echo esc_attr( $post->post_name ); ?>">
 
 					<h1 class="page-title"><?php the_title(); ?></h1>
 
