@@ -1,6 +1,10 @@
 .page-contact {
-	@include merlon($white, 12px);
+	@include merlon($white, 3.75vw);
 	color: $flamingo;
+
+	@media (min-width: 36 / 12 * 320px) {
+		@include merlon($white, 36px);
+	}
 
 	.open-contact-form-outer {
 		background: url(../images/8-bit-heart.svg) no-repeat center center;

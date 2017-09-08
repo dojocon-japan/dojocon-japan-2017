@@ -1,7 +1,11 @@
 .page-workshops {
-	@include merlon($flamingo, 12px);
+	@include merlon($flamingo, 3.75vw);
 	color: $white;
 	padding-bottom: 80px;
+
+	@media (min-width: 36 / 12 * 320px) {
+		@include merlon($flamingo, 36px);
+	}
 
 	.entry-content {
 		font-size: 14px;
