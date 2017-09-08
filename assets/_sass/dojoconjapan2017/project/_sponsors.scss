@@ -79,18 +79,40 @@
 
 	.sponsorship.button {
 		display: block;
+		margin: auto;
+		max-width: 280px;
 		padding-bottom: 18px;
-		padding-left: 75px;
+		padding-left: 70px;
 		padding-top: 18px;
 		position: relative;
 		text-align: left;
 
+		@media (min-width: $tablet-s) {
+			max-width: 500px;
+			padding: 4px 1em;
+			text-align: center;
+
+			br {
+				display: none;
+			}
+		}
+
 		&::before {
+			font-family: $noto;
+			font-weight: 500;
 			content: "▶︎";
-			left: 40px;
+			left: 35px;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
+
+			@media (min-width: $tablet-s) {
+				left: auto;
+				margin-right: 1em;
+				position: relative;
+				top: auto;
+				transform: none;
+			}
 		}
 	}
 }
