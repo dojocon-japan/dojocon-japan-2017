@@ -39,6 +39,8 @@
 	.fb-tw-widgets {
 
 		li {
+			max-width: 500px;
+			margin: auto;
 
 			+ li {
 				margin-top: 20px;
@@ -46,6 +48,10 @@
 				&.tw-widget {
 					border: 1px solid #e2e9ec;
 				}
+			}
+
+			iframe {
+				vertical-align: top;
 			}
 		}
 	}
