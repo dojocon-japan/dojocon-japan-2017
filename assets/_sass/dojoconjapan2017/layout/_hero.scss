@@ -8,6 +8,10 @@
 	padding-top: 15px;
 	position: relative;
 
+	@media (min-width: $tablet) {
+		min-height: calc(430px + 75.5625vw);
+	}
+
 	opacity: 0.5;
 
 	&::before {
@@ -32,6 +36,10 @@
 		top: calc(328.2px + 41vw);
 		transform: translateX(-50%);
 		width: 400vw;
+
+		@media (min-width: $tablet) {
+			top: calc(430px + 41vw);
+		}
 	}
 
 	a {
@@ -144,6 +152,10 @@
 		top: calc(328.2px + 24vw);
 		width: 100vw;
 		z-index: 5;
+
+		@media (min-width: $tablet) {
+			top: calc(430px + 24vw);
+		}
 
 		img {
 			left: 0;
