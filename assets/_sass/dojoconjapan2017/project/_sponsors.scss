@@ -15,9 +15,12 @@
 	[class*="-sponsors"] {
 		display: flex;
 		flex-flow: row wrap;
+		margin: 20px auto;
+		max-width: 970px;
 		padding: 15px;
 
 		> li {
+			max-width: 470px;
 			padding: 5px;
 		}
 	}
@@ -26,27 +29,51 @@
 
 		> li {
 			width: 100%;
+
+			@media (min-width: $desktop-s) {
+				width: 1 / 2 * 100%;
+			}
 		}
 	}
 
 	.silver-sponsors {
 
 		> li {
-			width: 50%;
+			width: 1 / 2 * 100%;
+
+			@media (min-width: $desktop-s) {
+				width: 1 / 3 * 100%;
+			}
 		}
 	}
 
 	.bronze-sponsors {
 
 		> li {
-			width: 33.33%;
+			width: 1 / 3 * 100%;
+
+			@media (min-width: $tablet) {
+				width: 1 / 4 * 100%;
+			}
+
+			@media (min-width: $desktop-s) {
+				width: 1 / 5 * 100%;
+			}
 		}
 	}
 
 	.inkind-sponsors {
 
 		> li {
-			width: 25%;
+			width: 1 / 4 * 100%;
+
+			@media (min-width: $tablet) {
+				width: 1 / 5 * 100%;
+			}
+
+			@media (min-width: $desktop-s) {
+				width: 1 / 6 * 100%;
+			}
 		}
 	}
 
