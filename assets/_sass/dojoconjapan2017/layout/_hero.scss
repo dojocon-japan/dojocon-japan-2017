@@ -12,8 +12,6 @@
 		min-height: calc(430px + 75.5625vw);
 	}
 
-	opacity: 0.5;
-
 	&::before {
 		background: url(../images/hero-stars.svg) no-repeat;
 		background-size: cover;
@@ -61,7 +59,7 @@
 
 		@media (min-width: $tablet) {
 			font-size: 77px;
-			letter-spacing: -0.12em;
+			letter-spacing: -0.1em;
 			margin-top: 40px;
 		}
 	}
@@ -78,7 +76,7 @@
 
 		@media (min-width: $tablet) {
 			font-size: 24px;
-			margin-top: -58px;
+			margin-top: -70px;
 			width: 150px;
 		}
 
@@ -199,11 +197,9 @@
 			background: url(../images/coderdojo-logo.svg) no-repeat center center;
 			background-size: contain;
 			height: 7.8125vw;
-			left: 50%;
 			max-height: 40px;
 			position: absolute;
 			top: 40vw;
-			transform: translateX(-50%);
 			width: 100%;
 		}
 	}
