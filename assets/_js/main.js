@@ -37,8 +37,27 @@ $(function() {
   /**
    * Warp page titles
    */
-  $('.hero .site-title').circleType({
-    radius: 180,
+  function warpSiteTitle() {
+    if ($(window).width() >= 768) {
+      $('.hero .site-title').circleType({
+        radius: 400,
+      });
+    } else {
+      $('.hero .site-title').circleType({
+        radius: 180,
+      });
+    }
+  }
+
+  warpSiteTitle();
+  var timer = false;
+  $(window).on('resize', function() {
+    if (timer !== false) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(function() {
+      warpSiteTitle();
+    }, 200);
   });
 
   $('.page .page-title').circleType({

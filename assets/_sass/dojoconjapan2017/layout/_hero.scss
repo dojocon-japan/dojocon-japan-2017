@@ -8,6 +8,8 @@
 	padding-top: 15px;
 	position: relative;
 
+	opacity: 0.5;
+
 	&::before {
 		background: url(../images/hero-stars.svg) no-repeat;
 		background-size: cover;
@@ -48,6 +50,12 @@
 		font-weight: bold;
 		letter-spacing: -0.125em;
 		text-align: center;
+
+		@media (min-width: $tablet) {
+			font-size: 77px;
+			letter-spacing: -0.12em;
+			margin-top: 40px;
+		}
 	}
 
 	.site-description {
@@ -60,11 +68,22 @@
 		width: 120px;
 		z-index: 5;
 
+		@media (min-width: $tablet) {
+			font-size: 24px;
+			margin-top: -58px;
+			width: 150px;
+		}
+
 		&::before {
 			@include dojocon8bit;
 			content: "▶";
 			font-size: 16px;
 			margin-right: 20px;
+
+			@media (min-width: $tablet) {
+				font-size: 23px;
+				margin-right: 30px;
+			}
 		}
 	}
 
@@ -74,12 +93,24 @@
 		letter-spacing: -0.03em;
 		text-align: center;
 
+		@media (min-width: $tablet) {
+			line-height: 1.5;
+		}
+
 		.date {
 			font-size: 34px;
+
+			@media (min-width: $tablet) {
+				font-size: 44px;
+			}
 		}
 
 		.day {
 			font-size: 19px;
+
+			@media (min-width: $tablet) {
+				font-size: 25px;
+			}
 		}
 	}
 
@@ -92,9 +123,18 @@
 		text-align: center;
 		width: 16.5em;
 
+		@media (min-width: $tablet) {
+			font-size: 16px;
+			letter-spacing: -0.05em;
+			width: auto;
+		}
+
 		.preposition {
 			display: block;
-			font-size: 14px;
+
+			@media (min-width: $tablet) {
+				display: inline;
+			}
 		}
 	}
 
