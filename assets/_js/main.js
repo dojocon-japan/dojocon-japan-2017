@@ -37,31 +37,33 @@ $(function() {
   /**
    * Warp page titles
    */
-  function warpSiteTitle() {
+  function warpTitles() {
     if ($(window).width() >= 768) {
       $('.hero .site-title').circleType({
         radius: 400,
+      });
+      $('.page .page-title').circleType({
+        radius: 240,
       });
     } else {
       $('.hero .site-title').circleType({
         radius: 180,
       });
+      $('.page .page-title').circleType({
+        radius: 160,
+      });
     }
   }
 
-  warpSiteTitle();
+  warpTitles();
   var timer = false;
   $(window).on('resize', function() {
     if (timer !== false) {
       clearTimeout(timer);
     }
     timer = setTimeout(function() {
-      warpSiteTitle();
+      warpTitles();
     }, 200);
-  });
-
-  $('.page .page-title').circleType({
-    radius: 160,
   });
 
   /**

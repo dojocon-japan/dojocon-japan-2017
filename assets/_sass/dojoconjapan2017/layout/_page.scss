@@ -9,6 +9,11 @@
 		text-align: center;
 		text-transform: uppercase;
 
+		@media (min-width: $tablet) {
+			font-size: 48px;
+			letter-spacing: -0.1em;
+		}
+
 		&::before,
 		&::after {
 			@include position(absolute, auto 0 -32px 0);
