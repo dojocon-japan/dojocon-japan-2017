@@ -18,24 +18,23 @@
 		&::after {
 			@include position(absolute, auto 0 -32px 0);
 			display: block;
-			font-size: 24px;
-			height: 24px;
-			line-height: 24px;
+			font-size: 28px;
+			height: 28px;
+			line-height: 28px;
 			margin: 0 auto;
 			overflow: hidden;
-			width: 144px;
+			width: 4 * 7 + 5 * 28px;
+			transform: scale(0.857142857); // 24px
 
 			@media (min-width: $tablet) {
-				font-size: 32px;
-				height: 32px;
-				line-height: 32px;
+				transform: scale(1.178571429); // 33px
 			}
 		}
 
 		&::before {
 			@include dojocon8bit;
 			content: "\e900\e900\e900\e900\e900";
-			letter-spacing: 6px;
+			letter-spacing: 7px;
 			white-space: nowrap;
 		}
 
@@ -50,6 +49,10 @@
 			font-size: 14px;
 			margin: 45px 0 30px;
 			text-align: center;
+
+			@media (min-width: $tablet) {
+				font-size: 16px;
+			}
 		}
 	}
 }
