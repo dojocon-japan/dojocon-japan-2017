@@ -9,6 +9,11 @@
 		text-align: center;
 		text-transform: uppercase;
 
+		@media (min-width: $tablet) {
+			font-size: 48px;
+			letter-spacing: -0.1em;
+		}
+
 		&::before,
 		&::after {
 			@include position(absolute, auto 0 -32px 0);
@@ -19,6 +24,12 @@
 			margin: 0 auto;
 			overflow: hidden;
 			width: 144px;
+
+			@media (min-width: $tablet) {
+				font-size: 32px;
+				height: 32px;
+				line-height: 32px;
+			}
 		}
 
 		&::before {
