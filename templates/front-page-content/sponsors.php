@@ -12,7 +12,7 @@
 	if ( $gold_sponsors ) : ?>
 		<h2>Gold Sponsors</h2>
 		<ul class="gold-sponsors">
-			<?php foreach ( $gold_sponsors as $key => $sponsor ) : ?>
+			<?php foreach ( $gold_sponsors as $sponsor ) : ?>
 				<li>
 					<a href="<?php echo esc_url( $sponsor['url'] ); ?>">
 						<img src="<?php echo esc_attr( $sponsor['logo']['sizes']['sponsor-logo'] ); ?>" alt="<?php esc_attr( $sponsor['logo']['alt'] ); ?>">
@@ -26,7 +26,7 @@
 	if ( $silver_sponsors ) : ?>
 		<h2>Silver Sponsors</h2>
 		<ul class="silver-sponsors">
-			<?php foreach ( $silver_sponsors as $key => $sponsor ) : ?>
+			<?php foreach ( $silver_sponsors as $sponsor ) : ?>
 				<li>
 					<a href="<?php echo esc_url( $sponsor['url'] ); ?>">
 						<img src="<?php echo esc_attr( $sponsor['logo']['sizes']['sponsor-logo'] ); ?>" alt="<?php esc_attr( $sponsor['logo']['alt'] ); ?>">
@@ -40,7 +40,7 @@
 	if ( $bronze_sponsors ) : ?>
 		<h2>Bronze Sponsors</h2>
 		<ul class="bronze-sponsors">
-			<?php foreach ( $bronze_sponsors as $key => $sponsor ) : ?>
+			<?php foreach ( $bronze_sponsors as $sponsor ) : ?>
 				<li>
 					<a href="<?php echo esc_url( $sponsor['url'] ); ?>">
 						<img src="<?php echo esc_attr( $sponsor['logo']['sizes']['sponsor-logo'] ); ?>" alt="<?php esc_attr( $sponsor['logo']['alt'] ); ?>">
@@ -54,12 +54,22 @@
 	if ( $inkind_sponsors ) : ?>
 		<h2>In-kind Sponsors</h2>
 		<ul class="inkind-sponsors">
-			<?php foreach ( $inkind_sponsors as $key => $sponsor ) : ?>
+			<?php foreach ( $inkind_sponsors as $sponsor ) : ?>
 				<li>
 					<a href="<?php echo esc_url( $sponsor['url'] ); ?>">
 						<img src="<?php echo esc_attr( $sponsor['logo']['sizes']['sponsor-logo'] ); ?>" alt="<?php esc_attr( $sponsor['logo']['alt'] ); ?>">
 					</a>
 				</li>
+			<?php endforeach; ?>
+		</ul>
+	<?php endif; ?>
+
+	<?php $individual_sponsors = get_field( 'individual-sponsors' );
+	if ( $individual_sponsors ) : ?>
+		<h2>Individual Sponsors</h2>
+		<ul class="individual-sponsors">
+			<?php foreach ( $individual_sponsors as $sponsor ) : ?>
+				<li><?php echo esc_html( $sponsor['name'] ); ?></li>
 			<?php endforeach; ?>
 		</ul>
 	<?php endif; ?>

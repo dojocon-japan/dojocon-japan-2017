@@ -77,6 +77,28 @@
 		}
 	}
 
+	.individual-sponsors {
+		display: block;
+		padding-right: 10px;
+
+		> li {
+			display: inline;
+			padding: 0;
+
+			&::after {
+				content: ",";
+				margin-right: 10px;
+			}
+
+			&:last-child {
+
+				&::after {
+					content: none;
+				}
+			}
+		}
+	}
+
 	.sponsorship.button {
 		display: block;
 		margin: auto;
