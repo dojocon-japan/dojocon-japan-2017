@@ -84,9 +84,8 @@ $(function() {
       {
         breakpoint: 768,
         settings: {
-          centerMode: true,
           slidesToShow: 2,
-          variableWidth: true,
+          slidesToScroll: 2,
         },
       },
     ],
