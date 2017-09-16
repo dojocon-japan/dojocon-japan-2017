@@ -91,12 +91,22 @@
 	}
 
 	.dojocon-japan-2016-archive-title {
+		$ribon-height: 24px;
+		$ribon-border-width: 2px;
+		$left-ribon-height: $ribon-height;
+		$left-ribon-width: 43px;
+		$left-ribon-border-width: $ribon-border-width;
+		$right-ribon-height: $ribon-height;
+		$right-ribon-width: 240px;
+		$right-ribon-border-width: $ribon-border-width;
+		$text-width: 230px;
+
 		$ribon: (
 			color: $flamingo,
-			height: 24px,
-			width: 43px,
+			height: $left-ribon-height,
+			width: $left-ribon-width,
 			border-color: $white,
-			border-width: 2px,
+			border-width: $left-ribon-border-width,
 			direction: left,
 		);
 		@include ribon-bordered($ribon);
@@ -104,66 +114,91 @@
 		font-weight: 700;
 		left: 5px;
 		margin: -20px auto 30px;
-		width: 230px;
+		width: $text-width;
 		z-index: 5;
 
-		@media (min-width: $tablet) {
+		> span {
 			$ribon: (
 				color: $flamingo,
-				height: 24px,
-				width: 43px,
+				height: $right-ribon-height,
+				width: $right-ribon-width,
 				border-color: $white,
-				border-width: 3px,
-				direction: left,
+				border-width: $right-ribon-border-width,
 			);
 			@include ribon-bordered($ribon);
+			display: block;
+			line-height: $right-ribon-height - 2px;
+			margin: auto;
+			padding-bottom: 2px;
+			position: relative;
+			text-align: center;
+			z-index: 5;
 		}
 
 		&::before {
 			top: 10px;
-			right: 230 - 43 + 25px;
+			right: $text-width - $left-ribon-width + 25px;
 			bottom: auto;
 			left: auto;
 		}
 
 		&::after {
 			top: 12px;
-			right: 230 - 43 + 25 + 2px;
+			right: $text-width - $left-ribon-width + 25 + $left-ribon-border-width;
 			bottom: auto;
 			left: auto;
-
-			@media (min-width: $tablet) {
-				top: 13px;
-				right: 230 - 43 + 25 + 3px;
-			}
 		}
 
-		> span {
+		@media (min-width: $tablet) {
+			$ribon-height: 48px;
+			$ribon-border-width: 3px;
+			$left-ribon-height: $ribon-height;
+			$left-ribon-width: 85px;
+			$left-ribon-border-width: $ribon-border-width;
+			$right-ribon-height: $ribon-height;
+			$right-ribon-width: 440px;
+			$right-ribon-border-width: $ribon-border-width;
+			$text-width: 430px;
+
 			$ribon: (
 				color: $flamingo,
-				height: 24px,
-				width: 240px,
+				height: $left-ribon-height,
+				width: $left-ribon-width,
 				border-color: $white,
-				border-width: 2px,
+				border-width: $left-ribon-border-width,
+				direction: left,
 			);
 			@include ribon-bordered($ribon);
-			display: block;
-			line-height: 22px;
-			margin: auto;
-			padding-bottom: 2px;
-			position: relative;
-			text-align: center;
-			z-index: 5;
+			font-size: 23px;
+			margin-top: -33px;
+			margin-bottom: 60px;
+			width: $text-width;
 
-			@media (min-width: $tablet) {
+			> span {
 				$ribon: (
 					color: $flamingo,
-					height: 24px,
-					width: 240px,
+					height: $right-ribon-height,
+					width: $right-ribon-width,
 					border-color: $white,
-					border-width: 3px,
+					border-width: $right-ribon-border-width,
 				);
 				@include ribon-bordered($ribon);
+				line-height: 44px;
+				padding-bottom: 4px;
+			}
+
+			&::before {
+				top: 20px;
+				right: $text-width - $left-ribon-width + 55px;
+				bottom: auto;
+				left: auto;
+			}
+
+			&::after {
+				top: $left-ribon-border-width + 20px;
+				right: $text-width - $left-ribon-width + $left-ribon-border-width + 55px;
+				bottom: auto;
+				left: auto;
 			}
 		}
 	}
