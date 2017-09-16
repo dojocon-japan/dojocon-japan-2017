@@ -19,26 +19,29 @@
 	}
 }
 
-@mixin ribon-bordered($args: (
-	color: transparent,
-	height: 0,
-	width: 0,
-	border-color: transparent,
-	border-width: 0,
-), $ribon-direction: right) {
+@mixin ribon-bordered($args) {
 	position: relative;
 
-	$color: map-get($args, color);
-	$height: map-get($args, height);
-	$width: map-get($args, width);
-	$border-color: map-get($args, border-color);
-	$border-width: map-get($args, border-width);
+	$defaults: (
+		color: transparent,
+		height: 0,
+		width: 0,
+		border-color: transparent,
+		border-width: 0,
+		direction: right,
+	);
 
-	$direction: right;
+	$config: map-merge($defaults, $args);
+
+	$color: map-get($config, color);
+	$height: map-get($config, height);
+	$width: map-get($config, width);
+	$border-color: map-get($config, border-color);
+	$border-width: map-get($config, border-width);
+	$direction: map-get($config, direction);
 	$opposition: left;
 
-	@if $ribon-direction == left {
-		$direction: left;
+	@if $direction == left {
 		$opposition: right;
 	}
 
