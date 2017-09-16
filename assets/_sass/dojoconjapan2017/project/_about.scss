@@ -28,24 +28,6 @@
 			}
 		}
 
-		img {
-
-			&.about-coderdojo-01 {
-				width: 160px;
-			}
-
-			&.about-coderdojo {
-				border-radius: 50%;
-				overflow: hidden;
-				width: 140px;
-			}
-
-			&.about-coderdojo-logo {
-				height: 30px;
-				width: auto;
-			}
-		}
-
 		.japan-map {
 			margin-left: -20px;
 			margin-right: -20px;
@@ -58,6 +40,27 @@
 			}
 		}
 
+		img {
+
+			&.about-coderdojo-01 {
+				width: 160px;
+
+				@media (min-width: $tablet) {
+					width: 263px;
+				}
+			}
+
+			&.about-coderdojo {
+				border-radius: 50%;
+				overflow: hidden;
+				width: 140px;
+
+				@media (min-width: $tablet) {
+					width: 233px;
+				}
+			}
+		}
+
 		.about-coderdojo-logo-outer {
 			@include size(140px);
 			background: $white;
@@ -67,9 +70,22 @@
 			overflow: hidden;
 			position: relative;
 
+			@media (min-width: $tablet) {
+				@include size(233px);
+			}
+
 			img {
 				@include position(absolute, 0);
 				margin: auto;
+
+				&.about-coderdojo-logo {
+					height: 30px;
+					width: auto;
+
+					@media (min-width: $tablet) {
+						height: 50px;
+					}
+				}
 			}
 		}
 	}
