@@ -217,6 +217,10 @@
 			line-height: 1;
 			margin: auto;
 			width: 40px;
+
+			@media (min-width: $tablet) {
+				width: 50px;
+			}
 		}
 	}
 
