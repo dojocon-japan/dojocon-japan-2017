@@ -9,54 +9,54 @@
 	<?php endif; ?>
 
 	<div class="entry-content">
-
 		<?php the_content(); ?>
+	</div>
 
-		<?php
-		$photos  = get_field( '2016-archive-photos' );
-		$movie   = get_field( '2016-archive-movie' );
-		$outline = get_field( 'outline' );
-		?>
+	<?php
+	$photos  = get_field( '2016-archive-photos' );
+	$movie   = get_field( '2016-archive-movie' );
+	$outline = get_field( 'outline' );
+	?>
 
-		<?php if ( $photos || $movie ) : ?>
+	<?php if ( $photos || $movie ) : ?>
 
-			<div class="dojocon-japan-2016-archive">
+		<div class="dojocon-japan-2016-archive">
 
-				<h3 class="dojocon-japan-2016-archive-title"><span>DojoCon Japan 2016 Archives</span></h3>
+			<h3 class="dojocon-japan-2016-archive-title"><span>DojoCon Japan 2016 Archives</span></h3>
 
-				<?php if ( $photos ) : ?>
+			<?php if ( $photos ) : ?>
 
-					<h4 class="dojocon-japan-2016-archive-photo-title">Photo</h4>
+				<h4 class="dojocon-japan-2016-archive-photo-title">Photo</h4>
 
-					<ul class="dojocon-japan-2016-archive-photos js-dojocon-japan-2016-archive-photos">
-						<?php foreach ( $photos as $photo ) : ?>
-							<li><img src="<?php echo esc_url( $photo['sizes']['2016-archive-photo'] ); ?>"></li>
-						<?php endforeach; ?>
-					</ul>
+				<ul class="dojocon-japan-2016-archive-photos js-dojocon-japan-2016-archive-photos">
+					<?php foreach ( $photos as $photo ) : ?>
+						<li><img src="<?php echo esc_url( $photo['sizes']['2016-archive-photo'] ); ?>"></li>
+					<?php endforeach; ?>
+				</ul>
 
-				<?php endif; ?>
+			<?php endif; ?>
 
-				<?php if ( $movie ) : ?>
+			<?php if ( $movie ) : ?>
 
-					<h4 class="dojocon-japan-2016-archive-movie-title">Movie</h4>
+				<h4 class="dojocon-japan-2016-archive-movie-title">Movie</h4>
 
+				<div class="dojocon-japan-2016-archive-movie-outer">
 					<div class="dojocon-japan-2016-archive-movie">
 						<?php the_field( '2016-archive-movie' ); ?>
 					</div>
+				</div>
 
-				<?php endif; ?>
+			<?php endif; ?>
 
-			</div>
+		</div>
 
-		<?php endif; ?>
+	<?php endif; ?>
 
-		<?php if ( $outline ) : ?>
-
+	<?php if ( $outline ) : ?>
+		<div class="entry-content">
 			<?php the_field( 'outline' ); ?>
-
-		<?php endif; ?>
-
-	</div>
+		</div>
+	<?php endif; ?>
 
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="background-image">
