@@ -44,7 +44,7 @@ $(function() {
    * Warp page titles
    */
   function warpTitles() {
-    if ($(window).width() >= 768) {
+    if ($(window).width() >= 640) {
       $('.hero .site-title').circleType({
         radius: 400,
       });

@@ -8,7 +8,7 @@
 		font-size: 14px;
 		font-weight: 300;
 
-		@media (min-width: $tablet) {
+		@media (min-width: $tablet-s) {
 			font-size: 16px;
 		}
 
@@ -21,7 +21,7 @@
 			padding-bottom: 15px;
 			text-align: center;
 
-			@media (min-width: $tablet) {
+			@media (min-width: $tablet-s) {
 				font-size: 23px;
 				background-size: 171px 2px;
 				padding-bottom: 25px;
@@ -45,7 +45,7 @@
 			&.about-coderdojo-01 {
 				width: 160px;
 
-				@media (min-width: $tablet) {
+				@media (min-width: $tablet-s) {
 					width: 263px;
 				}
 			}
@@ -55,7 +55,7 @@
 				overflow: hidden;
 				width: 140px;
 
-				@media (min-width: $tablet) {
+				@media (min-width: $tablet-s) {
 					width: 233px;
 				}
 			}
@@ -70,7 +70,7 @@
 			overflow: hidden;
 			position: relative;
 
-			@media (min-width: $tablet) {
+			@media (min-width: $tablet-s) {
 				@include size(233px);
 			}
 
@@ -82,7 +82,7 @@
 					height: 30px;
 					width: auto;
 
-					@media (min-width: $tablet) {
+					@media (min-width: $tablet-s) {
 						height: 50px;
 					}
 				}
@@ -96,7 +96,7 @@
 		margin-top: 60px;
 		padding-bottom: 30px;
 
-		@media (min-width: $tablet) {
+		@media (min-width: $tablet-s) {
 			border-bottom-width: 3px;
 			border-top-width: 3px;
 			margin-top: 120px;
@@ -162,7 +162,7 @@
 			left: auto;
 		}
 
-		@media (min-width: $tablet) {
+		@media (min-width: $tablet-s) {
 			$ribon-height: 48px;
 			$ribon-border-width: 3px;
 			$left-ribon-height: $ribon-height;
@@ -224,7 +224,7 @@
 		text-align: center;
 		text-transform: uppercase;
 
-		@media (min-width: $tablet) {
+		@media (min-width: $tablet-s) {
 			font-size: 21px;
 			margin: 30px auto 15px;
 		}
@@ -236,7 +236,7 @@
 			margin: auto;
 			width: 40px;
 
-			@media (min-width: $tablet) {
+			@media (min-width: $tablet-s) {
 				margin-bottom: 10px;
 				width: 50px;
 			}
@@ -338,29 +338,73 @@
 		@include embed-container(56.38%);
 	}
 
+	.outline-outer {
+		max-width: 540px;
+	}
+
 	.outline {
 		font-size: 16px;
 		font-weight: 500;
 		margin-bottom: 1.25em;
 		text-align: center;
 
+		@media (min-width: $tablet-s) {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: flex-start;
+		}
+
 		dt {
 			@include ribon($white, 28px);
 			color: $flamingo;
 			margin: 0 auto 0.5em;
 			width: 90px;
+
+			@media (min-width: $tablet-s) {
+				margin: 0;
+			}
 		}
 
 		dd {
 
+			@media (min-width: $tablet-s) {
+				text-align: left;
+				margin-left: 25px;
+				margin-top: 1em;
+				width: calc(100% - 90px - 25px);
+			}
+
+			&:first-of-type {
+
+				@media (min-width: $tablet-s) {
+					margin-top: 0;
+				}
+			}
+
+			+ dd {
+
+				@media (min-width: $tablet-s) {
+					margin-left: 25px + 90px;
+					margin-top: 0;
+				}
+			}
+
 			+ dt {
 				margin-top: 0.75em;
+
+				@media (min-width: $tablet-s) {
+					margin-top: 1em;
+				}
 			}
 		}
 	}
 
 	.outline-note {
-		font-size: 14px;
+		font-size: 12px;
+
+		@media (min-width: $tablet-s) {
+			font-size: 14px;
+		}
 
 		li {
 			text-indent: -1.5em;

@@ -9,7 +9,7 @@
 		text-align: center;
 		text-transform: uppercase;
 
-		@media (min-width: $tablet) {
+		@media (min-width: $tablet-s) {
 			font-size: 48px;
 			letter-spacing: -0.1em;
 		}
@@ -26,7 +26,7 @@
 			width: 4 * 7 + 5 * 28px;
 			transform: scale(0.857142857); // 24px
 
-			@media (min-width: $tablet) {
+			@media (min-width: $tablet-s) {
 				transform: scale(1.178571429); // 33px
 			}
 		}
@@ -50,7 +50,7 @@
 			margin: 45px 0 30px;
 			text-align: center;
 
-			@media (min-width: $tablet) {
+			@media (min-width: $tablet-s) {
 				font-size: 16px;
 			}
 		}

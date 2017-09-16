@@ -53,7 +53,7 @@
 	<?php endif; ?>
 
 	<?php if ( $outline ) : ?>
-		<div class="entry-content">
+		<div class="entry-content outline-outer">
 			<?php the_field( 'outline' ); ?>
 		</div>
 	<?php endif; ?>
