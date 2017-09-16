@@ -211,6 +211,11 @@
 		text-align: center;
 		text-transform: uppercase;
 
+		@media (min-width: $tablet) {
+			font-size: 21px;
+			margin: 30px auto 15px;
+		}
+
 		&::before {
 			display: block;
 			height: auto;
@@ -219,6 +224,7 @@
 			width: 40px;
 
 			@media (min-width: $tablet) {
+				margin-bottom: 10px;
 				width: 50px;
 			}
 		}
