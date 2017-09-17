@@ -35,17 +35,25 @@ if ( get_the_content() || $sessions->have_posts() ) : ?>
 			<?php while ( $sessions->have_posts() ) : $sessions->the_post(); ?>
 
 				<li>
-					<a href="<?php the_permalink(); ?>">
-						<div class="post-thumbnail">
-							<?php if ( has_post_thumbnail() ) : ?>
-								<?php the_post_thumbnail( 'post-thumbnail' ); ?>
-							<?php else : ?>
-								<img src="//via.placeholder.com/300x200/eee">
-							<?php endif; ?>
-						</div>
-						<time datetime="<?php echo get_the_date( DATE_W3C ); ?>"><?php echo get_the_date(); ?></time>
-						<h2><?php the_title(); ?></h2>
-					</a>
+					<?php $session_categories = get_the_terms( get_the_ID(), 'session-category' );
+					if ( $session_categories && ! is_wp_error( $session_categories ) ) : ?>
+						<p class="session-category">
+							<?php foreach ( $session_categories as $cat ) : ?>
+								<span><?php echo esc_html( $cat->name ); ?></span>
+							<?php endforeach; ?>
+						</p>
+					<?php endif; ?>
+					<h2><?php the_title(); ?></h2>
+					<p class="session-time">[<?php the_field( 'start-time' ); ?>−<?php the_field( 'ending-time' ); ?>]</p>
+					<?php $speakers = get_field( 'speakers' );
+					if ( $speakers ) : ?>
+						<ul class="speakers">
+							<?php foreach ( $speakers as $speaker ) : ?>
+								<li><?php echo esc_html( $speaker->post_title); ?></li>
+							<?php endforeach; ?>
+						</ul>
+					<?php endif; ?>
+					<a href="<?php the_permalink(); ?>" class="button button-secondary session-more-button">More</a>
 				</li>
 
 			<?php endwhile; ?>
