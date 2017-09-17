@@ -5,11 +5,18 @@
 	.posts {
 		display: flex;
 		flex-flow: row wrap;
-		margin: 0 20px;
+		margin: auto;
+		max-width: 980px;
+		padding: 0 20px;
 
 		> li {
+			font-size: 14px;
 			width: 48%;
-			margin-bottom: 15px;
+			margin-bottom: 1.5em;
+
+			@media (min-width: $tablet-s) {
+				font-size: 16px;
+			}
 
 			&:nth-child(even) {
 				margin-left: 4%;
@@ -22,19 +29,34 @@
 
 				&:hover {
 
+					.post-thumbnail {
+
+						img {
+							opacity: 0.8;
+						}
+					}
+
 					h2 {
 						text-decoration: none;
 					}
 				}
 			}
 
+			.post-thumbnail {
+				background: $white;
+			}
+
 			time {
-				font-size: 14px;
+				display: block;
+				margin-top: 0.4em;
 			}
 
 			h2 {
-				font-size: 14px;
 				text-decoration: underline;
+
+				@media (min-width: $tablet-s) {
+					font-weight: 700;
+				}
 			}
 		}
 	}
