@@ -8,6 +8,10 @@
 			font-family: $pixelmplus10;
 			font-size: 14px;
 			text-align: center;
+
+			@media (min-width: $tablet-s) {
+				font-size: 16px;
+			}
 		}
 
 		+ .follow-us {
@@ -19,19 +23,70 @@
 			text-transform: uppercase;
 			width: 110px;
 
+			@media (min-width: $tablet-s) {
+				border: 0;
+				font-size: 21px;
+				margin-top: 0;
+				width: 256px;
+
+				.follow,
+				.us {
+					border: 2px solid $navy;
+					border-radius: 4px;
+					display: block;
+					line-height: 28px;
+					margin-top: -42px;
+					position: absolute;
+					width: 110px;
+
+					&::before {
+						@include size(0);
+						border: 7px solid $navy;
+						border-bottom-color: transparent;
+						border-top-color: transparent;
+						content: "";
+						display: block;
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
+
+				.follow {
+					right: 100%;
+
+					&::before {
+						border-right: 0;
+						left: 100%;
+					}
+				}
+
+				.us {
+					left: 100%;
+
+					&::before {
+						border-left: 0;
+						right: 100%;
+					}
+				}
+			}
+
 			&::before {
+				@include size(0);
 				border: 7px solid $navy;
-				border-top: 0;
 				border-left-color: transparent;
 				border-right-color: transparent;
+				border-top: 0;
 				bottom: 100%;
 				content: "";
 				display: block;
-				height: 0;
 				left: 50%;
 				position: absolute;
 				transform: translateX(-50%);
-				width: 0;
+
+				@media (min-width: $tablet-s) {
+					content: none;
+				}
 			}
 		}
 	}
