@@ -422,22 +422,31 @@
 		margin: 35px auto;
 		width: 180px;
 
+		@media (min-width: $tablet-s) {
+			width: 210px;
+		}
+
+		&::after,
 		&::before {
-			@include position(absolute, 50% calc(100% + 20px) auto auto);
-			content: url(../images/eye-catcher-l.svg);
 			display: block;
 			height: 55px;
 			transform: translateY(-50%);
 			width: 21px;
+
+			@media (min-width: $tablet-s) {
+				transform: scale(1.15) translateY(-50%);
+				transform-origin: top;
+			}
+		}
+
+		&::before {
+			@include position(absolute, 50% calc(100% + 20px) auto auto);
+			content: url(../images/eye-catcher-l.svg);
 		}
 
 		&::after {
 			@include position(absolute, 50% auto auto calc(100% + 20px));
 			content: url(../images/eye-catcher-r.svg);
-			display: block;
-			height: 55px;
-			transform: translateY(-50%);
-			width: 21px;
 		}
 
 		.outline-entry {
@@ -449,11 +458,19 @@
 			text-indent: -0.5em;
 			text-transform: uppercase;
 
+			@media (min-width: $tablet-s) {
+				font-size: 21px;
+			}
+
 			&::before {
 				content: "▶︎";
 				font-size: 12px;
 				vertical-align: 2px;
 				margin-right: 18px;
+
+				@media (min-width: $tablet-s) {
+					font-size: 14px;
+				}
 			}
 		}
 	}
