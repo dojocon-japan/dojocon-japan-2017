@@ -5,4 +5,14 @@
 	@media (min-width: 36 / 12 * 320px) {
 		@include merlon(rgba($navy, 0.15), 36px);
 	}
+
+	.post-thumbnail {
+		margin: auto (20 / 320 * 100vw);
+		max-width: 980px;
+		padding: 0 20px;
+
+		@media (min-width: 35 / 20 * 320px) {
+			margin-bottom: 35px;
+		}
+	}
 }
