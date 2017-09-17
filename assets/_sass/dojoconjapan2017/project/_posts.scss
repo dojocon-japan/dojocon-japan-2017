@@ -7,19 +7,23 @@
 		flex-flow: row wrap;
 		margin: auto;
 		max-width: 980px;
-		padding: 0 20px;
+		padding: 20px;
+		$gutter: 10 / 320 * 100vw;
+		padding-right: calc(20px - #{$gutter});
 
 		> li {
 			font-size: 14px;
-			width: 48%;
+			width: 1 / 2 * 100%;
 			margin-bottom: 1.5em;
+			padding-right: $gutter;
+
+			@media (min-width: 18 / 10 * 320px) {
+				padding-right: 18px;
+			}
 
 			@media (min-width: $tablet-s) {
 				font-size: 16px;
-			}
-
-			&:nth-child(even) {
-				margin-left: 4%;
+				width: 1 / 3 * 100%;
 			}
 
 			a {
