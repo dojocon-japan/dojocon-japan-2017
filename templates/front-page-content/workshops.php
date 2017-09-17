@@ -63,6 +63,13 @@
 				<?php foreach ( $workshops as $post ) : setup_postdata( $post );
 					$labels = get_field( 'labels' ); ?>
 					<li>
+						<div class="post-thumbnail">
+							<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail( 'workshop-post-thumbnail' ); ?>
+							<?php else : ?>
+								<img src="//via.placeholder.com/600x400/eee">
+							<?php endif; ?>
+						</div>
 						<h2 class="workshop-title"><?php the_title(); ?></h2>
 						<?php if ( $labels ) : ?>
 							<p class="labels">
