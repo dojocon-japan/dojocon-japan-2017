@@ -5,6 +5,10 @@
 		font-size: 14px;
 		text-align: center;
 
+		@media (min-width: $tablet-s) {
+			font-size: 16px;
+		}
+
 		figure {
 			margin-bottom: 1.75em;
 		}
@@ -23,14 +27,17 @@
 			&.access-icon-train {
 
 				&::before {
+					@include size(54px);
 					background-repeat: no-repeat;
 					background-size: contain;
 					content: "";
 					display: block;
-					height: 54px;
 					line-height: 1;
 					margin: 0 auto 10px;
-					width: 54px;
+
+					@media (min-width: $tablet-s) {
+						@include size(67px);
+					}
 				}
 			}
 
