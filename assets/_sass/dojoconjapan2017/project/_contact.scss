@@ -6,6 +6,20 @@
 		@include merlon($white, 36px);
 	}
 
+	@media (min-width: $tablet) {
+		background: $white url(../images/8-bit-heart.svg) no-repeat center 100px;
+		background-size: 700px 560px;
+		color: $white;
+		min-height: 700px;
+	}
+
+	.page-title {
+
+		@media (min-width: $tablet) {
+			margin-top: 200px;
+		}
+	}
+
 	.open-contact-form-outer {
 		background: url(../images/8-bit-heart.svg) no-repeat center center;
 		background-size: 280px 224px;
@@ -13,6 +27,12 @@
 		margin: auto;
 		padding-top: 75px;
 		width: 280px;
+
+		@media (min-width: $tablet) {
+			background: none;
+			height: auto;
+			padding-top: 0;
+		}
 	}
 
 	.open-contact-form.button {
@@ -23,6 +43,12 @@
 		padding-bottom: 3px;
 		padding-top: 3px;
 		width: 190px;
+
+		@media (min-width: $tablet) {
+			color: $flamingo;
+			font-size: 18px;
+			width: 220px;
+		}
 
 		&::before {
 			content: "▶︎";
