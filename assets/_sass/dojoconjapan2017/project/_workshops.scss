@@ -68,9 +68,24 @@
 		border-top: 1px solid rgba(#fff, 0.2);
 		margin-top: 20px;
 
+		@media (min-width: $tablet-s) {
+			border: 0;
+			display: flex;
+			flex-flow: row wrap;
+			margin-top: 30px;
+			margin-right: -20px;
+		}
+
 		> li {
 			border-bottom: 1px solid rgba(#fff, 0.2);
 			padding: 15px 0 20px;
+
+			@media (min-width: $tablet-s) {
+				border: 0;
+				padding: 0 20px 30px 0;
+				position: relative;
+				width: 1 / 2 * 100%;
+			}
 		}
 
 		.workshop-title {
@@ -86,6 +101,11 @@
 		margin: 0;
 		margin-right: -10px;
 
+		@media (min-width: $tablet-s) {
+			font-size: 14px;
+			margin-bottom: 45px;
+		}
+
 		span {
 			background: rgba(#fff, 0.2);
 			border-radius: 24px;
@@ -93,28 +113,40 @@
 			margin: 8px 10px 0 0;
 			padding: 1.5px 1.5em;
 			position: relative;
+
+			@media (min-width: $tablet-s) {
+				margin: 10px 15px 0 0;
+			}
 		}
 
 		.label-for_ninja {
 			padding-left: 55px;
 
+			@media (min-width: $tablet-s) {
+				padding-left: 65px;
+			}
+
 			&::before {
+				@include size(42px, 30px);
 				background: url(../images/8-bit-fuma.svg) no-repeat center center;
 				background-size: 42px 30px;
 				content: "";
 				display: block;
-				height: 30px;
 				left: 0;
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
-				width: 42px;
+
+				@media (min-width: $tablet-s) {
+					@include size(49px, 35px);
+					background-size: 49px 35px;
+				}
 			}
 		}
 	}
 
-	.workshop-more-button,
-	.main-event-more-button {
+	.main-event-more-button,
+	.workshop-more-button {
 		color: $flamingo;
 		display: block;
 		margin: 15px auto 0;
@@ -122,5 +154,13 @@
 		padding-top: 2px;
 		text-transform: uppercase;
 		width: 80px;
+	}
+
+	.workshop-more-button {
+		bottom: 30px;
+		left: 50%;
+		margin: 0;
+		position: absolute;
+		transform: translateX(-50%);
 	}
 }
