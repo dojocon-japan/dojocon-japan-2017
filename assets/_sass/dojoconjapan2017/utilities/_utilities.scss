@@ -2,3 +2,47 @@ img.circle-image {
 	border-radius: 50%;
 	overflow: hidden;
 }
+
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	flex-flow: row wrap;
+}
+
+@for $i from 1 through 12 {
+
+	.flex-s-col-#{$i} {
+
+		.flex-item {
+			width: (1 / $i * 100%);
+		}
+	}
+}
+
+@media (min-width: $tablet-s) {
+
+	@for $i from 1 through 12 {
+
+		.flex-m-col-#{$i} {
+
+			.flex-item {
+				width: (1 / $i * 100%);
+			}
+		}
+	}
+}
+
+@media (min-width: $desktop-s) {
+
+	@for $i from 1 through 12 {
+
+		.flex-l-col-#{$i} {
+
+			.flex-item {
+				width: (1 / $i * 100%);
+			}
+		}
+	}
+}
