@@ -44,6 +44,9 @@ $(function() {
    * Warp page titles
    */
   function warpTitles() {
+    $('.post-header .site-title').circleType({
+      radius: 90,
+    });
     if ($(window).width() >= 640) {
       $('.hero .site-title').circleType({
         radius: 400,

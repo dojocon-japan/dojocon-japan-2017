@@ -1,7 +1,48 @@
 .post-header {
 	background: $flamingo;
 	color: $white;
+	font-size: 18px;
+	padding: 25px 0;
 	text-align: center;
+
+	.site-title {
+		font-family: $roboto-condensed;
+		font-weight: bold;
+		letter-spacing: -0.125em;
+	}
+
+	.post-type-title {
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+		position: relative;
+
+		&::before,
+		&::after {
+			@include position(absolute, auto 0 -32px 0);
+			display: block;
+			font-size: 28px;
+			height: 28px;
+			line-height: 28px;
+			margin: 0 auto;
+			overflow: hidden;
+			width: 4 * 7 + 5 * 28px;
+			transform: scale(0.642857143); // 18px
+		}
+
+		&::before {
+			@include dojocon8bit;
+			content: "\e900\e900\e900\e900\e900";
+			letter-spacing: 7px;
+			white-space: nowrap;
+		}
+
+		&::after {
+			background: url(../images/8-bit-hachimakis.svg) no-repeat center center;
+			background-size: contain;
+			content: "";
+		}
+	}
 }
 
 .single {
