@@ -14,6 +14,7 @@
 		font-family: $roboto-condensed;
 		font-weight: bold;
 		letter-spacing: -0.125em;
+
 	}
 
 	.post-type-title {
@@ -24,6 +25,7 @@
 
 		@media (min-width: $tablet-s) {
 			font-size: 22px;
+			margin-top: -5px;
 		}
 
 		&::before,
