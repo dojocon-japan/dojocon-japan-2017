@@ -44,9 +44,6 @@ $(function() {
    * Warp page titles
    */
   function warpTitles() {
-    $('.post-header .site-title').circleType({
-      radius: 90,
-    });
     if ($(window).width() >= 640) {
       $('.hero .site-title').circleType({
         radius: 400,
@@ -54,12 +51,18 @@ $(function() {
       $('.page .page-title').circleType({
         radius: 240,
       });
+      $('.post-header .site-title').circleType({
+        radius: 120,
+      });
     } else {
       $('.hero .site-title').circleType({
         radius: 180,
       });
       $('.page .page-title').circleType({
         radius: 160,
+      });
+      $('.post-header .site-title').circleType({
+        radius: 90,
       });
     }
   }

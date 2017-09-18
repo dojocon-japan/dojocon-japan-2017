@@ -5,6 +5,11 @@
 	padding: 25px 0;
 	text-align: center;
 
+	@media (min-width: $tablet-s) {
+		font-size: 24px;
+		padding: (50 + 25px) 0 30px;
+	}
+
 	.site-title {
 		font-family: $roboto-condensed;
 		font-weight: bold;
@@ -17,6 +22,10 @@
 		margin-bottom: 25px;
 		position: relative;
 
+		@media (min-width: $tablet-s) {
+			font-size: 22px;
+		}
+
 		&::before,
 		&::after {
 			@include position(absolute, auto 0 -32px 0);
@@ -28,6 +37,10 @@
 			overflow: hidden;
 			width: 4 * 7 + 5 * 28px;
 			transform: scale(0.642857143); // 18px
+
+			@media (min-width: $tablet-s) {
+				transform: scale(0.857142857); // 24px
+			}
 		}
 
 		&::before {
@@ -55,29 +68,48 @@
 		text-align: center;
 	}
 
-	.post-title {
-		background: url(../images/about-h2-border.svg) no-repeat center bottom;
-		background-size: 160px 2px;
-		font-size: 24px;
+	.post-meta {
 		font-weight: 500;
-		line-height: 1.5;
-		margin-bottom: 1em;
-		padding-bottom: 1em;
+
+		.post-title {
+			background: url(../images/about-h2-border.svg) no-repeat center bottom;
+			background-size: 160px 2px;
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 1.5;
+			margin-bottom: 1em;
+			padding-bottom: 1em;
+
+			@media (min-width: $tablet-s) {
+				font-size: 28px;
+			}
+		}
 	}
 
 	.entry-content {
 		font-size: 15px;
 		margin-bottom: 70px;
 
+		@media (min-width: $tablet-s) {
+			font-size: 16px;
+		}
+
 		a {
 			color: $flamingo;
 		}
 
 		h1 {
+			background: url(../images/about-h2-border.svg) no-repeat center bottom;
+			background-size: 160px 2px;
 			font-size: 24px;
 			font-weight: 500;
 			line-height: 1.5;
 			margin: 1.75em 0 1em;
+			text-align: center;
+
+			@media (min-width: $tablet-s) {
+				font-size: 28px;
+			}
 		}
 
 		h2 {
@@ -86,6 +118,10 @@
 			font-weight: 500;
 			margin: 1.75em 0 1.25em;
 			padding-bottom: 0.5em;
+
+			@media (min-width: $tablet-s) {
+				font-size: 24px;
+			}
 		}
 
 		h3 {
@@ -94,6 +130,10 @@
 			font-weight: 700;
 			margin: 1.75em 0 1.458333333em;
 			padding-left: 1em;
+
+			@media (min-width: $tablet-s) {
+				font-size: 20px;
+			}
 		}
 
 		h4 {
