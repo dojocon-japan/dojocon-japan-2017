@@ -18,10 +18,10 @@ body {
 	height: 100%;
 	line-height: $default-line-height;
 
-	@media (min-width: $tablet) {
-		background: url(../images/hero-1500.png) no-repeat center top;
-		background-size: auto;
-	}
+	// @media (min-width: $tablet) {
+	// 	background: url(../images/hero-1500.png) no-repeat center top;
+	// 	background-size: auto;
+	// }
 }
 
 a {
