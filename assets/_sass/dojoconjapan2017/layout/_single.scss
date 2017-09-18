@@ -74,6 +74,7 @@
 		h1 {
 			font-size: 24px;
 			font-weight: 500;
+			margin: 1.75em 0 1em;
 		}
 
 		h2 {
@@ -86,16 +87,20 @@
 
 		h3 {
 			border-left: 4px solid $flamingo;
+			font-size: 18px;
 			font-weight: 700;
+			margin: 1.75em 0 1.458333333em;
 			padding-left: 1em;
 		}
 
 		h4 {
 			font-weight: 700;
+			margin: 1.75em 0;
 		}
 
 		ul,
 		ol {
+			margin: 1.75em 0;
 			padding-left: 1em;
 
 			> li {
