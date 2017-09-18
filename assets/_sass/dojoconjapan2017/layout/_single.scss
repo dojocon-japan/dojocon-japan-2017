@@ -63,5 +63,20 @@
 		ol {
 			list-style-type: decimal;
 		}
+
+		table {
+			border: 1px solid #99a4ae;
+		}
+
+		th {
+			background: #ebedef;
+			font-weight: 700;
+			padding: 1em;
+		}
+
+		td {
+			border: 1px solid #99a4ae;
+			padding: 1em;
+		}
 	}
 }
