@@ -6,8 +6,19 @@
 
 .single {
 
+	.post-meta {
+		margin: 50px 0;
+		text-align: center;
+	}
+
+	.post-title {
+		font-size: 24px;
+		font-weight: 500;
+	}
+
 	.entry-content {
 		font-size: 15px;
+		margin-bottom: 70px;
 
 		a {
 			color: $flamingo;
