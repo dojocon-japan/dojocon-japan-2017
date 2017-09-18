@@ -133,5 +133,13 @@
 			border: 1px solid #99a4ae;
 			padding: 1em;
 		}
+
+		*:first-child {
+			margin-top: 0;
+		}
+
+		*:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
