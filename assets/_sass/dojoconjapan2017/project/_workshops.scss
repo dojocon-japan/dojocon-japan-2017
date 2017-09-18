@@ -173,10 +173,13 @@
 	}
 
 	.workshop-more-button {
-		bottom: 30px;
-		left: 50%;
-		margin: 0;
-		position: absolute;
-		transform: translateX(-50%);
+
+		@media (min-width: $tablet-s) {
+			bottom: 30px;
+			left: 50%;
+			margin: 0;
+			position: absolute;
+			transform: translateX(-50%);
+		}
 	}
 }
