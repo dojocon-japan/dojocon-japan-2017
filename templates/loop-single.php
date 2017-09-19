@@ -7,7 +7,7 @@
 			<time><?php the_date(); ?></time>
 		</div>
 
-		<?php if ( has_post_thumbnail() ) : ?>
+		<?php if ( ! get_field( 'hide-post-thumbnail' ) && has_post_thumbnail() ) : ?>
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail( 'full' ); ?>
 			</div>
