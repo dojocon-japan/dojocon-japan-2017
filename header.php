@@ -103,17 +103,9 @@
 			</div>
 		<?php endif; ?>
 	</div>
-<?php elseif ( is_single() ) : ?>
+<?php elseif ( is_singular() ) : ?>
 	<header class="post-header">
 		<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-		<h2 class="post-type-title">
-			<?php $page_for_posts_id = (int) get_option( 'page_for_posts' );
-			if ( $page_for_posts_id ) :
-				echo get_the_title( $page_for_posts_id );
-			else :
-				$post_type_obj = get_post_type_object( 'post' );
-				echo $post_type_obj->labels->singular_name;
-			endif; ?>
-		</h2>
+		<h2 class="post-type-title"><?php dojoconjapan2017_single_post_type_title(); ?></h2>
 	</header>
 <?php endif; ?>

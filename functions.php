@@ -200,3 +200,15 @@ function dojoconjapan2017_custom_logo() {
 		echo wp_get_attachment_image( $custom_logo_id, 'full', false, $custom_logo_attr );
 	}
 }
+
+function dojoconjapan2017_single_post_type_title() {
+	$page_for_posts_id = (int) get_option( 'page_for_posts' );
+	if ( is_singular( 'post' ) && $page_for_posts_id ) {
+		echo get_the_title( $page_for_posts_id );
+	} else {
+		$post_type_obj = get_post_type_object( get_post_type() );
+		$ja = array( 'スピーカー', 'ワークショップ', 'セッション' );
+		$en = array( 'Speaker', 'Workshop', 'Session' );
+		echo str_replace( $ja, $en, $post_type_obj->labels->singular_name );
+	}
+}
