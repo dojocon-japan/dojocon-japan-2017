@@ -205,6 +205,8 @@ function dojoconjapan2017_single_post_type_title() {
 	$page_for_posts_id = (int) get_option( 'page_for_posts' );
 	if ( is_singular( 'post' ) && $page_for_posts_id ) {
 		echo get_the_title( $page_for_posts_id );
+	} elseif ( is_page() ) {
+		the_title();
 	} else {
 		$post_type_obj = get_post_type_object( get_post_type() );
 		$ja = array( 'スピーカー', 'ワークショップ', 'セッション' );
