@@ -156,7 +156,7 @@
 		}
 
 		&::after {
-			top: $ribon-border-width + 2px;
+			top: $left-ribon-border-width + 10px;
 			right: $text-width - $left-ribon-width + $left-ribon-border-width + 25px;
 			bottom: auto;
 			left: auto;
