@@ -7,7 +7,7 @@ $blog_posts = new WP_Query( array(
 
 if ( $blog_posts->have_posts() ) : ?>
 
-	<section id="front-page-posts" class="front-page-content page page-posts">
+	<section id="front-page-posts" class="front-page-content page-posts">
 
 		<h1 class="page-title"><?php the_title(); ?></h1>
 
