@@ -273,6 +273,11 @@
 		margin: 30px auto;
 		padding: 10px 15px 20px;
 
+		@media (min-width: $tablet-s) {
+			margin: 50px auto;
+			padding: 20px 30px 30px;
+		}
+
 		.notes {
 			margin-top: -10px;
 		}
@@ -289,6 +294,11 @@
 				content: "▶";
 				font-size: 12px;
 				margin-right: 20px;
+
+				@media (min-width: $tablet-s) {
+					font-size: 14px;
+					vertical-align: 1px;
+				}
 			}
 		}
 	}
