@@ -116,10 +116,13 @@
 		color: $flamingo;
 		display: block;
 		margin: 15px auto 0;
-		padding-bottom: 2px;
-		padding-top: 2px;
+		padding: 2px 0;
 		text-transform: uppercase;
 		width: 80px;
+
+		@media (min-width: $tablet-s) {
+			font-size: 14px;
+		}
 	}
 
 	.workshop-more-button {
