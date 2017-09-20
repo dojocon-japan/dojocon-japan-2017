@@ -1,6 +1,7 @@
 .page-contact {
 	@include merlon($white, 3.75vw);
 	color: $flamingo;
+	padding: 40px 0 30px;
 
 	@media (min-width: 36 / 12 * 320px) {
 		@include merlon($white, 36px);
@@ -12,6 +13,7 @@
 		color: $white;
 		min-height: 700px;
 	}
+
 
 	.page-title {
 
