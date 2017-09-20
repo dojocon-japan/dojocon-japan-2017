@@ -25,8 +25,7 @@
 		<div class="entry-content">
 			<?php the_content(); ?>
 
-			<?php // $entry_url = get_field( 'entry-url' );
-			$entry_url = true;
+			<?php $entry_url = get_field( 'entry-url' );
 			if ( $entry_url ) : ?>
 				<div class="workshop-entry">
 					<h2><?php _e( 'Workshop Entry', 'dojocon-japan-2017' ); ?></h2>
