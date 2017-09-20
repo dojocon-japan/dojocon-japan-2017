@@ -32,7 +32,7 @@ if ( $blog_posts->have_posts() ) : ?>
 					</div>
 					<h2><?php the_title(); ?></h2>
 					<p><?php the_field( 'name-alphabet' ); ?></p>
-					<a href="<?php the_permalink(); ?>">More</a>
+					<a class="button button-white" href="<?php the_permalink(); ?>">More</a>
 				</li>
 
 			<?php endwhile; ?>
