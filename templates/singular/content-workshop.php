@@ -13,7 +13,10 @@
 				</p>
 			<?php endif; ?>
 			<time>[<?php the_field( 'start-time' ); ?> - <?php the_field( 'ending-time' ); ?>]</time>
-			<p class="area"><span><?php echo esc_html( get_field( 'area')['label'] ); ?>エリア</span></p>
+			<?php $area = get_field( 'area');
+			if ( $area ) : ?>
+				<p class="area"><span><?php echo esc_html( $area['label'] ); ?>エリア</span></p>
+			<?php endif; ?>
 		</div>
 
 		<?php if ( ! get_field( 'hide-post-thumbnail' ) && has_post_thumbnail() ) : ?>
