@@ -128,28 +128,48 @@
 button,
 .button {
 	@include button;
+	@include button-default;
 }
 
+.page:not(.home) .entry-content .button-block,
+.single .entry-content .button-block,
+.button-block {
+	display: block;
+	width: 100%;
+}
+
+.page:not(.home) .entry-content .button-primary,
+.single .entry-content .button-primary,
 .button-primary {
 	@include button-primary;
 }
 
+.page:not(.home) .entry-content .button-secondary,
+.single .entry-content .button-secondary,
 .button-secondary {
 	@include button-secondary;
 }
 
+.page:not(.home) .entry-content .button-white,
+.single .entry-content .button-white,
 .button-white {
 	@include button-white;
 }
 
+.page:not(.home) .entry-content .button-mid-night,
+.single .entry-content .button-mid-night,
 .button-mid-night {
 	@include button-mid-night;
 }
 
+.page:not(.home) .entry-content .button-bordered,
+.single .entry-content .button-bordered,
 .button-bordered {
 	@include button-bordered;
 }
 
+.page:not(.home) .entry-content .button-close,
+.single .entry-content .button-close,
 .button-close {
 	@include button-close;
 }
