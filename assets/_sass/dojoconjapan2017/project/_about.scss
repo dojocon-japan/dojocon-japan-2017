@@ -156,8 +156,8 @@
 		}
 
 		&::after {
-			top: 12px;
-			right: $text-width - $left-ribon-width + 25 + $left-ribon-border-width;
+			top: $ribon-border-width + 2px;
+			right: $text-width - $left-ribon-width + $left-ribon-border-width + 25px;
 			bottom: auto;
 			left: auto;
 		}
@@ -196,7 +196,7 @@
 					border-width: $right-ribon-border-width,
 				);
 				@include ribon-bordered($ribon);
-				line-height: 44px;
+				line-height: $right-ribon-height - 4px;
 				padding-bottom: 4px;
 			}
 

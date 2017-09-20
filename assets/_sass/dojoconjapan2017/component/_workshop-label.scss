@@ -1,0 +1,49 @@
+.workshop-labels {
+	font-size: 12px;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0;
+	margin-right: -10px;
+
+	@media (min-width: $tablet-s) {
+		font-size: 14px;
+	}
+
+	span {
+		background: rgba($white, 0.2);
+		border-radius: 24px;
+		display: block;
+		margin: 8px 10px 0 0;
+		padding: 1.5px 1.5em;
+		position: relative;
+
+		@media (min-width: $tablet-s) {
+			margin: 10px 15px 0 0;
+		}
+	}
+
+	.label-for_ninja {
+		padding-left: 55px;
+
+		@media (min-width: $tablet-s) {
+			padding-left: 65px;
+		}
+
+		&::before {
+			@include size(42px, 30px);
+			background: url(../images/8-bit-fuma.svg) no-repeat center center;
+			background-size: 42px 30px;
+			content: "";
+			display: block;
+			left: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+
+			@media (min-width: $tablet-s) {
+				@include size(49px, 35px);
+				background-size: 49px 35px;
+			}
+		}
+	}
+}
