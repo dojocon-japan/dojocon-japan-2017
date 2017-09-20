@@ -27,6 +27,7 @@
 		}
 
 		> li {
+			margin-bottom: 20px;
 
 			@media (min-width: $tablet-s) {
 				width: 1 / 2 * 100%;
@@ -38,6 +39,7 @@
 
 			.session-category {
 				background: $white;
+				font-size: 14px;
 				text-align: center;
 
 				> span {
@@ -52,6 +54,33 @@
 							content: none;
 						}
 					}
+				}
+			}
+
+			h2 {
+				font-weight: 500;
+				margin: 1em auto 0.5em;
+			}
+
+			.session-time,
+			.speakers {
+				font-size: 14px;
+				width: 50%;
+
+				@media (min-width: $tablet-s) {
+					font-size: 16px;
+				}
+			}
+
+			.session-more-button {
+				display: block;
+				margin: 0.75em auto;
+				padding: 1px 0 3px;
+				text-transform: uppercase;
+				width: 80px;
+
+				@media (min-width: $tablet-s) {
+					font-size: 14px;
 				}
 			}
 		}

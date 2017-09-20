@@ -52,6 +52,15 @@
 	}
 }
 
+@mixin button-mid-night() {
+	background: $mid-night;
+	color: $white;
+
+	&:hover {
+		background: tint($mid-night, 10);
+	}
+}
+
 @mixin button-bordered() {
 	background: $white;
 	border: 1px solid $default-font-color;
@@ -131,6 +140,10 @@ button,
 
 .button-white {
 	@include button-white;
+}
+
+.button-mid-night {
+	@include button-mid-night;
 }
 
 .button-bordered {

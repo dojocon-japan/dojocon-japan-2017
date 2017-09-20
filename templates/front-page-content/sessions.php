@@ -44,16 +44,18 @@ if ( get_the_content() || $sessions->have_posts() ) : ?>
 						</p>
 					<?php endif; ?>
 					<h2><?php the_title(); ?></h2>
-					<p class="session-time">[<?php the_field( 'start-time' ); ?>−<?php the_field( 'ending-time' ); ?>]</p>
-					<?php $speakers = get_field( 'speakers' );
-					if ( $speakers ) : ?>
-						<ul class="speakers">
-							<?php foreach ( $speakers as $speaker ) : ?>
-								<li><?php echo esc_html( $speaker->post_title); ?></li>
-							<?php endforeach; ?>
-						</ul>
-					<?php endif; ?>
-					<a href="<?php the_permalink(); ?>" class="button button-secondary session-more-button">More</a>
+					<div class="flex">
+						<p class="session-time">[<?php the_field( 'start-time' ); ?>−<?php the_field( 'ending-time' ); ?>]</p>
+						<?php $speakers = get_field( 'speakers' );
+						if ( $speakers ) : ?>
+							<ul class="speakers">
+								<?php foreach ( $speakers as $speaker ) : ?>
+									<li><?php echo esc_html( $speaker->post_title); ?></li>
+								<?php endforeach; ?>
+							</ul>
+						<?php endif; ?>
+					</div>
+					<a href="<?php the_permalink(); ?>" class="button button-mid-night session-more-button">More</a>
 				</li>
 
 			<?php endwhile; ?>
