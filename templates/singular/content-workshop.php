@@ -30,6 +30,14 @@
 			if ( $entry_url ) : ?>
 				<div class="workshop-entry">
 					<h2><?php _e( 'Workshop Entry', 'dojocon-japan-2017' ); ?></h2>
+					<?php $notes = get_field( 'notes' );
+					if ( $notes ) : ?>
+						<ul class="notes">
+							<?php foreach ( $notes as $note ) : ?>
+								<li><?php echo esc_html( $note['item'] ); ?></li>
+							<?php endforeach; ?>
+						</ul>
+					<?php endif; ?>
 					<a href="<?php echo esc_url( $entry_url ); ?>" class="button button-primary workshop-entry-button" target="_blank">Entry</a>
 				</div>
 			<?php endif; ?>
