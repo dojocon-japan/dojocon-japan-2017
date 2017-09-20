@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DojoCon Japan 2017 1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-09-07 01:05+0900\n"
+"POT-Creation-Date: 2017-09-20 17:32+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -25,58 +25,62 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
-#: functions.php:34
+#: functions.php:44
 msgid "Global"
 msgstr "グローバル"
 
-#: functions.php:35
+#: functions.php:45
 msgid "Entry"
 msgstr "エントリー"
 
-#: functions.php:36
+#: functions.php:46
 msgid "Workshop"
 msgstr "ワークショップ"
 
-#: functions.php:37
+#: functions.php:47
 msgid "CoderDojo"
 msgstr "CoderDojo"
 
-#: functions.php:38
+#: functions.php:48
 msgid "Footer"
 msgstr "フッター"
 
-#: functions.php:66
+#: functions.php:76
 msgid "Sidebar"
 msgstr "サイドバー"
 
-#: functions.php:104
+#: functions.php:114
 msgid "Date"
 msgstr "開催日"
 
-#: functions.php:114
+#: functions.php:124
 msgctxt "Day of the week"
 msgid "Day"
 msgstr "曜日"
 
-#: functions.php:124
+#: functions.php:134
 msgid "Venue"
 msgstr "会場"
 
-#: functions.php:130
+#: functions.php:140
 msgid "DojoCon Japan 2017 Organization"
 msgstr "DojoCon Japan 2017 実行委員会"
 
-#: functions.php:135
+#: functions.php:145
 msgid "Copyright"
 msgstr "コピーライト"
 
-#: functions.php:141
+#: functions.php:151
 msgid "Theme Options"
 msgstr ""
 
 #: templates/front-page-content/staff.php:25
 msgid "Staff Avatar"
 msgstr "スタッフアバター"
+
+#: templates/singular/content-workshop.php:32
+msgid "Workshop Entry"
+msgstr "ワークショップ申込"
 
 #: assets/js/main.js:1
 msgid "show"
