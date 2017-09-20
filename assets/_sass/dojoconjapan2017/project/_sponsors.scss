@@ -1,6 +1,10 @@
 .page-sponsors {
 	color: $navy;
-	padding-bottom: 80px;
+	padding-bottom: calc(55px + 8.4375vw); // 82px
+
+	@media (min-width: 36 / 12 * 320px) {
+		padding-bottom: 100 + 36px;
+	}
 
 	h2 {
 		background: rgba($navy, 0.2);

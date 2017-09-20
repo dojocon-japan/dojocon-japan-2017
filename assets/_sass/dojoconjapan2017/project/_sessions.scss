@@ -1,9 +1,11 @@
 .page-sessions {
 	@include merlon(rgba($navy, 0.15), 3.75vw);
 	color: $mid-night;
+	padding-bottom: calc(70px + 3.75vw);
 
 	@media (min-width: 36 / 12 * 320px) {
 		@include merlon(rgba($navy, 0.15), 36px);
+		padding-bottom: 70 + 36px;
 	}
 
 	.post-thumbnail {
