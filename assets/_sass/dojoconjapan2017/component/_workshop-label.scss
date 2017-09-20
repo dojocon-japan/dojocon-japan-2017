@@ -47,3 +47,18 @@
 		}
 	}
 }
+
+.entry-content {
+
+	.workshop-labels {
+		margin: 0;
+
+		span {
+			margin-top: 8px;
+
+			@media (min-width: $tablet-s) {
+				margin-top: 10px;
+			}
+		}
+	}
+}
