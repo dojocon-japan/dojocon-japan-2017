@@ -19,9 +19,9 @@
 	}
 
 	.sessions {
-		margin: auto;
+		margin: 40px auto 20px;
 		max-width: 980px;
-		padding: 0 20px;
+		padding-left: 20px;
 
 		@media (min-width: $tablet-s) {
 			display: flex;
@@ -30,6 +30,7 @@
 
 		> li {
 			margin-bottom: 20px;
+			padding-right: 20px;
 
 			@media (min-width: $tablet-s) {
 				width: 1 / 2 * 100%;
