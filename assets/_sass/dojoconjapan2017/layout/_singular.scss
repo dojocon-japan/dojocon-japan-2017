@@ -121,11 +121,11 @@
 			padding: 1em;
 		}
 
-		*:first-child {
+		:not(.keep-margin) *:first-child {
 			margin-top: 0;
 		}
 
-		*:last-child {
+		:not(.keep-margin) *:last-child {
 			margin-bottom: 0;
 		}
 	}
