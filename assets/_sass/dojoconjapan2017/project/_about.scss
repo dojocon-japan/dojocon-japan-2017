@@ -503,6 +503,7 @@
 		margin-top: 60px;
 		position: relative;
 		overflow: hidden;
+		text-align: center;
 
 		&::before {
 			background: $flamingo;
@@ -516,6 +517,10 @@
 			overflow: hidden;
 			transform: translateX(-50%);
 			width: 400vw;
+		}
+
+		img {
+			width: 100%;
 		}
 	}
 }

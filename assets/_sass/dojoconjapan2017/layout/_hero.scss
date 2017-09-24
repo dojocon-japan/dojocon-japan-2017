@@ -1,5 +1,5 @@
 .hero {
-	background: url(../images/hero-nightsky.svg) no-repeat;
+	background: #293b4b url(../images/hero-nightsky.svg) no-repeat;
 	background-size: cover;
 	background-position: 60% 0;
 	color: $white;
@@ -8,14 +8,17 @@
 	padding-top: 15px;
 	position: relative;
 
-	opacity: 0.5;
+	// opacity: 0.5;
 
 	@media (min-width: $tablet-s) {
 		min-height: calc(430px + 75.5625vw);
 	}
 
 	@media (min-width: $desktop) {
+		margin-bottom: -60px;
 		min-height: auto;
+		background-size: auto 100%;
+		background-position: center top;
 	}
 
 	&::before {
@@ -28,6 +31,11 @@
 		position: absolute;
 		top: 0;
 		width: 100%;
+
+		@media (min-width: $desktop) {
+			content: none;
+			display: none;
+		}
 	}
 
 	&::after {
