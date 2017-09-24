@@ -35,6 +35,7 @@ $hamburger-border-color: $white;
 	}
 
 	&:hover {
+		background: $navy;
 
 		.hamburger {
 			opacity: 0.75;
