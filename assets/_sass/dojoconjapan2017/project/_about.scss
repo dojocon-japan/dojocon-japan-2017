@@ -244,9 +244,33 @@
 	}
 
 	.dojocon-japan-2016-archive-photo-title {
+		position: relative;
 
 		&::before {
 			content: url(../images/icon-photo.svg);
+		}
+
+		.button {
+			background: transparent;
+			border: 1px solid $white;
+			bottom: 0;
+			color: $white;
+			display: block;
+			font-size: 14px;
+			margin: 0 auto 10px;
+			padding: 1px 10px;
+			width: 80px;
+
+			@media (min-width: $tablet-s) {
+				bottom: 0;
+				left: 50%;
+				margin: 0 0 4px 4em;
+				position: absolute;
+			}
+
+			&:hover {
+				opacity: 0.75;
+			}
 		}
 	}
 

@@ -26,7 +26,11 @@
 
 			<?php if ( $photos ) : ?>
 
-				<h4 class="dojocon-japan-2016-archive-photo-title">Photo</h4>
+				<h4 class="dojocon-japan-2016-archive-photo-title">Photo
+					<?php if ( get_field( '2016-archive-photos-more-link') ) : ?>
+						<a href="<?php the_field( '2016-archive-photos-more-link' ); ?>" class="button" target="_blank">More</a>
+					<?php endif; ?>
+				</h4>
 
 				<ul class="dojocon-japan-2016-archive-photos js-dojocon-japan-2016-archive-photos">
 					<?php foreach ( $photos as $photo ) : ?>
