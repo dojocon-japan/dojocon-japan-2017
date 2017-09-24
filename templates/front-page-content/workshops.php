@@ -10,11 +10,25 @@
 
 	<div class="entry-content">
 
-		<?php the_post_thumbnail( 'full' ); ?>
+		<?php
+		$children = get_posts( array(
+			'post_parent' => get_the_ID(),
+			'post_type'   => 'page',
+			'post_status' => 'publish',
+			'name'        => 'main-event',
+		) );
 
-		<h2 class="main-event-title"><?php the_field( 'main-event-title' ); ?></h2>
+		if ( $children ) :
+			$post = array_shift( $children );
+			setup_postdata( $post ); ?>
 
-		<?php the_content( '' ); ?>
+			<?php the_post_thumbnail( 'full' ); ?>
+
+			<h2 class="main-event-title"><?php the_title(); ?></h2>
+
+			<?php the_content( '' ); ?>
+
+		<?php endif; ?>
 
 		<?php $_post = $post;
 		$args = array(

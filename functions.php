@@ -205,6 +205,8 @@ function dojoconjapan2017_single_post_type_title() {
 	$page_for_posts_id = (int) get_option( 'page_for_posts' );
 	if ( is_singular( 'post' ) && $page_for_posts_id ) {
 		echo get_the_title( $page_for_posts_id );
+	} elseif ( is_page( 'workshops/main-event' ) ) {
+		echo 'Workshops';
 	} elseif ( is_page() ) {
 		the_title();
 	} else {

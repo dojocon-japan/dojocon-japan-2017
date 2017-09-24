@@ -25,7 +25,6 @@ $(function() {
       &&
       location.hostname == this.hostname
     ) {
-      e.preventDefault();
       $('.js-sliding-panel-toggle, .sliding-panel-content').removeClass('is-active');
     }
   });
