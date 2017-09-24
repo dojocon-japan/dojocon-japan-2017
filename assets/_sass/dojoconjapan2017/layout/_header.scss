@@ -4,6 +4,7 @@
 	padding: 0 30px;
 
 	@media (min-width: $desktop) {
+		align-items: center;
 		background: $white;
 		color: $default-font-color;
 		display: flex;
@@ -56,6 +57,7 @@
 
 				@media (min-width: $desktop) {
 					display: flex;
+					flex-flow: row wrap;
 				}
 
 				.menu-item {
@@ -72,6 +74,7 @@
 
 							.sub-menu {
 								display: flex;
+								z-index: 10;
 							}
 						}
 					}

@@ -39,6 +39,8 @@ if ( $blog_posts->have_posts() ) : ?>
 
 		</ul>
 
+		<a href="#" class="button button-white more-posts-link">More</a>
+
 	</section>
 
 <?php endif; ?>
