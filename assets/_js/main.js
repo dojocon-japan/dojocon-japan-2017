@@ -19,7 +19,7 @@ $(function() {
     $('.js-sliding-panel-toggle, .sliding-panel-content').toggleClass('is-active');
   });
 
-  $('.sliding-panel-content a[href*="#"]').on('click touchstart', function(e) {
+  $('.sliding-panel-content a[href*="#"]').on('click', function(e) {
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
       &&
