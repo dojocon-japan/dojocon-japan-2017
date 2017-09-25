@@ -14,7 +14,7 @@ $(function() {
   /**
    * Menu
    */
-  $('.js-sliding-panel-toggle').on('click touchstart', function(e) {
+  $('.js-sliding-panel-toggle').on('click', function(e) {
     e.preventDefault();
     $('.js-sliding-panel-toggle, .sliding-panel-content').toggleClass('is-active');
   });
@@ -29,12 +29,12 @@ $(function() {
     }
   });
 
-  $('.js-entry-nav-box-toggle').on('click touchstart', function(e) {
+  $('.js-entry-nav-box-toggle').on('click', function(e) {
     e.preventDefault();
     $('.entry-nav-box, .js-entry-nav-fade-screen').addClass('is-active');
   });
 
-  $('.js-entry-nav-box-close, .js-entry-nav-fade-screen').on('click touchstart', function(e) {
+  $('.js-entry-nav-box-close, .js-entry-nav-fade-screen').on('click', function(e) {
     e.preventDefault();
     $('.entry-nav-box, .js-entry-nav-fade-screen').removeClass('is-active');
   });
