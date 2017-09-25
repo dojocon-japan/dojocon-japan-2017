@@ -93,7 +93,7 @@ function dojoconjapan2017_scripts() {
 
 	wp_enqueue_style( 'dojocon-japan-2017-style', get_template_directory_uri() . '/assets/css/main.css' );
 
-	wp_enqueue_script( 'dojocon-japan-2017-script', get_template_directory_uri() . '/assets/js/main.js', array(), '', true );
+	wp_enqueue_script( 'dojocon-japan-2017-script', get_template_directory_uri() . '/assets/js/main.js', array(), '20170925191340', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
