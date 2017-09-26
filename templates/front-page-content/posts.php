@@ -41,7 +41,7 @@ if ( $blog_posts->have_posts() ) : ?>
 
 		<?php $count_posts = wp_count_posts();
 		if ( $count_posts->publish > 6 ) : ?>
-			<a href="#" class="button button-white more-posts-link">More</a>
+			<a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>" class="button button-white more-posts-link">More</a>
 		<?php endif; ?>
 
 	</section>
