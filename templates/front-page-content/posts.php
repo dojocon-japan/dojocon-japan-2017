@@ -39,7 +39,10 @@ if ( $blog_posts->have_posts() ) : ?>
 
 		</ul>
 
-		<a href="#" class="button button-white more-posts-link">More</a>
+		<?php $count_posts = wp_count_posts();
+		if ( $count_posts->publish > 6 ) : ?>
+			<a href="#" class="button button-white more-posts-link">More</a>
+		<?php endif; ?>
 
 	</section>
 
