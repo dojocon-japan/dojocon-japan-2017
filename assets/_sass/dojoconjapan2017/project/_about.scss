@@ -374,6 +374,17 @@
 	}
 
 	.dojocon-japan-2016-archive-photos {
+		overflow: hidden;
+
+		.slick-list {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+
+			@media (min-width: $desktop-s) {
+				padding-left: calc(50% - 470px) !important;
+				padding-right: calc(50% - 470px) !important;
+			}
+		}
 
 		.slick-prev,
 		.slick-next {
@@ -381,24 +392,36 @@
 			border-radius: 0;
 			bottom: 0;
 			font-size: 0;
+			height: 110%;
 			overflow: hidden;
 			position: absolute;
 			padding: 0;
-			top: 0;
+			top: 50%;
+			transform: translateY(-50%);
 			width: 20px;
 			z-index: 99;
 
+			@media (min-width: $desktop-s) {
+				width: calc(50% - 470px);
+			}
+
 			&::before {
+				@include size(50%, 100%);
 				background-repeat: no-repeat;
 				background-size: contain;
+				background-position: center;
 				content: "";
 				display: block;
-				height: 17px;
-				left: 50%;
-				position: absolute;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				width: 10px;
+				margin: auto;
+				max-width: 16px;
+				top: 0;
+			}
+
+			&:hover {
+
+				&::before {
+					opacity: 0.6;
+				}
 			}
 		}
 
@@ -407,6 +430,11 @@
 
 			&::before {
 				background-image: url(../images/slick-arrow-left.svg);
+
+				@media (min-width: 1052px) {
+					position: absolute;
+					right: 20px;
+				}
 			}
 		}
 
@@ -416,32 +444,12 @@
 			&::before {
 				background-image: url(../images/slick-arrow-right.svg);
 
+				@media (min-width: 1052px) {
+					left: 20px;
+					position: absolute;
+				}
 			}
 		}
-
-		// .slick-slide {
-		// 	position: relative;
-
-		// 	&::before {
-		// 		background: rgba($navy, 0.8);
-		// 		content: "";
-		// 		display: block;
-		// 		height: 100%;
-		// 		left: 0;
-		// 		position: absolute;
-		// 		top: 0;
-		// 		// transition: all 0.3s;
-		// 		width: 100%;
-		// 	}
-
-		// 	&.slick-current {
-
-		// 		&::before {
-		// 			content: none;
-		// 			// background: rgba($navy, 0);
-		// 		}
-		// 	}
-		// }
 	}
 
 	.dojocon-japan-2016-archive-movie-outer {
