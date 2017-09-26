@@ -64,4 +64,17 @@
 			}
 		}
 	}
+
+	.more-posts-link {
+		display: block;
+		font-weight: 500;
+		margin: auto;
+		padding: 2px 0;
+		text-transform: uppercase;
+		width: 80px;
+
+		@media (min-width: $tablet-s) {
+			font-size: 14px;
+		}
+	}
 }
