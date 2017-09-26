@@ -22,6 +22,10 @@
 
 	.googlemaps-container {
 		@include embed-container(100%);
+
+		@media (min-width: $desktop-s) {
+			@include embed-container(42.5531915%);
+		}
 	}
 
 	*:first-child {

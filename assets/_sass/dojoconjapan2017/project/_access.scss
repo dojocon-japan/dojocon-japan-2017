@@ -9,6 +9,30 @@
 			font-size: 16px;
 		}
 
+		@media (min-width: $desktop-s) {
+			text-align: left;
+
+			.access-info-box {
+
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: space-between;
+
+				.venue-image {
+					margin-left: 20px;
+					width: 447px;
+				}
+
+				.access-info {
+					padding-left: 90px;
+				}
+			}
+
+			p + h2 {
+				margin-top: 30px;
+			}
+		}
+
 		figure {
 			margin-bottom: 1.75em;
 		}
@@ -26,6 +50,10 @@
 			&.access-icon-pin,
 			&.access-icon-train {
 
+				@media (min-width: $desktop-s) {
+					position: relative;
+				}
+
 				&::before {
 					@include size(54px);
 					background-repeat: no-repeat;
@@ -37,6 +65,12 @@
 
 					@media (min-width: $tablet-s) {
 						@include size(67px);
+					}
+
+					@media (min-width: $desktop-s) {
+						left: -90px;
+						margin: 0;
+						position: absolute;
 					}
 				}
 			}
