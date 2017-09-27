@@ -1,5 +1,3 @@
-<?php // get_sidebar(); ?>
-
 <footer class="footer">
 	<div class="footer-inner">
 
@@ -18,6 +16,8 @@
 
 	</div>
 </footer>
+
+</div><!-- #site-container -->
 
 <?php wp_footer(); ?>
 

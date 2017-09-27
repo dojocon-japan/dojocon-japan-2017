@@ -9,6 +9,8 @@
 
 <body <?php body_class(); ?>>
 
+<div class="site-container">
+
 <header class="header sliding-panel-content">
 
 	<?php if ( has_nav_menu( 'global' ) ) : ?>
@@ -80,14 +82,23 @@
 			<?php _e( 'Posts' ); ?>
 		<?php endif; ?></h2>
 	</header>
+
 <?php elseif ( is_archive() ) : ?>
 	<header class="archive-header">
 		<h1 class="site-title js-site-title"><?php bloginfo( 'name' ); ?></h1>
 		<h2 class="archive-title"><?php post_type_archive_title(); ?></h2>
 	</header>
+
 <?php elseif ( ! ( is_home() || is_front_page() ) && is_singular() ) : ?>
 	<header class="post-header">
 		<h1 class="site-title js-site-title"><?php bloginfo( 'name' ); ?></h1>
 		<h2 class="post-type-title"><?php dojoconjapan2017_single_post_type_title(); ?></h2>
 	</header>
+
+<?php elseif ( is_404() ) : ?>
+	<header class="post-header">
+		<h1 class="site-title js-site-title"><?php bloginfo( 'name' ); ?></h1>
+		<h2 class="post-type-title">404</h2>
+	</header>
+
 <?php endif ?>

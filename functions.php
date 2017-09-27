@@ -160,28 +160,6 @@ function dojoconjapan2017_auto_embed_container( $content ) {
 }
 add_filter( 'the_content', 'dojoconjapan2017_auto_embed_container' );
 
-function dojoconjapan2017_custom_logo() {
-	$custom_logo_id = get_theme_mod( 'custom_logo' );
-
-	if ( $custom_logo_id ) {
-		$custom_logo_attr = array(
-			'class'    => 'custom-logo',
-			'itemprop' => 'logo',
-		);
-
-		/*
-		 * If the logo alt attribute is empty, get the site title and explicitly
-		 * pass it to the attributes used by wp_get_attachment_image().
-		 */
-		$image_alt = get_post_meta( $custom_logo_id, '_wp_attachment_image_alt', true );
-		if ( empty( $image_alt ) ) {
-			$custom_logo_attr['alt'] = get_bloginfo( 'name', 'display' );
-		}
-
-		echo wp_get_attachment_image( $custom_logo_id, 'full', false, $custom_logo_attr );
-	}
-}
-
 function dojoconjapan2017_single_post_type_title() {
 	$page_for_posts_id = (int) get_option( 'page_for_posts' );
 	if ( is_singular( 'post' ) && $page_for_posts_id ) {
