@@ -19,26 +19,9 @@ function dojoconjapan2017_setup() {
 		'caption',
 	) );
 
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
-
-	add_theme_support( 'custom-logo' );
-
-	add_theme_support( 'custom-header', array(
-		'default-image' => get_theme_file_uri( 'assets/images/big-top.svg' ),
-	) );
-
-	add_theme_support( 'custom-background', apply_filters( 'dojoconjapan2017_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-
 	add_image_size( 'post-thumbnail', 300, 200, true );
+
+	add_image_size( '2016-archive-photo', 940, 517, true );
 
 	register_nav_menus( array(
 		'global'    => esc_html__( 'Global',    'dojocon-japan-2017' ),
@@ -49,8 +32,6 @@ function dojoconjapan2017_setup() {
 	) );
 
 	add_post_type_support( 'page', 'excerpt' );
-
-	add_image_size( '2016-archive-photo', 940, 517, true );
 }
 
 }
