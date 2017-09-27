@@ -32,7 +32,7 @@
 				<?php foreach ( $main_events as $post ) : setup_postdata( $post );
 					$labels = get_field( 'labels' ); ?>
 
-					<div class="event keep-margin">
+					<div class="main-event keep-margin">
 						<h2><?php the_title(); ?></h2>
 						<div class="event-meta">
 							<?php if ( $labels ) : ?>
@@ -52,7 +52,6 @@
 						<?php $entry_url = get_field( 'entry-url' );
 						if ( $entry_url ) : ?>
 							<div class="workshop-entry">
-								<h2><?php _e( 'Workshop Entry', 'dojocon-japan-2017' ); ?></h2>
 								<?php $notes = get_field( 'notes' );
 								if ( $notes ) : ?>
 									<ul class="notes">

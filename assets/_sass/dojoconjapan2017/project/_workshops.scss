@@ -142,7 +142,8 @@
 
 	.workshop-labels {
 		justify-content: center;
-		margin: -10px auto 15px;
+		margin-right: -10px;
+		margin-bottom: 15px;
 
 		span {
 			background: rgba($navy, 0.2);
@@ -271,6 +272,65 @@
 		}
 	}
 
+	.main-event {
+
+		.workshop-entry {
+			padding-top: 15px;
+
+			@media (min-width: $desktop-s) {
+				padding-top: 30px;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+
+				.notes {
+					margin-bottom: 0;
+					margin-right: 40px;
+				}
+
+				.workshop-entry-button {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.event-meta {
+		margin-top: -10px;
+		margin-bottom: 1em;
+
+		@media (min-width: $desktop-s) {
+			float: left;
+			margin-right: 20px;
+			width: 300px;
+		}
+
+		.workshop-labels {
+
+			@media (min-width: $desktop-s) {
+				justify-content: flex-start;
+			}
+		}
+
+		.event-time {
+			font-weight: 500;
+			margin-top: 0;
+			text-align: center;
+
+			@media (min-width: $desktop-s) {
+				text-align: left;
+			}
+		}
+	}
+
+	.event-description {
+
+		@media (min-width: $desktop-s) {
+			margin-top: -10px;
+			overflow: hidden;
+		}
+	}
+
 	.workshop-entry {
 		border: 4px solid rgba($navy, 0.4);
 		border-radius: 20px;
@@ -278,6 +338,7 @@
 		padding: 10px 15px 20px;
 
 		@media (min-width: $tablet-s) {
+			border-radius: 30px;
 			margin: 50px auto;
 			padding: 20px 30px 30px;
 		}
@@ -298,6 +359,7 @@
 				content: "▶";
 				font-size: 12px;
 				margin-right: 20px;
+				vertical-align: 2px;
 
 				@media (min-width: $tablet-s) {
 					font-size: 14px;
