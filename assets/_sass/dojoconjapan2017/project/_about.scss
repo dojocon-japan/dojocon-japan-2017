@@ -41,7 +41,7 @@
 			@media (min-width: $desktop) {
 				background: url(../images/coderdojo-icon-flamingo.svg) no-repeat center center;
 				background-size: cover;
-				height: calc(100% + 23vw);
+				height: calc(100% + 22.5vw);
 				top: -180px;
 			}
 		}
@@ -51,6 +51,7 @@
 
 			@media (min-width: $desktop) {
 				background: #293b4b;
+				bottom: 0;
 				height: 100%;
 				top: 0;
 				z-index: -5;
@@ -81,10 +82,6 @@
 				padding-bottom: 25px;
 			}
 
-			@media (min-width: $desktop-s) {
-				background-position: left bottom;
-				text-align: left;
-			}
 		}
 
 		.japan-map {
@@ -159,6 +156,14 @@
 		}
 
 		.flex {
+
+			h2 {
+
+				@media (min-width: $desktop-s) {
+					background-position: left bottom;
+					text-align: left;
+				}
+			}
 
 			&.section-2-2,
 			&.section-2-3,
@@ -524,6 +529,14 @@
 
 	.outline-outer {
 		max-width: 540px;
+
+		h2 {
+
+			@media (min-width: $desktop-s) {
+				margin-top: 85px;
+				margin-bottom: 65px;
+			}
+		}
 	}
 
 	.outline {

@@ -116,16 +116,13 @@
 	}
 
 	.hero-image {
-		// left: 0;
 		height: 51.5625vw;
 		margin-top: calc(20px + 24vw);
 		position: relative;
-		// top: calc(328.2px + 24vw);
 		width: 100%;
 		z-index: 5;
 
 		@media (min-width: $tablet-s) {
-			// top: calc(430px + 24vw);
 			margin-top: calc(121.8 + 24vw);
 		}
 
