@@ -3,22 +3,6 @@
 	padding-bottom: 0;
 	overflow: hidden;
 
-	// @media (min-width: $desktop-s) {
-		// background: #293b4b;
-		// position: relative;
-		// background: #293b4b url(../images/coderdojo-icon-flamingo.svg) no-repeat center center;
-		// background-size: cover;
-
-	// 	&::before {
-	// 		@include size(100%);
-	// 		background: #293b4b url(../images/coderdojo-icon-flamingo.svg) no-repeat center center;
-	// 		background-size: cover;
-	// 		// content: "";
-	// 		position: absolute;
-	// 		z-index: -1;
-	// 	}
-	// }
-
 	.page-content {
 		background: $flamingo;
 		color: $white;
