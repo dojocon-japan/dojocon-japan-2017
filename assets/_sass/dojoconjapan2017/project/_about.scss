@@ -24,10 +24,9 @@
 		&::before,
 		&::after {
 			background: $flamingo;
-			border-radius: 50%;
 			content: "";
 			display: block;
-			height: 400vw;
+			height: 200vw;
 			left: 50%;
 			position: absolute;
 			transform: translateX(-50%);
@@ -35,7 +34,6 @@
 			z-index: -1;
 
 			@media (min-width: $desktop) {
-				border-radius: 0;
 				left: 0;
 				transform: none;
 				width: 100%;
@@ -43,17 +41,24 @@
 		}
 
 		&::before {
+			border-radius: 200vw 200vw 0 0;
 			top: -35vw;
 
 			@media (min-width: $desktop) {
 				background: url(../images/coderdojo-icon-flamingo.svg) no-repeat center center;
 				background-size: cover;
+				border-radius: 0;
 				height: calc(100% + 22.5vw);
-				top: -180px;
+				top: calc(55px + 7.5vw - 240px);
+			}
+
+			@media (min-width: $desktop-l) {
+				top: 55 + 73.5 - 240px;
 			}
 		}
 
 		&::after {
+			border-radius: 0 0 200vw 200vw;
 			bottom: -8vw;
 
 			@media (min-width: $desktop) {
