@@ -1,22 +1,76 @@
 .page-about {
-	background: $flamingo;
-	color: $white;
-	padding-top: 20px;
+	padding-top: 0;
 	padding-bottom: 0;
+	overflow: hidden;
 
-	@media (min-width: $desktop-s) {
+	// @media (min-width: $desktop-s) {
 		// background: #293b4b;
 		// position: relative;
 		// background: #293b4b url(../images/coderdojo-icon-flamingo.svg) no-repeat center center;
 		// background-size: cover;
 
-		&::before {
-			@include size(100%);
-			background: #293b4b url(../images/coderdojo-icon-flamingo.svg) no-repeat center center;
-			background-size: cover;
-			// content: "";
+	// 	&::before {
+	// 		@include size(100%);
+	// 		background: #293b4b url(../images/coderdojo-icon-flamingo.svg) no-repeat center center;
+	// 		background-size: cover;
+	// 		// content: "";
+	// 		position: absolute;
+	// 		z-index: -1;
+	// 	}
+	// }
+
+	.page-content {
+		background: $flamingo;
+		color: $white;
+		padding-top: 20px;
+		padding-bottom: 60px;
+		position: relative;
+
+		@media (min-width: $desktop) {
+			background: none;
+		}
+
+		&::before,
+		&::after {
+			background: $flamingo;
+			border-radius: 50%;
+			content: "";
+			display: block;
+			height: 400vw;
+			left: 50%;
 			position: absolute;
+			transform: translateX(-50%);
+			width: 400vw;
 			z-index: -1;
+
+			@media (min-width: $desktop) {
+				border-radius: 0;
+				left: 0;
+				transform: none;
+				width: 100%;
+			}
+		}
+
+		&::before {
+			top: -35vw;
+
+			@media (min-width: $desktop) {
+				background: url(../images/coderdojo-icon-flamingo.svg) no-repeat center center;
+				background-size: cover;
+				height: calc(100% + 23vw);
+				top: -180px;
+			}
+		}
+
+		&::after {
+			bottom: -8vw;
+
+			@media (min-width: $desktop) {
+				background: #293b4b;
+				height: 100%;
+				top: 0;
+				z-index: -5;
+			}
 		}
 	}
 
@@ -622,24 +676,10 @@
 	}
 
 	.background-image {
-		margin-top: 60px;
 		position: relative;
 		overflow: hidden;
 		text-align: center;
-
-		&::before {
-			background: $flamingo;
-			border-radius: 50%;
-			bottom: 75%;
-			content: "";
-			display: block;
-			height: 400vw;
-			left: 50%;
-			position: absolute;
-			overflow: hidden;
-			transform: translateX(-50%);
-			width: 400vw;
-		}
+		z-index: -10;
 
 		img {
 			width: 100%;

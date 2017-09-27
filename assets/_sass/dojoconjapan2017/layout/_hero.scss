@@ -1,66 +1,63 @@
 .hero {
-	background: #293b4b url(../images/hero-nightsky.svg) no-repeat;
-	background-size: cover;
-	background-position: 60% 0;
+	// background: #293b4b url(../images/hero-nightsky.svg) no-repeat;
+	// background-size: cover;
+	// background-position: 60% 0;
 	color: $white;
-	min-height: calc(328.2px + 75.5625vw);
+	// min-height: calc(328.2px + 75.5625vw);
 	overflow: hidden;
 	padding-top: 15px;
 	position: relative;
 
-	// opacity: 0.5;
-
-	@media (min-width: $tablet-s) {
-		min-height: calc(430px + 75.5625vw);
-	}
+	// @media (min-width: $tablet-s) {
+	// 	min-height: calc(430px + 75.5625vw);
+	// }
 
 	@media (min-width: $desktop) {
 		margin-bottom: -60px;
 		min-height: auto;
 		background-size: auto 100%;
 		background-position: center top;
-		z-index: 0;
 	}
 
-	&::before {
-		background: url(../images/hero-stars.svg) no-repeat;
-		background-size: cover;
-		content: "";
-		display: block;
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
+	// &::before {
+	// 	background: url(../images/hero-stars.svg) no-repeat;
+	// 	background-size: cover;
+	// 	content: "";
+	// 	display: block;
+	// 	height: 100%;
+	// 	left: 0;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	width: 100%;
 
-		@media (min-width: $desktop) {
-			content: none;
-			display: none;
-		}
-	}
+	// 	@media (min-width: $desktop) {
+	// 		content: none;
+	// 		display: none;
+	// 	}
+	// }
 
-	&::after {
-		background: $flamingo;
-		border-radius: 50%;
-		content: "";
-		height: 400vw;
-		left: 50%;
-		position: absolute;
-		top: calc(328.2px + 41vw);
-		transform: translateX(-50%);
-		width: 400vw;
+	// &::after {
+	// 	background: $flamingo;
+	// 	border-radius: 50%;
+	// 	content: "";
+	// 	height: 400vw;
+	// 	left: 50%;
+	// 	position: absolute;
+	// 	top: calc(328.2px + 41vw);
+	// 	transform: translateX(-50%);
+	// 	width: 400vw;
 
-		@media (min-width: $tablet-s) {
-			top: calc(430px + 41vw);
-		}
+	// 	@media (min-width: $tablet-s) {
+	// 		top: calc(430px + 41vw);
+	// 	}
 
-		@media (min-width: $desktop) {
-			height: 4380px;
-			margin-top: -240px;
-			top: 100%;
-			width: 4380px;
-		}
-	}
+	// 	@media (min-width: $desktop) {
+	// 		height: 4380px;
+	// 		margin-top: -240px;
+	// 		top: 100%;
+	// 		width: 4380px;
+	// 	}
+	// }
 
 	a {
 		color: inherit;
@@ -167,14 +164,17 @@
 	}
 
 	.hero-image {
-		left: 0;
-		position: absolute;
-		top: calc(328.2px + 24vw);
-		width: 100vw;
+		// left: 0;
+		height: 51.5625vw;
+		margin-top: calc(20px + 24vw);
+		position: relative;
+		// top: calc(328.2px + 24vw);
+		width: 100%;
 		z-index: 5;
 
 		@media (min-width: $tablet-s) {
-			top: calc(430px + 24vw);
+			// top: calc(430px + 24vw);
+			margin-top: calc(121.8 + 24vw);
 		}
 
 		@media (min-width: $desktop) {
@@ -262,6 +262,27 @@
 				content: none;
 				display: none;
 			}
+		}
+	}
+}
+
+.has-hero {
+	position: relative;
+
+	&::before {
+		background: #293b4b url(../images/hero-nightsky.svg) no-repeat;
+		background-size: cover;
+		background-position: 60% 0;
+		content: "";
+		height: calc(328.2px + 75.5625vw);
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -10;
+
+		@media (min-width: $desktop) {
+			height: 796.183px;
 		}
 	}
 }
