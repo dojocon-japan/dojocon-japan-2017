@@ -231,7 +231,26 @@
 		z-index: -10;
 
 		@media (min-width: $desktop) {
+			background-position: center;
 			height: 796.183px;
+		}
+	}
+
+	&::after {
+		background: url(../images/hero-stars.svg) no-repeat;
+		background-size: cover;
+		content: "";
+		display: block;
+		height: calc(328.2px + 75.5625vw);
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -10;
+
+		@media (min-width: $desktop) {
+			content: none;
+			display: none;
 		}
 	}
 }
