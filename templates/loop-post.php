@@ -24,6 +24,8 @@
 
 		</ul>
 
+		<?php the_posts_pagination(); ?>
+
 	<?php endif; ?>
 
 </section>

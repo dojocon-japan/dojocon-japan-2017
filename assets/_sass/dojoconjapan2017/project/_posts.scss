@@ -80,8 +80,11 @@
 .archive-posts {
 	background: $white;
 
-	a {
-		color: inherit;
+	.posts {
+
+		a {
+			color: inherit;
+		}
 	}
 }
 
@@ -89,7 +92,10 @@
 	background: $navy;
 	color: $white;
 
-	a {
-		color: $white;
+	.posts {
+
+		a {
+			color: $white;
+		}
 	}
 }
