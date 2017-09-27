@@ -1,4 +1,4 @@
-<section id="front-page-<?php echo esc_attr( $post->post_name ); ?>" class="front-page-content has-hero page-<?php echo esc_attr( $post->post_name ); ?>">
+<section id="front-page-top" class="front-page-content has-hero page-<?php echo esc_attr( $post->post_name ); ?>">
 
 	<div class="hero">
 
@@ -32,7 +32,7 @@
 		<?php endif; ?>
 	</div>
 
-	<div class="page-content">
+	<div id="front-page-<?php echo esc_attr( $post->post_name ); ?>" class="page-content">
 		<h1 class="page-title"><?php the_title(); ?></h1>
 
 		<?php if ( get_the_excerpt() ) : ?>
