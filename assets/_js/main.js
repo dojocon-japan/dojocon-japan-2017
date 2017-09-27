@@ -81,6 +81,7 @@ $(function() {
    * Slick
    */
   $('.js-dojocon-japan-2016-archive-photos').slick({
+    autoplay: true,
     centerMode: true,
     centerPadding: '20px',
     mobileFirst: true,
