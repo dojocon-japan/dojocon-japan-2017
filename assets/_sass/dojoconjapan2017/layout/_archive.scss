@@ -1,4 +1,4 @@
-[class*="archive-"],
+.archive,
 .front-page-content {
 	padding: calc(15px + 7.5vw) 0;
 
@@ -7,6 +7,7 @@
 		padding-top: 15 + 73.5px;
 	}
 
+	.archive-title,
 	.page-title {
 		font-family: $roboto-condensed;
 		font-size: 33.6px;
@@ -52,6 +53,7 @@
 			content: "";
 		}
 
+		+ .archive-excerpt,
 		+ .page-excerpt {
 			font-family: $pixelmplus10;
 			font-size: 14px;

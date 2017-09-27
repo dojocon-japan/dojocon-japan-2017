@@ -1,18 +1,18 @@
-<section class="archive-posts">
+<section class="archive archive-posts">
 
 	<?php $page_for_posts = get_option( 'page_for_posts' );
 	if ( $page_for_posts ) : ?>
 
-		<h1 class="page-title"><?php echo get_the_title( $page_for_posts ); ?></h1>
+		<h1 class="archive-title js-archive-title"><?php echo get_the_title( $page_for_posts ); ?></h1>
 
 		<?php if ( get_the_excerpt( $page_for_posts ) ) : ?>
-			<div class="page-excerpt">
+			<div class="archive-excerpt">
 				<?php echo apply_filters( 'the_excerpt', get_the_excerpt( $page_for_posts ) ); ?>
 			</div>
 		<?php endif; ?>
 
 	<?php else : ?>
-		<h1 class="page-title"><?php _e( 'Posts' ); ?></h1>
+		<h1 class="archive-title"><?php _e( 'Posts' ); ?></h1>
 	<?php endif; ?>
 
 	<?php if( have_posts() ): ?>

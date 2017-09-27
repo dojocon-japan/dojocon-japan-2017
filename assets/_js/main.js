@@ -47,7 +47,7 @@ $(function() {
       $('.hero .site-title').circleType({
         radius: 400,
       });
-      $('.page .page-title').circleType({
+      $('.js-archive-title, .page .page-title').circleType({
         radius: 240,
       });
       $('.post-header .site-title').circleType({
@@ -57,7 +57,7 @@ $(function() {
       $('.hero .site-title').circleType({
         radius: 180,
       });
-      $('.page .page-title').circleType({
+      $('.js-archive-title, .page .page-title').circleType({
         radius: 160,
       });
       $('.post-header .site-title').circleType({
