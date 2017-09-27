@@ -1,7 +1,5 @@
 .archive-posts,
 .page-posts {
-	background: $navy;
-	color: $white;
 
 	.posts {
 		display: flex;
@@ -28,7 +26,6 @@
 			}
 
 			a {
-				color: $white;
 				display: block;
 				text-decoration: none;
 
@@ -77,5 +74,22 @@
 		@media (min-width: $tablet-s) {
 			font-size: 14px;
 		}
+	}
+}
+
+.archive-posts {
+	background: $white;
+
+	a {
+		color: inherit;
+	}
+}
+
+.page-posts {
+	background: $navy;
+	color: $white;
+
+	a {
+		color: $white;
 	}
 }

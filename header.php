@@ -70,9 +70,24 @@
 	</span>
 </button>
 
-<?php if ( ! ( is_home() || is_front_page() ) && is_singular() ) : ?>
+<?php if ( is_home() ) : ?>
+	<header class="archive-header">
+		<h1 class="site-title js-site-title"><?php bloginfo( 'name' ); ?></h1>
+		<h2 class="archive-title"><?php $page_for_posts = get_option( 'page_for_posts' );
+		if ( $page_for_posts ) : ?>
+			<?php echo get_the_title( $page_for_posts ); ?>
+		<?php else : ?>
+			<?php _e( 'Posts' ); ?>
+		<?php endif; ?></h2>
+	</header>
+<?php elseif ( is_archive() ) : ?>
+	<header class="archive-header">
+		<h1 class="site-title js-site-title"><?php bloginfo( 'name' ); ?></h1>
+		<h2 class="archive-title"><?php post_type_archive_title(); ?></h2>
+	</header>
+<?php elseif ( ! ( is_home() || is_front_page() ) && is_singular() ) : ?>
 	<header class="post-header">
-		<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+		<h1 class="site-title js-site-title"><?php bloginfo( 'name' ); ?></h1>
 		<h2 class="post-type-title"><?php dojoconjapan2017_single_post_type_title(); ?></h2>
 	</header>
-<?php endif; ?>
+<?php endif ?>

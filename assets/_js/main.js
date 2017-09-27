@@ -47,20 +47,20 @@ $(function() {
       $('.hero .site-title').circleType({
         radius: 400,
       });
-      $('.js-archive-title, .page .page-title').circleType({
+      $('.page .page-title').circleType({
         radius: 240,
       });
-      $('.post-header .site-title').circleType({
+      $('.js-site-title').circleType({
         radius: 120,
       });
     } else {
       $('.hero .site-title').circleType({
         radius: 180,
       });
-      $('.js-archive-title, .page .page-title').circleType({
+      $('.page .page-title').circleType({
         radius: 160,
       });
-      $('.post-header .site-title').circleType({
+      $('.js-site-title').circleType({
         radius: 90,
       });
     }
