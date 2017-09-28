@@ -89,3 +89,60 @@
 		}
 	}
 }
+
+a.coderdojo-foundation-outer {
+	display: block;
+	text-decoration: none;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.coderdojo-foundation {
+	background-blend-mode: multiply;
+	background-color: rgba($flamingo, 0.6);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: $white;
+	min-height: 70vw;
+	padding: 12.5vw 6.25vw 18.75vw;
+	position: relative;
+	text-align: center;
+
+	@media (min-width: $tablet-s) {
+		min-height: 448px;
+		padding: 80px 20px 120px;
+	}
+
+	.coderdojo-foundation-title {
+		font-family: $roboto-condensed;
+		font-size: 24px;
+		font-weight: bold;
+		letter-spacing: -0.075em;
+		text-transform: uppercase;
+	}
+
+	.coderdojo-foundation-description {
+		font-family: $pixelmplus10;
+		font-size: 16px;
+		margin: calc(8.125vw - 42px) 0 5vw;
+
+		@media (min-width: $tablet-s) {
+			font-size: 18px;
+			margin: 10px 0 32px;
+		}
+	}
+
+	.coderdojo-foundation-logo {
+
+		img {
+			max-height: 12.5vw;
+
+			@media (min-width: 560px) {
+				max-height: 70px;
+			}
+		}
+	}
+}

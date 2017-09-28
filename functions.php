@@ -92,8 +92,9 @@ function dojoconjapan2017_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'dojocon_date', array(
-		'label'   => __( 'Date', 'dojocon-japan-2017' ),
-		'section' => 'title_tagline',
+		'label'    => __( 'Date', 'dojocon-japan-2017' ),
+		'section'  => 'title_tagline',
+		'priority' => 100,
 	) );
 
 	// Date
@@ -102,8 +103,9 @@ function dojoconjapan2017_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'dojocon_day', array(
-		'label'   => _x( 'Day', 'Day of the week', 'dojocon-japan-2017' ),
-		'section' => 'title_tagline',
+		'label'    => _x( 'Day', 'Day of the week', 'dojocon-japan-2017' ),
+		'section'  => 'title_tagline',
+		'priority' => 110,
 	) );
 
 	// Venue
@@ -112,8 +114,9 @@ function dojoconjapan2017_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'dojocon_venue', array(
-		'label'   => __( 'Venue', 'dojocon-japan-2017' ),
-		'section' => 'title_tagline',
+		'label'    => __( 'Venue', 'dojocon-japan-2017' ),
+		'section'  => 'title_tagline',
+		'priority' => 120,
 	) );
 
 	// Copyright
@@ -123,9 +126,72 @@ function dojoconjapan2017_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'copyright', array(
-		'label'   => __( 'Copyright', 'dojocon-japan-2017' ),
-		'section' => 'title_tagline',
+		'label'    => __( 'Copyright', 'dojocon-japan-2017' ),
+		'section'  => 'title_tagline',
+		'priority' => 130,
 	) );
+
+	// CoderDojo Foundation Title
+	$wp_customize->add_setting( 'coderdojo_foundation_title', array(
+		'default'    => __( 'Under the Auspices of', 'dojocon-japan-2017' ),
+		'capability' => 'edit_theme_options',
+	) );
+
+	$wp_customize->add_control( 'coderdojo_foundation_title', array(
+		'label'    => __( 'CoderDojo Foundation Title', 'dojocon-japan-2017' ),
+		'section'  => 'title_tagline',
+		'priority' => 140,
+	) );
+
+	// CoderDojo Foundation Descritption
+	$wp_customize->add_setting( 'coderdojo_foundation_description', array(
+		'default'    => _x( 'Under the Auspices of', 'CoderDojo Foundation description', 'dojocon-japan-2017' ),
+		'capability' => 'edit_theme_options',
+	) );
+
+	$wp_customize->add_control( 'coderdojo_foundation_description', array(
+		'label'    => __( 'CoderDojo Foundation Descritption', 'dojocon-japan-2017' ),
+		'section'  => 'title_tagline',
+		'priority' => 150,
+	) );
+
+	// CoderDojo Foundation Logo
+	$wp_customize->add_setting( 'coderdojo_foundation_logo', array(
+		'default'    => '',
+		'capability' => 'edit_theme_options',
+		'type'       => 'theme_mod',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'coderdojo_foundation_logo', array(
+		'label'    => __( 'CoderDojo Foundation Logo', 'dojocon-japan-2017' ),
+		'section'  => 'title_tagline',
+		'priority' => 160,
+	) ) );
+
+	// CoderDojo Foundation URL
+	$wp_customize->add_setting( 'coderdojo_foundation_url', array(
+		'default'    => 'https://coderdojo.com/',
+		'capability' => 'edit_theme_options',
+	));
+
+	$wp_customize->add_control( 'coderdojo_foundation_url', array(
+		'label'    => __( 'CoderDojo Foundation URL', 'dojocon-japan-2017'),
+		'section'  => 'title_tagline',
+		'priority' => 170,
+	));
+
+	// CoderDojo Fundation Background Image
+	$wp_customize->add_setting( 'coderdojo_foundation_background_image', array(
+		'default'    => '',
+		'capability' => 'edit_theme_options',
+		'type'       => 'theme_mod',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'coderdojo_foundation_background_image', array(
+		'label'    => __( 'CoderDojo Foundation Background Image', 'dojocon-japan-2017' ),
+		'section'  => 'title_tagline',
+		'priority' => 180,
+	) ) );
 
 	// Theme Options
 	$wp_customize->add_section( 'theme_options', array(
@@ -140,7 +206,7 @@ function dojoconjapan2017_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( 'front_page_content_' . $i, array(
-			'label'          => 'Front Page Content ' . $i,
+			'label'          => __( 'Front Page Content ', 'dojocon-japan-2017' ) . $i,
 			'section'        => 'theme_options',
 			'type'           => 'dropdown-pages',
 			'allow_addition' => true,
@@ -173,5 +239,37 @@ function dojoconjapan2017_single_post_type_title() {
 		$ja = array( 'スピーカー', 'ワークショップ', 'セッション' );
 		$en = array( 'Speaker', 'Workshop', 'Session' );
 		echo str_replace( $ja, $en, $post_type_obj->labels->singular_name );
+	}
+}
+
+function dojoconjapan2017_foundation_background_image_url() {
+	$id = get_theme_mod( 'coderdojo_foundation_background_image' );
+
+	if ( $id ) {
+		$url = wp_get_attachment_url( $id );
+		echo esc_url( $url );
+	}
+}
+
+function dojoconjapan2017_foundation() {
+	$title = get_theme_mod( 'coderdojo_foundation_title' );
+	$desc  = get_theme_mod( 'coderdojo_foundation_description' );
+	$logo  = get_theme_mod( 'coderdojo_foundation_logo' );
+	$url   = get_theme_mod( 'coderdojo_foundation_url' );
+	$bg    = get_theme_mod( 'coderdojo_foundation_background_image' );
+	$bg    = $bg ? ' style="background-image: url(' . esc_url( $bg ) . ');"' : $bg;
+	$html  = '';
+
+	if ( $logo ) {
+		$html .= $url ? '<a class="coderdojo-foundation-outer" href="' . esc_url( $url ) . '" target="_blank">' : '';
+		$html .= '<div class="coderdojo-foundation"' . $bg . '>';
+		$html .= '<h1 class="coderdojo-foundation-title js-coderdojo-foundation-title">' . esc_html( $title ) . '</h1>';
+		$html .= '<h2 class="coderdojo-foundation-description">' . esc_html( $desc ) . '</h2>';
+		$html .= '<p class="coderdojo-foundation-logo">';
+		$html .= '<img src="' . esc_url( $logo ) . '" alt="CoderDojo Foundation">';
+		$html .= '</p>';
+		$html .= '</div>';
+		$html .= $url ? '</a>' : '';
+		echo $html;
 	}
 }

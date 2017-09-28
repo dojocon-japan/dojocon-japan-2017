@@ -1,3 +1,5 @@
+<?php dojoconjapan2017_foundation(); ?>
+
 <footer class="footer">
 	<div class="footer-inner">
 

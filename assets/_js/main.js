@@ -53,6 +53,9 @@ $(function() {
       $('.js-site-title').circleType({
         radius: 120,
       });
+      $('.js-coderdojo-foundation-title').circleType({
+        radius: 200,
+      });
     } else {
       $('.hero .site-title').circleType({
         radius: 180,
@@ -62,6 +65,9 @@ $(function() {
       });
       $('.js-site-title').circleType({
         radius: 90,
+      });
+      $('.js-coderdojo-foundation-title').circleType({
+        radius: 200,
       });
     }
   }
