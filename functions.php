@@ -54,7 +54,7 @@ add_action( 'after_setup_theme', 'dojoconjapan2017_content_width', 0 );
  */
 function dojoconjapan2017_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'dojocon-japan-2017' ),
+		'name'          => esc_html__( 'Sidebar', 'dojocon-japan-2017' ) . ' 1',
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -64,6 +64,7 @@ function dojoconjapan2017_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'dojoconjapan2017_widgets_init' );
+add_filter( 'widget_text', 'do_shortcode' );
 
 /**
  * Enqueue scripts and styles.

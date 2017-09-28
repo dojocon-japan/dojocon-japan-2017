@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DojoCon Japan 2017 1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-09-28 11:14+0900\n"
+"POT-Creation-Date: 2017-09-28 15:28+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -57,63 +57,75 @@ msgstr "フッター"
 msgid "Sidebar"
 msgstr "サイドバー"
 
-#: functions.php:95
+#: functions.php:96
 msgid "Date"
 msgstr "開催日"
 
-#: functions.php:106
+#: functions.php:107
 msgctxt "Day of the week"
 msgid "Day"
 msgstr "曜日"
 
-#: functions.php:117
+#: functions.php:118
 msgid "Venue"
 msgstr "会場"
 
-#: functions.php:124
+#: functions.php:125
 msgid "DojoCon Japan 2017 Organization"
 msgstr "DojoCon Japan 2017 実行委員会"
 
-#: functions.php:129
+#: functions.php:130
 msgid "Copyright"
 msgstr "コピーライト"
 
-#: functions.php:136
+#: functions.php:137
 msgid "Under the Auspices of"
 msgstr ""
 
-#: functions.php:141
+#: functions.php:142
 msgid "CoderDojo Foundation Title"
 msgstr "CoderDojo Foundation タイトル"
 
-#: functions.php:148
+#: functions.php:149
 msgctxt "CoderDojo Foundation description"
 msgid "Under the Auspices of"
 msgstr "後援"
 
-#: functions.php:153
+#: functions.php:154
 msgid "CoderDojo Foundation Descritption"
 msgstr "CoderDojo Foundation 説明"
 
-#: functions.php:166
+#: functions.php:167
 msgid "CoderDojo Foundation Logo"
 msgstr "CoderDojo Foundation ロゴ"
 
-#: functions.php:178
+#: functions.php:179
 msgid "CoderDojo Foundation URL"
 msgstr "CoderDojo Foundation URL"
 
-#: functions.php:191
+#: functions.php:192
 msgid "CoderDojo Foundation Background Image"
 msgstr "CoderDojo Foundation 背景画像"
 
-#: functions.php:198
+#: functions.php:199
 msgid "Theme Options"
 msgstr ""
 
-#: functions.php:209
+#: functions.php:210
 msgid "Front Page Content "
 msgstr "フロントページコンテンツ "
+
+#: functions.php:290
+msgid "Share on Facebook"
+msgstr "Facebook でシェア"
+
+#: functions.php:296
+msgid "Share on Twitter"
+msgstr "Twitter でシェア"
+
+#: functions.php:299
+msgid "Share on LINE"
+msgstr "LINE でシェア"
 
 #: header.php:82
 msgid "Posts"
