@@ -9,6 +9,19 @@
 
 <body <?php body_class(); ?>>
 
+<div class="loading js-loading">
+	<div class="text">
+		<p>
+			<span class="fuma yellow"></span>
+			<span class="fuma blue"></span>
+			<span class="fuma red"></span>
+			<span class="fuma green"></span>
+			<span class="fuma magenta"></span>
+		</p>
+		<p>Loading...</p>
+	</div>
+</div>
+
 <div class="site-container">
 
 <header class="header sliding-panel-content">
