@@ -232,3 +232,162 @@ a.coderdojo-foundation-outer {
 		}
 	}
 }
+
+.loading {
+	@include size(100%);
+	@include position(fixed, 0);
+	background: $night-sky;
+	color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+
+	&::before {
+		background: $night-sky url(../images/hero-nightsky.svg) no-repeat;
+		background-size: cover;
+		background-position: 60% 0;
+		content: "";
+		height: calc(328.2px + 75.5625vw);
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+
+		@media (min-width: $desktop) {
+			background-position: center;
+			height: 796.183px;
+		}
+	}
+
+	&::after {
+		background: url(../images/hero-stars.svg) no-repeat;
+		background-size: cover;
+		content: "";
+		display: block;
+		height: calc(328.2px + 75.5625vw);
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+
+		@media (min-width: $desktop) {
+			content: none;
+			display: none;
+		}
+	}
+
+	.text {
+		font-size: 16px;
+		font-weight: 700;
+		position: relative;
+		text-align: center;
+		z-index: 99;
+
+		p {
+			margin: 0.5em 0;
+		}
+
+		.fuma {
+			$speed: 1.5s;
+			margin: 2px;
+
+			&::before,
+			&::after {
+				@include dojocon8bit;
+				display: inline-block;
+				font-size: 28px;
+				line-height: 28px;
+				animation: scaleinout $speed ease-in-out infinite;
+			}
+
+			&::before {
+				content: "\e900";
+				margin-right: -28px;
+			}
+
+			&::after {
+				content: "\e901";
+			}
+
+			&.yellow {
+
+				&::before,
+				&::after {
+					animation-delay: $speed / 7 * 1;
+				}
+
+				&::after {
+					color: $yellow;
+				}
+			}
+
+			&.blue {
+
+				&::before,
+				&::after {
+					animation-delay: $speed / 7 * 2;
+				}
+
+				&::after {
+					color: $blue;
+				}
+			}
+
+			&.red {
+
+				&::before,
+				&::after {
+					animation-delay: $speed / 7 * 3;
+				}
+
+				&::after {
+					color: $red;
+				}
+			}
+
+			&.green {
+
+				&::before,
+				&::after {
+					animation-delay: $speed / 7 * 4;
+				}
+
+				&::after {
+					color: $green;
+				}
+			}
+
+			&.magenta {
+
+				&::before,
+				&::after {
+					animation-delay: $speed / 7 * 5;
+				}
+
+				&::after {
+					color: $magenta;
+				}
+			}
+		}
+	}
+}
+
+@keyframes scaleinout {
+	0% {
+		transform: translateY(0);
+	}
+
+	20% {
+		transform: translateY(-100%);
+		// transform: scale(1);
+	}
+
+	40% {
+		transform: translateY(0);
+		// transform: scale(0);
+	}
+
+}

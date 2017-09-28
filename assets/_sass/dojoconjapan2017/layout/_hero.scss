@@ -219,7 +219,7 @@
 	position: relative;
 
 	&::before {
-		background: #293b4b url(../images/hero-nightsky.svg) no-repeat;
+		background: $night-sky url(../images/hero-nightsky.svg) no-repeat;
 		background-size: cover;
 		background-position: 60% 0;
 		content: "";
