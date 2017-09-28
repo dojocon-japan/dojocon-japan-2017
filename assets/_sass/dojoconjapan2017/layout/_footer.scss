@@ -243,41 +243,41 @@ a.coderdojo-foundation-outer {
 	align-items: center;
 	z-index: 9999;
 
-	&::before {
-		background: $night-sky url(../images/hero-nightsky.svg) no-repeat;
-		background-size: cover;
-		background-position: 60% 0;
-		content: "";
-		height: calc(328.2px + 75.5625vw);
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: 0;
+	// &::before {
+	// 	background: $night-sky url(../images/hero-nightsky.svg) no-repeat;
+	// 	background-size: cover;
+	// 	background-position: 60% 0;
+	// 	content: "";
+	// 	height: calc(328.2px + 75.5625vw);
+	// 	left: 0;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	width: 100%;
+	// 	z-index: 0;
 
-		@media (min-width: $desktop) {
-			background-position: center;
-			height: 796.183px;
-		}
-	}
+	// 	@media (min-width: $desktop) {
+	// 		background-position: center;
+	// 		height: 796.183px;
+	// 	}
+	// }
 
-	&::after {
-		background: url(../images/hero-stars.svg) no-repeat;
-		background-size: cover;
-		content: "";
-		display: block;
-		height: calc(328.2px + 75.5625vw);
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: 0;
+	// &::after {
+	// 	background: url(../images/hero-stars.svg) no-repeat;
+	// 	background-size: cover;
+	// 	content: "";
+	// 	display: block;
+	// 	height: calc(328.2px + 75.5625vw);
+	// 	left: 0;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	width: 100%;
+	// 	z-index: 0;
 
-		@media (min-width: $desktop) {
-			content: none;
-			display: none;
-		}
-	}
+	// 	@media (min-width: $desktop) {
+	// 		content: none;
+	// 		display: none;
+	// 	}
+	// }
 
 	.text {
 		font-size: 16px;
