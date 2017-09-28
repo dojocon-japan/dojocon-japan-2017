@@ -38,14 +38,29 @@ button {
 
 .site-container {
 	min-height: 100%;
-	padding-bottom: 222px;
+	padding-bottom: 224px;
 	position: relative;
 
 	@media (min-width: $mobile-l) {
-		padding-bottom: 186px;
+		padding-bottom: 188px;
 	}
 
 	@media (min-width: $tablet-s) {
 		padding-bottom: 100px;
+	}
+}
+
+.home {
+
+	.site-container {
+		padding-bottom: calc(246px + 70vw);
+
+		@media (min-width: $mobile-l) {
+			padding-bottom: calc(188px + 70vw);
+		}
+
+		@media (min-width: $tablet-s) {
+			padding-bottom: 548px;
+		}
 	}
 }
