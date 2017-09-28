@@ -4,15 +4,16 @@
 	<?php dojoconjapan2017_foundation(); ?>
 <?php endif; ?>
 
-<ul class="share-links">
-	<li class="fb"><?php echo do_shortcode( '[share_link sns="fb"]Facebook<br><small>で</small><br>シェア[/share_link]' ); ?></li>
-	<li class="tw"><?php echo do_shortcode( '[share_link sns="tw" hashtags="DojoConJP" via="DojoConJapan"]Twitter<br><small>で</small><br>シェア[/share_link]' ); ?></li>
-	<?php if ( wp_is_mobile() ) : ?>
-		<li class="line"><?php echo do_shortcode( '[share_link sns="line"]LINE<br><small>で</small><br>シェア[/share_link]' ); ?></li>
-	<?php endif; ?>
-</ul>
 
 <footer class="footer">
+	<ul class="share-links">
+		<li class="fb"><?php echo do_shortcode( '[share_link sns="fb"]Facebook<br><small>で</small><br>シェア[/share_link]' ); ?></li>
+		<li class="tw"><?php echo do_shortcode( '[share_link sns="tw" hashtags="DojoConJP" via="DojoConJapan"]Twitter<br><small>で</small><br>シェア[/share_link]' ); ?></li>
+		<?php if ( !wp_is_mobile() ) : ?>
+			<li class="line"><?php echo do_shortcode( '[share_link sns="line"]LINE<br><small>で</small><br>シェア[/share_link]' ); ?></li>
+		<?php endif; ?>
+	</ul>
+
 	<div class="footer-inner">
 
 		<?php if ( has_nav_menu( 'footer' ) ) : ?>

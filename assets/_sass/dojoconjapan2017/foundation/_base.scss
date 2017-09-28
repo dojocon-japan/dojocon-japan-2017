@@ -38,10 +38,14 @@ button {
 
 .site-container {
 	min-height: 100%;
-	padding-bottom: 142px;
+	padding-bottom: 223px;
 	position: relative;
 
-	@media (min-width: $desktop-s) {
-		padding-bottom: 50px;
+	@media (min-width: $mobile-l) {
+		padding-bottom: 188px;
+	}
+
+	@media (min-width: $tablet-s) {
+		padding-bottom: 102px;
 	}
 }

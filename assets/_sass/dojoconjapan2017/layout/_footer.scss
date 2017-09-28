@@ -1,20 +1,21 @@
 .footer {
 	background: $navy;
 	bottom: 0;
-	font-weight: 500;
-	padding: 5px;
 	position: absolute;
 	width: 100%;
 
-	@media (min-width: $desktop-s) {
-		padding: 8.75px;
+	.footer-inner {
+		font-weight: 500;
+		padding: 5px;
 
-		.footer-inner {
+		@media (min-width: $tablet-s) {
+
 			align-items: center;
 			display: flex;
 			justify-content: space-between;
 			margin: auto;
 			max-width: 940px;
+			padding: 8.75px;
 		}
 	}
 
@@ -25,7 +26,7 @@
 		opacity: 0.75;
 		text-align: center;
 
-		@media (min-width: $desktop-s) {
+		@media (min-width: $tablet-s) {
 			margin: 0;
 		}
 
@@ -67,7 +68,7 @@
 					}
 				}
 
-				@media (min-width: $desktop-s) {
+				@media (min-width: $tablet-s) {
 
 					&:last-child {
 						margin-right: 0;
@@ -84,7 +85,7 @@
 		opacity: 0.75;
 		text-align: center;
 
-		@media (min-width: $desktop-s) {
+		@media (min-width: $tablet-s) {
 			margin: 0;
 			order: -1;
 		}
@@ -218,7 +219,7 @@ a.coderdojo-foundation-outer {
 			small {
 				font-size: 12px;
 
-				@media (min-width: $mobile-l) {
+				@media (min-width: $tablet-s) {
 					font-size: 16px;
 				}
 			}
