@@ -1,6 +1,8 @@
 <?php get_sidebar(); ?>
 
-<?php dojoconjapan2017_foundation(); ?>
+<?php if ( is_home() || is_front_page() ) : ?>
+	<?php dojoconjapan2017_foundation(); ?>
+<?php endif; ?>
 
 <ul class="share-links">
 	<li class="fb"><?php echo do_shortcode( '[share_link sns="fb"]Facebook<br><small>で</small><br>シェア[/share_link]' ); ?></li>
