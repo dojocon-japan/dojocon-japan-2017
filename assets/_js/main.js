@@ -117,8 +117,9 @@ $(function() {
   $(window).on('load', function() {
     $('.js-loading').fadeOut(1000);
 
-    setTimeout(function() {
-      $('.js-loading').fadeOut(1000);
-    }, 10000);
   });
+
+  setTimeout(function() {
+    $('.js-loading').fadeOut(1000);
+  }, 15000);
 });
