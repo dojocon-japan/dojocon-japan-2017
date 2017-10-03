@@ -14,7 +14,7 @@
 		<ul class="gold-sponsors">
 			<?php foreach ( $gold_sponsors as $sponsor ) : ?>
 				<li>
-					<a href="<?php echo esc_url( $sponsor['url'] ); ?>">
+					<a href="<?php echo esc_url( $sponsor['url'] ); ?>" target="_blank">
 						<img src="<?php echo esc_attr( $sponsor['logo']['sizes']['sponsor-logo'] ); ?>" alt="<?php esc_attr( $sponsor['logo']['alt'] ); ?>">
 					</a>
 				</li>
@@ -28,7 +28,7 @@
 		<ul class="silver-sponsors">
 			<?php foreach ( $silver_sponsors as $sponsor ) : ?>
 				<li>
-					<a href="<?php echo esc_url( $sponsor['url'] ); ?>">
+					<a href="<?php echo esc_url( $sponsor['url'] ); ?>" target="_blank">
 						<img src="<?php echo esc_attr( $sponsor['logo']['sizes']['sponsor-logo'] ); ?>" alt="<?php esc_attr( $sponsor['logo']['alt'] ); ?>">
 					</a>
 				</li>
@@ -42,7 +42,7 @@
 		<ul class="bronze-sponsors">
 			<?php foreach ( $bronze_sponsors as $sponsor ) : ?>
 				<li>
-					<a href="<?php echo esc_url( $sponsor['url'] ); ?>">
+					<a href="<?php echo esc_url( $sponsor['url'] ); ?>" target="_blank">
 						<img src="<?php echo esc_attr( $sponsor['logo']['sizes']['sponsor-logo'] ); ?>" alt="<?php esc_attr( $sponsor['logo']['alt'] ); ?>">
 					</a>
 				</li>
@@ -56,7 +56,7 @@
 		<ul class="inkind-sponsors">
 			<?php foreach ( $inkind_sponsors as $sponsor ) : ?>
 				<li>
-					<a href="<?php echo esc_url( $sponsor['url'] ); ?>">
+					<a href="<?php echo esc_url( $sponsor['url'] ); ?>" target="_blank">
 						<img src="<?php echo esc_attr( $sponsor['logo']['sizes']['sponsor-logo'] ); ?>" alt="<?php esc_attr( $sponsor['logo']['alt'] ); ?>">
 					</a>
 				</li>
