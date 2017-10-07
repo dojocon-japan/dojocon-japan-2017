@@ -84,9 +84,8 @@
 		margin-top: 10px;
 
 		> li {
-			height: 28px;
+			@include size(28px);
 			margin: 5px;
-			width: 28px;
 
 			a {
 				opacity: 0.6;
@@ -96,5 +95,12 @@
 				}
 			}
 		}
+	}
+
+	.speaker-avatar {
+		@include size(200px);
+		border-radius: 50%;
+		margin: 0 auto 30px;
+		overflow: hidden;
 	}
 }

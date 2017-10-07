@@ -21,14 +21,16 @@
 
 		<div class="entry-content">
 
-			<?php if ( ! get_field( 'hide-post-thumbnail' ) && has_post_thumbnail() ) : ?>
-				<div class="speaker-avatar">
-					<?php the_post_thumbnail( 'speaker-avatar' ); ?>
-				</div>
-			<?php endif; ?>
+			<div class="speaker-detail">
+				<?php if ( ! get_field( 'hide-post-thumbnail' ) && has_post_thumbnail() ) : ?>
+					<div class="speaker-avatar">
+						<?php the_post_thumbnail( 'speaker-avatar' ); ?>
+					</div>
+				<?php endif; ?>
 
-			<div class="speaker-description">
-				<?php the_content(); ?>
+				<div class="speaker-description">
+					<?php the_content(); ?>
+				</div>
 			</div>
 
 		</div>
