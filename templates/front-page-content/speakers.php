@@ -27,7 +27,7 @@ if ( $blog_posts->have_posts() ) : ?>
 						<?php if ( has_post_thumbnail() ) : ?>
 							<?php the_post_thumbnail( 'speaker-avatar' ); ?>
 						<?php else : ?>
-							<img src="//via.placeholder.com/400/eee">
+							<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar.svg' ) ); ?>">
 						<?php endif; ?>
 					</div>
 					<h2><?php the_title(); ?></h2>
