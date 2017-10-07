@@ -97,10 +97,24 @@
 		}
 	}
 
+	.speaker-detail {
+
+		@media (min-width: $desktop-s) {
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+
 	.speaker-avatar {
 		@include size(200px);
 		border-radius: 50%;
 		margin: 0 auto 30px;
+		min-height: 200px;
+		min-width: 200px;
 		overflow: hidden;
+
+		@media (min-width: $desktop-s) {
+			margin: 0 50px;
+		}
 	}
 }
