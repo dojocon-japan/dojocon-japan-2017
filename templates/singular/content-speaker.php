@@ -7,11 +7,11 @@
 			<p><?php the_field( 'name-alphabet' ); ?></p>
 			<?php $links = get_field('external-links');
 			if ( $links ) : ?>
-				<ul>
+				<ul class="links">
 					<?php foreach ( $links as $link ) : ?>
 						<li>
 							<a href="<?php echo esc_url( $link['url'] ); ?>" target="_blank">
-								<?php echo esc_html( $link['type']['value'] ); ?>
+								<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/icon-' . $link['type']['value'] . '.svg' ) ); ?>" alt="<?php echo esc_html( $link['type']['value'] ); ?>">
 							</a>
 						</li>
 					<?php endforeach; ?>

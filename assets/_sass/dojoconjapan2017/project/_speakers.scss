@@ -75,3 +75,26 @@
 		}
 	}
 }
+
+.single-speaker {
+
+	.links {
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+
+		> li {
+			height: 28px;
+			margin: 5px;
+			width: 28px;
+
+			a {
+				opacity: 0.6;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
