@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DojoCon Japan 2017 1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-09-28 15:28+0900\n"
+"POT-Creation-Date: 2017-10-08 12:47+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -21,7 +21,7 @@ msgstr ""
 "_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
@@ -32,6 +32,18 @@ msgstr ""
 #: 404.php:10
 msgid "The page you requested could not be found."
 msgstr "お探しのページは見つかりませんでした。"
+
+#: assets/js/main.js:1
+msgid "show"
+msgstr ""
+
+#: assets/js/main.js:1
+msgid "hide"
+msgstr ""
+
+#: assets/js/main.js:1
+msgid "toggle"
+msgstr ""
 
 #: functions.php:27
 msgid "Global"
@@ -115,19 +127,7 @@ msgstr ""
 msgid "Front Page Content "
 msgstr "フロントページコンテンツ "
 
-#: functions.php:290
-msgid "Share on Facebook"
-msgstr "Facebook でシェア"
-
-#: functions.php:296
-msgid "Share on Twitter"
-msgstr "Twitter でシェア"
-
-#: functions.php:299
-msgid "Share on LINE"
-msgstr "LINE でシェア"
-
-#: header.php:82
+#: header.php:95
 msgid "Posts"
 msgstr ""
 
@@ -135,18 +135,19 @@ msgstr ""
 msgid "Staff Avatar"
 msgstr "スタッフアバター"
 
+#: templates/singular/content-speaker.php:36
+msgid "Session"
+msgstr "セッション"
+
 #: templates/singular/content-workshop.php:34
 msgid "Workshop Entry"
 msgstr "ワークショップ申込"
 
-#: assets/js/main.js:1
-msgid "show"
-msgstr ""
+#~ msgid "Share on Facebook"
+#~ msgstr "Facebook でシェア"
 
-#: assets/js/main.js:1
-msgid "hide"
-msgstr ""
+#~ msgid "Share on Twitter"
+#~ msgstr "Twitter でシェア"
 
-#: assets/js/main.js:1
-msgid "toggle"
-msgstr ""
+#~ msgid "Share on LINE"
+#~ msgstr "LINE でシェア"

@@ -114,7 +114,43 @@
 		overflow: hidden;
 
 		@media (min-width: $desktop-s) {
-			margin: 0 50px;
+			margin: 0 60px 0 0;
+		}
+	}
+
+	.sessions {
+
+		.session-title {
+			border-left: none;
+			font-size: 16px;
+			font-weight: 700;
+			margin-bottom: -15px;
+			padding: 0;
+
+			@media (min-width: $desktop-s) {
+				font-size: 18px;
+			}
+
+			a {
+				color: inherit;
+			}
+		}
+
+		.session-meta {
+			font-size: 16px;
+			margin-right: -20px;
+			margin-bottom: 30px;
+		}
+
+		.session-category {
+			background: rgba($navy, 0.2);
+			border-radius: 26px;
+			display: inline-block;
+			font-size: 14px;
+			margin-right: 20px;
+			min-width: 128px;
+			padding: 2.5px 1.5em;
+			text-align: center;
 		}
 	}
 }

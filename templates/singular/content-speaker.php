@@ -33,6 +33,36 @@
 				</div>
 			</div>
 
+			<?php $sessions = new WP_Query( array(
+				'post_type' => 'session',
+				'post__in' => get_field( 'sessions' ),
+			) );
+
+			if ( $sessions->have_posts() ) : ?>
+
+				<h2><?php _e( 'Session', 'dojocon-japan-2017' ); ?></h2>
+
+				<div class="sessions">
+
+					<?php while ( $sessions->have_posts() ) : $sessions->the_post(); ?>
+
+						<?php $categories = get_the_terms( $post->ID, 'session-category' ); ?>
+
+						<h3 class="session-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+						<p class="session-meta">
+							<?php foreach ( $categories as $cat ) : ?>
+								<span class="session-category"><?php echo esc_html( $cat->name ); ?></span>
+							<?php endforeach; ?>
+							<span class="session-time">[<?php the_field( 'start-time' ); ?> - <?php the_field( 'ending-time' ); ?>]</span>
+						</p>
+
+					<?php endwhile; ?>
+
+				</div>
+
+			<?php endif; wp_reset_postdata(); ?>
+
 		</div>
 
 	<?php endwhile ?>
