@@ -4,12 +4,14 @@
 
 		<div class="post-meta">
 			<h1 class="post-title"><?php the_title(); ?></h1>
-			<?php $categories = get_the_terms( $post->ID, 'session-category' ); ?>
-			<p>
-				<?php foreach ( $categories as $cat ) : ?>
-					<span class="session-category"><?php echo esc_html( $cat->name ); ?></span>
-				<?php endforeach; ?>
-			</p>
+			<?php $categories = get_the_terms( $post->ID, 'session-category' );
+			if ( $categories ) : ?>
+				<p>
+					<?php foreach ( $categories as $cat ) : ?>
+						<span class="session-category"><?php echo esc_html( $cat->name ); ?></span>
+					<?php endforeach; ?>
+				</p>
+			<?php endif; ?>
 			<time>[<?php the_field( 'start-time' ); ?> - <?php the_field( 'ending-time' ); ?>]</time>
 		</div>
 
@@ -25,7 +27,7 @@
 
 			<?php $speakers = new WP_Query( array(
 				'post_type' => 'speaker',
-				'post__in' => get_field( 'speakers' ),
+				'post__in'  => get_field( 'speakers' ),
 			) );
 
 			if ( $speakers->have_posts() ) : ?>

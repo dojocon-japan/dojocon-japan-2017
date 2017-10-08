@@ -43,7 +43,7 @@
 				<?php foreach ( $main_events as $post ) : setup_postdata( $post );
 					$labels = get_field( 'labels' ); ?>
 					<li>
-						<p class="event-time">[<?php the_field( 'start-time' ); ?>−<?php the_field( 'ending-time' ); ?>]</p>
+						<p class="event-time">[<?php the_field( 'start-time' ); ?>-<?php the_field( 'ending-time' ); ?>]</p>
 						<h2 class="event-title"><?php the_title(); ?></h2>
 						<?php if ( $labels ) : ?>
 							<p class="workshop-labels">

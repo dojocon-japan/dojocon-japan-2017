@@ -35,7 +35,7 @@
 
 			<?php $sessions = new WP_Query( array(
 				'post_type' => 'session',
-				'post__in' => get_field( 'sessions' ),
+				'post__in'  => get_field( 'sessions' ),
 			) );
 
 			if ( $sessions->have_posts() ) : ?>
@@ -46,14 +46,16 @@
 
 					<?php while ( $sessions->have_posts() ) : $sessions->the_post(); ?>
 
-						<?php $categories = get_the_terms( $post->ID, 'session-category' ); ?>
 
 						<h3 class="session-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
 						<p class="session-meta">
-							<?php foreach ( $categories as $cat ) : ?>
-								<span class="session-category"><?php echo esc_html( $cat->name ); ?></span>
-							<?php endforeach; ?>
+							<?php $categories = get_the_terms( $post->ID, 'session-category' );
+							if ( $categories ) : ?>
+								<?php foreach ( $categories as $cat ) : ?>
+									<span class="session-category"><?php echo esc_html( $cat->name ); ?></span>
+								<?php endforeach; ?>
+							<?php endif; ?>
 							<span class="session-time">[<?php the_field( 'start-time' ); ?> - <?php the_field( 'ending-time' ); ?>]</span>
 						</p>
 

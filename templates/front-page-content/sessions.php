@@ -1,6 +1,6 @@
 <?php
 $sessions = new WP_Query( array(
-	'posts_per_page' => 6,
+	'posts_per_page' => -1,
 	'post_status'    => 'publish',
 	'post_type'      => 'session',
 	'no_found_rows'  => true,
@@ -36,7 +36,7 @@ if ( get_the_content() || $sessions->have_posts() ) : ?>
 
 				<li>
 					<?php $session_categories = get_the_terms( get_the_ID(), 'session-category' );
-					if ( $session_categories && ! is_wp_error( $session_categories ) ) : ?>
+					if ( $session_categories ) : ?>
 						<p class="session-category">
 							<?php foreach ( $session_categories as $cat ) : ?>
 								<span><?php echo esc_html( $cat->name ); ?></span>
@@ -45,8 +45,11 @@ if ( get_the_content() || $sessions->have_posts() ) : ?>
 					<?php endif; ?>
 					<h2><?php the_title(); ?></h2>
 					<div class="flex">
-						<p class="session-time">[<?php the_field( 'start-time' ); ?>−<?php the_field( 'ending-time' ); ?>]</p>
-						<?php $speakers = get_field( 'speakers' );
+						<p class="session-time">[<?php the_field( 'start-time' ); ?>-<?php the_field( 'ending-time' ); ?>]</p>
+						<?php $speakers = get_posts( array(
+							'post_type' => 'speaker',
+							'post__in'  => get_field( 'speakers' ),
+						) );
 						if ( $speakers ) : ?>
 							<ul class="speakers">
 								<?php foreach ( $speakers as $speaker ) : ?>
