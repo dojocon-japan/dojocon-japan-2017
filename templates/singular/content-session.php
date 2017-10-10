@@ -38,7 +38,21 @@
 
 					<?php while ( $speakers->have_posts() ) : $speakers->the_post(); ?>
 
-						<h3 class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<div class="speaker">
+
+							<?php if ( ! get_field( 'hide-post-thumbnail' ) && has_post_thumbnail() ) : ?>
+								<div class="speaker-avatar">
+									<?php the_post_thumbnail( 'speaker-avatar' ); ?>
+								</div>
+							<?php endif; ?>
+
+							<h3 class="speaker-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+							<div class="speaker-description">
+								<?php the_excerpt(); ?>
+							</div>
+
+						</div>
 
 					<?php endwhile; ?>
 

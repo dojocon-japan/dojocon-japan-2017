@@ -274,3 +274,13 @@ function dojoconjapan2017_foundation() {
 		echo $html;
 	}
 }
+
+function dojoconjapan2017_excerpt_length( $length ) {
+
+	if ( get_post_type( get_the_ID() ) === 'speaker' ) {
+		return 100;
+	};
+
+	return $length;
+}
+add_filter( 'excerpt_length', 'dojoconjapan2017_excerpt_length' );

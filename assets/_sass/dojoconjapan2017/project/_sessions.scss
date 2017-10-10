@@ -92,3 +92,55 @@
 		}
 	}
 }
+
+.single-session {
+
+	.speakers {
+
+		.speaker {
+			margin-bottom: 30px;
+			overflow: hidden;
+		}
+
+		.speaker-avatar {
+			@include size(105px);
+			border-radius: 50%;
+			display: inline-block;
+			margin: 0 20px;
+			overflow: hidden;
+			vertical-align: middle;
+
+			@media (min-width: $desktop-s) {
+				@include size(150px);
+				float: left;
+				margin: 0 50px 0 0;
+			}
+		}
+
+		.speaker-name {
+			border: none;
+			display: inline-block;
+			font-size: 16px;
+			padding: 0;
+			vertical-align: middle;
+
+			@media (min-width: $desktop-s) {
+				font-size: 18px;
+				margin: 10px 0 0;
+			}
+
+			a {
+				color: inherit;
+			}
+		}
+
+		.speaker-description {
+			margin-top: 20px;
+			overflow: hidden;
+
+			@media (min-width: $desktop-s) {
+				margin-top: 10px;
+			}
+		}
+	}
+}
