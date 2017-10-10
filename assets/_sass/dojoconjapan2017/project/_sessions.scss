@@ -30,7 +30,9 @@
 
 		> li {
 			margin-bottom: 20px;
+			padding-bottom: 60px;
 			padding-right: 20px;
+			position: relative;
 
 			@media (min-width: $tablet-s) {
 				width: 1 / 2 * 100%;
@@ -76,6 +78,7 @@
 			}
 
 			.session-more-button {
+				@include position(absolute, auto 0 0 0);
 				display: block;
 				margin: 0.75em auto;
 				padding: 1px 0 3px;
