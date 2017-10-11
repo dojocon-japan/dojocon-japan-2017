@@ -11,8 +11,9 @@
 
 		> li {
 			text-align: center;
-			margin: 15px 0;
-			padding: 0 5px;
+			margin: 15px 0 20px;
+			padding: 0 5px 45px;
+			position: relative;
 			width: 1 / 2 * 100%;
 
 			@media (min-width: $mobile-l) {
@@ -62,9 +63,10 @@
 			}
 
 			a {
+				@include position(absolute, auto 0 0 0);
 				font-size: 14px;
 				font-weight: 500;
-				margin-top: 12px;
+				margin: 12px auto 0;
 				padding: 2px 0;
 				text-transform: uppercase;
 				width: 80px;
