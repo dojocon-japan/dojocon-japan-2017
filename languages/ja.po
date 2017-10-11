@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DojoCon Japan 2017 1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-10-08 15:39+0900\n"
+"POT-Creation-Date: 2017-10-11 15:36+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Staff Avatar"
 msgstr "スタッフアバター"
 
-#: templates/singular/content-session.php:33
+#: templates/singular/content-session.php:35
 msgid "Speaker"
 msgstr "スピーカー"
 
@@ -146,6 +146,10 @@ msgstr "セッション"
 #: templates/singular/content-workshop.php:34
 msgid "Workshop Entry"
 msgstr "ワークショップ申込"
+
+#: timetable.php:5
+msgid "Timetable"
+msgstr "タイムテーブル"
 
 #~ msgid "Share on Facebook"
 #~ msgstr "Facebook でシェア"
