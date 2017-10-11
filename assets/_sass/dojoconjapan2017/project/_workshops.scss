@@ -115,14 +115,11 @@
 	.workshop-more-button {
 		color: $flamingo;
 		display: block;
+		font-size: 14px;
 		margin: 15px auto 0;
 		padding: 2px 0;
 		text-transform: uppercase;
 		width: 80px;
-
-		@media (min-width: $tablet-s) {
-			font-size: 14px;
-		}
 	}
 
 	.workshop-more-button {

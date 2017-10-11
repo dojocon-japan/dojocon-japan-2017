@@ -62,15 +62,12 @@
 			}
 
 			a {
+				font-size: 14px;
 				font-weight: 500;
 				margin-top: 12px;
 				padding: 2px 0;
 				text-transform: uppercase;
 				width: 80px;
-
-				@media (min-width: $tablet-s) {
-					font-size: 14px;
-				}
 			}
 		}
 	}
