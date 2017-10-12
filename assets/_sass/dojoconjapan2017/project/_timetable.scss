@@ -1,0 +1,49 @@
+.page-template-timetable {
+
+	.timetable {
+		display: flex;
+
+		[class*="-column"] {
+
+			> h2 {
+				background: $navy;
+				color: $white;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 35px;
+				margin: 0 0 5px;
+				padding: 0;
+				text-align: center;
+			}
+
+			ol {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				> li {
+					margin: 0;
+					padding: 15px 10px;
+
+					+ li {
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+
+		.time-column {
+			width: 50px;
+
+			.time {
+
+				> li {
+					background: $light-gray;
+					font-size: 12px;
+					font-weight: 700;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
