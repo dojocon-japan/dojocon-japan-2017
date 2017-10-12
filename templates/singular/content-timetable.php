@@ -12,7 +12,7 @@
 			<?php // the_content(); ?>
 			<div class="timetable-outer">
 				<div class="timetable-vertical-scroll-box">
-					<div class="timetable">
+					<div class="timetable js-timetable">
 						<div class="column time-column">
 							<h2>時間</h2>
 							<ol class="time">
@@ -62,11 +62,11 @@
 								<li class="duration-20min">
 									<p class="category">コミュニティ</p>
 									<h3>DojoとDojo、そして地域！みんなつながる合同イベントのすすめ</h3>
-									<p>[12:20-12:40]<br>
-									とがぞの</p>
+									<p>[12:20-12:40]　とがぞの</p>
 								</li>
 								<li class="duration-40min">
 									<h3>お昼休み</h3>
+									<p>[12:40-13:40]</p>
 								</li>
 								<li class="duration-20min">
 									<h3>会場提供スポンサーセッション</h3>
@@ -80,8 +80,7 @@
 								<li class="duration-20min">
 									<p class="category">コミュニティ</p>
 									<h3>柏市教育委員会とCoderDojo Kashiwaの連携</h3>
-									<p>[14:30-14:50]<br>
-									宮島 衣瑛</p>
+									<p>[14:30-14:50]　宮島 衣瑛</p>
 								</li>
 								<li class="duration-40min">
 									<p class="category">コミュニティ</p>
@@ -153,6 +152,7 @@
 								</li>
 								<li class="duration-40min blank-before-15min">
 									<h3>お昼休み</h3>
+									<p>[12:40-13:40]</p>
 								</li>
 								<li class="duration-90min">
 									<h3>未定</h3>
@@ -179,6 +179,7 @@
 								</li>
 								<li class="duration-40min">
 									<h3>お昼休み</h3>
+									<p>[12:40-13:40]</p>
 								</li>
 								<li class="duration-230min">
 									<h3>CoderDojoロゴコンテスト</h3>
@@ -194,12 +195,34 @@
 								</li>
 								<li class="duration-40min">
 									<h3>お昼休み</h3>
+									<p>[12:40-13:40]</p>
 								</li>
 								<li class="duration-230min">
 									<h3>Dojo日本地図-日本全国のCoderDojoを探してみよう-</h3>
 									<p>[10:00-12:40]</p>
 									<p class="label">忍者向け</p>
 									<p class="label">メンター向け</p>
+								</li>
+							</ol>
+						</div>
+						<div class="column">
+							<h2>図工</h2>
+							<ol>
+								<li class="duration-160min">
+									<h3>テクノ手芸に挑戦！！LEDで光るフェルトマスコットを作ろう</h3>
+									<p>[10:00-12:40]</p>
+									<p class="label">忍者向け</p>
+									<p class="label">要当日整理券</p>
+								</li>
+								<li class="duration-40min">
+									<h3>お昼休み</h3>
+									<p>[12:40-13:40]</p>
+								</li>
+								<li class="duration-230min">
+									<h3>テクノ手芸に挑戦！！LEDで光るフェルトマスコットを作ろう</h3>
+									<p>[10:00-12:40]</p>
+									<p class="label">忍者向け</p>
+									<p class="label">要当日整理券</p>
 								</li>
 							</ol>
 						</div>

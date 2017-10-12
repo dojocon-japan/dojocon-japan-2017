@@ -105,6 +105,17 @@ $(function() {
   });
 
   /**
+   * Timetable
+   */
+  $('.js-timetable').on('scroll', function() {
+    var scrollTop = $(this).scrollTop();
+    console.log(scrollTop);
+    $(this).find('.time-column').css({
+      marginTop: - scrollTop,
+    });
+  });
+
+  /**
    * Smooth Scroll
    */
   $('a[href*="#"]').smoothscroll({

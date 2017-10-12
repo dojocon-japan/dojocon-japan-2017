@@ -9,15 +9,9 @@
 		position: relative;
 
 		.timetable {
-			height: calc(100vh - 250px);
+			// height: calc(100vh - 250px);
+			margin-left: $time-column-width + 5px;
 			overflow: auto;
-
-			.time-column {
-
-				+ .column {
-					margin-left: $time-column-width + 5px;
-				}
-			}
 		}
 	}
 
@@ -26,11 +20,8 @@
 
 		.column {
 			min-width: 200px;
+			margin-right: 5px;
 			width: 200px;
-
-			+ .column {
-				margin-left: 5px;
-			}
 
 			ol {
 				list-style: none;
@@ -89,7 +80,7 @@
 				color: $white;
 				display: inline-block;
 				margin-top: 10px;
-				padding: 0.5px 1em 1px;
+				padding: 0.5px 1.5em 1px;
 			}
 		}
 
@@ -99,6 +90,7 @@
 			left: 0;
 			padding-right: 5px;
 			position: absolute;
+			top: 0;
 			width: $time-column-width + 5px;
 
 			.time {
