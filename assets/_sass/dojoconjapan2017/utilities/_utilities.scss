@@ -46,3 +46,15 @@ img.circle-image {
 		}
 	}
 }
+
+@for $i from 1 through 24 {
+	$interval: 5;
+
+	.duration-#{$i * $interval}min {
+		height: $i * $interval * $timetable-height-per-min - 5px !important;
+	}
+
+	.blank-before-#{$i * $interval}min {
+		margin-top: $i * $interval * $timetable-height-per-min + 5px !important;
+	}
+}
