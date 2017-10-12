@@ -47,7 +47,7 @@ img.circle-image {
 	}
 }
 
-@for $i from 1 through 24 {
+@for $i from 1 through 96 {
 	$interval: 5;
 
 	.duration-#{$i * $interval}min {
@@ -56,5 +56,9 @@ img.circle-image {
 
 	.blank-before-#{$i * $interval}min {
 		margin-top: $i * $interval * $timetable-height-per-min + 5px !important;
+
+		&:first-child {
+			margin-top: $i * $interval * $timetable-height-per-min !important;
+		}
 	}
 }

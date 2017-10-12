@@ -1,4 +1,25 @@
 .page-template-timetable {
+	$time-column-width: 50px;
+
+	.timetable-outer {
+		overflow: hidden;
+	}
+
+	.timetable-vertical-scroll-box {
+		position: relative;
+
+		.timetable {
+			height: calc(100vh - 250px);
+			overflow: auto;
+
+			.time-column {
+
+				+ .column {
+					margin-left: $time-column-width + 5px;
+				}
+			}
+		}
+	}
 
 	.timetable {
 		display: flex;
@@ -25,11 +46,12 @@
 
 			h2 {
 				background: $navy;
+				border-bottom: 5px solid $white;
 				color: $white;
 				font-size: 14px;
 				font-weight: 700;
 				line-height: 35px;
-				margin: 0 0 5px;
+				margin: 0;
 				padding: 0;
 				text-align: center;
 			}
@@ -60,11 +82,24 @@
 				margin-bottom: 10px;
 				text-align: center;
 			}
+
+			.label {
+				background: $navy;
+				border-radius: 26px;
+				color: $white;
+				display: inline-block;
+				margin-top: 10px;
+				padding: 0.5px 1em 1px;
+			}
 		}
 
 		.time-column {
-			min-width: 50px;
-			width: 50px;
+			background: $white;
+			min-width: $time-column-width + 5px;
+			left: 0;
+			padding-right: 5px;
+			position: absolute;
+			width: $time-column-width + 5px;
 
 			.time {
 
@@ -76,6 +111,26 @@
 					padding-left: 0;
 					padding-right: 0;
 					text-align: center;
+				}
+			}
+		}
+
+		.foyer-column {
+			min-width: 610px;
+			width: 610px;
+			display: flex;
+			flex-flow: row wrap;
+
+			h2 {
+				width: 100%;
+			}
+
+			> ol {
+				min-width: 200px;
+				width: 200px;
+
+				+ ol {
+					margin-left: 5px;
 				}
 			}
 		}
