@@ -64,7 +64,7 @@
 									<h3>DojoとDojo、そして地域！みんなつながる合同イベントのすすめ</h3>
 									<p>[12:20-12:40]　とがぞの</p>
 								</li>
-								<li class="duration-40min">
+								<li class="duration-60min">
 									<h3>お昼休み</h3>
 									<p>[12:40-13:40]</p>
 								</li>
@@ -177,7 +177,7 @@
 									<h3>CoderDojoロゴコンテスト</h3>
 									<p>[10:00-12:40]</p>
 								</li>
-								<li class="duration-40min">
+								<li class="duration-60min">
 									<h3>お昼休み</h3>
 									<p>[12:40-13:40]</p>
 								</li>
@@ -193,7 +193,7 @@
 									<p class="label">忍者向け</p>
 									<p class="label">メンター向け</p>
 								</li>
-								<li class="duration-40min">
+								<li class="duration-60min">
 									<h3>お昼休み</h3>
 									<p>[12:40-13:40]</p>
 								</li>
@@ -214,7 +214,7 @@
 									<p class="label">忍者向け</p>
 									<p class="label">要当日整理券</p>
 								</li>
-								<li class="duration-40min">
+								<li class="duration-60min">
 									<h3>お昼休み</h3>
 									<p>[12:40-13:40]</p>
 								</li>
