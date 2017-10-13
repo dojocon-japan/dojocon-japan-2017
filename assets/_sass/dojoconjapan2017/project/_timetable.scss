@@ -1,3 +1,4 @@
+.page,
 .page-template-timetable {
 	$time-column-width: 50px;
 
@@ -12,6 +13,12 @@
 			// height: calc(100vh - 250px);
 			margin-left: $time-column-width + 5px;
 			overflow: auto;
+
+			.time-column {
+				left: 0;
+				position: absolute;
+				top: 0;
+			}
 		}
 	}
 
@@ -41,6 +48,7 @@
 				color: $white;
 				font-size: 14px;
 				font-weight: 700;
+				height: 40px;
 				line-height: 35px;
 				margin: 0;
 				padding: 0;
@@ -86,11 +94,8 @@
 
 		.time-column {
 			background: $white;
+			border-right: 5px solid $white;
 			min-width: $time-column-width + 5px;
-			left: 0;
-			padding-right: 5px;
-			position: absolute;
-			top: 0;
 			width: $time-column-width + 5px;
 
 			.time {
