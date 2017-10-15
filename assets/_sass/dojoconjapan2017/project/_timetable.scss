@@ -8,8 +8,12 @@ $time-column-width: 50px;
 		flex-flow: row wrap;
 		align-items: flex-start;
 		list-style: none !important;
-		margin: 0 -5px 30px 0 !important;
+		margin: 0 -5px 10px 0 !important;
 		padding: 0 !important;
+
+		@media (min-width: $desktop) {
+			margin-bottom: 30px !important;
+		}
 
 		> li {
 			background: rgba($navy, 0.15);
@@ -26,19 +30,36 @@ $time-column-width: 50px;
 				padding: 3px 0;
 				width: calc(20% - 5px);
 
-				&.all {
+				&#all {
 					width: calc(40% - 5px);
 				}
 			}
 
 			&.active {
 				background: $flamingo;
+				color: $white;
 			}
 		}
 	}
 
 	.timetable {
 		display: flex;
+
+		&.hide-all {
+
+			.column {
+				display: none;
+
+				&.time-column,
+				&.active {
+					display: block;
+
+					&.foyer-column {
+						display: flex;
+					}
+				}
+			}
+		}
 
 		.column {
 			min-width: 200px;
@@ -152,6 +173,10 @@ $time-column-width: 50px;
 			min-width: $time-column-width + 5px;
 			width: $time-column-width + 5px;
 
+			&.hide {
+				display: block;
+			}
+
 			.time {
 
 				> li {
@@ -202,7 +227,7 @@ $time-column-width: 50px;
 		overflow: auto;
 
 		@media (min-width: $desktop) {
-			height: calc(100vh - 150px);
+			height: calc(100vh - 250px);
 		}
 
 		.time-column {

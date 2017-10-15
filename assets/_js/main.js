@@ -130,6 +130,23 @@ $(function() {
     });
   });
 
+  $('.js-timetable-tabs #all')
+    .addClass('active')
+    .on('click', function() {
+      $('.js-timetable-tabs > li').removeClass('active');
+      $(this).addClass('active');
+      $('.timetable').removeClass('hide-all');
+      $('.timetable .column').removeClass('active');
+    });
+
+  $('.js-timetable-tabs > li:not(#all)').on('click', function() {
+    $('.js-timetable-tabs #all').removeClass('active');
+    $(this).toggleClass('active');
+    $('.timetable').addClass('hide-all');
+    var id = $(this).attr('id');
+    $('.timetable .' + id + '-column').toggleClass('active');
+  });
+
   /**
    * Smooth Scroll
    */

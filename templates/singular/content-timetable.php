@@ -11,15 +11,15 @@
 		<div class="entry-content">
 
 <ul class="timetable-tabs js-timetable-tabs">
-	<li class="all">すべて</li>
-	<li class="session">セッション</li>
-	<li class="foyer">交流スペース</li>
-	<li class="arts-crafts">図工</li>
-	<li class="board-game">ボードゲーム</li>
-	<li class="hands-on">ハンズオン</li>
-	<li class="vr">VR</li>
-	<li class="robot">ロボ</li>
-	<li class="stamp-rally">スタンプラリー</li>
+	<li id="all">すべて</li>
+	<li id="session">セッション</li>
+	<li id="foyer">交流スペース</li>
+	<li id="arts-crafts">図工</li>
+	<li id="board-game">ボードゲーム</li>
+	<li id="hands-on">ハンズオン</li>
+	<li id="vr">VR</li>
+	<li id="robot">ロボ</li>
+	<li id="stamp-rally">スタンプラリー</li>
 </ul>
 
 <div class="table-outermost">
