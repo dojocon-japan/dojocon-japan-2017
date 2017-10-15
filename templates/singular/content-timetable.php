@@ -10,6 +10,18 @@
 
 		<div class="entry-content">
 
+<ul class="timetable-tabs js-timetable-tabs">
+	<li class="all">すべて</li>
+	<li class="session">セッション</li>
+	<li class="foyer">交流スペース</li>
+	<li class="arts-crafts">図工</li>
+	<li class="board-game">ボードゲーム</li>
+	<li class="hands-on">ハンズオン</li>
+	<li class="vr">VR</li>
+	<li class="robot">ロボ</li>
+	<li class="stamp-rally">スタンプラリー</li>
+</ul>
+
 <div class="table-outermost">
 	<div class="table-scroll-box js-table-scroll-box">
 		<div class="timetable js-timetable">
@@ -205,7 +217,7 @@
 					</li>
 				</ol>
 			</div>
-			<div class="column">
+			<div class="column arts-crafts-column">
 				<h2>図工</h2>
 				<ol>
 					<li class="duration-160min">
@@ -226,7 +238,7 @@
 					</li>
 				</ol>
 			</div>
-			<div class="column">
+			<div class="column board-game-column">
 				<h2>ボードゲーム</h2>
 				<ol>
 					<li class="duration-160min">
@@ -247,7 +259,7 @@
 					</li>
 				</ol>
 			</div>
-			<div class="column">
+			<div class="column hands-on-column">
 				<h2>ハンズオン</h2>
 				<ol>
 					<li class="duration-145min blank-before-15min">
@@ -292,7 +304,7 @@
 					</li>
 				</ol>
 			</div>
-			<div class="column">
+			<div class="column vr-column">
 				<h2>VR</h2>
 				<ol>
 					<li class="duration-160min">
@@ -311,7 +323,7 @@
 					</li>
 				</ol>
 			</div>
-			<div class="column">
+			<div class="column robot-column">
 				<h2>ロボ</h2>
 				<ol>
 					<li class="duration-160min">
@@ -332,7 +344,7 @@
 					</li>
 				</ol>
 			</div>
-			<div class="column">
+			<div class="column stamp-rally-column">
 				<h2>スタンプラリー</h2>
 				<ol>
 					<li class="duration-160min">

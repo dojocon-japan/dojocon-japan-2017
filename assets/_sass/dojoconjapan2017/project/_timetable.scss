@@ -3,6 +3,40 @@ $time-column-width: 50px;
 .page,
 .page-template-timetable {
 
+	.timetable-tabs {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
+		list-style: none !important;
+		margin: 0 -5px 30px 0 !important;
+		padding: 0 !important;
+
+		> li {
+			background: rgba($navy, 0.15);
+			cursor: pointer;
+			font-size: 12px;
+			font-weight: 700;
+			margin: 0 5px 5px 0;
+			padding: 5px 0 4px;
+			text-align: center;
+			width: calc(33.33% - 5px);
+
+			@media (min-width: $tablet-s) {
+				font-size: 14px;
+				padding: 3px 0;
+				width: calc(20% - 5px);
+
+				&.all {
+					width: calc(40% - 5px);
+				}
+			}
+
+			&.active {
+				background: $flamingo;
+			}
+		}
+	}
+
 	.timetable {
 		display: flex;
 
