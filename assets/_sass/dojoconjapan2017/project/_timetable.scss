@@ -1,26 +1,7 @@
+$time-column-width: 50px;
+
 .page,
 .page-template-timetable {
-	$time-column-width: 50px;
-
-	.timetable-outer {
-		overflow: hidden;
-	}
-
-	.timetable-vertical-scroll-box {
-		position: relative;
-
-		.timetable {
-			// height: calc(100vh - 250px);
-			margin-left: $time-column-width + 5px;
-			overflow: auto;
-
-			.time-column {
-				left: 0;
-				position: absolute;
-				top: 0;
-			}
-		}
-	}
 
 	.timetable {
 		display: flex;
@@ -130,6 +111,26 @@
 					margin-left: 5px;
 				}
 			}
+		}
+	}
+}
+
+.table-outermost {
+	overflow: hidden;
+}
+
+.table-scroll-box {
+	position: relative;
+
+	.timetable {
+		height: calc(100vh - 350px);
+		margin-left: $time-column-width + 5px;
+		overflow: auto;
+
+		.time-column {
+			left: 0;
+			position: absolute;
+			top: 0;
 		}
 	}
 }
