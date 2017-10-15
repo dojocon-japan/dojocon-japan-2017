@@ -120,7 +120,7 @@ $(function() {
         .wrap('<div class="timetable corner"></div>');
 
   $('.js-timetable').addClass('tbody').on('scroll', function() {
-    var scrollTop  = $(this).scrollTop();
+    var scrollTop = $(this).scrollTop();
     var scrollLeft = $(this).scrollLeft();
     $(this).find('.time-column').css({
       marginTop: - scrollTop,
