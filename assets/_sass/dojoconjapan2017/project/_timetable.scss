@@ -120,17 +120,43 @@ $time-column-width: 50px;
 }
 
 .table-scroll-box {
+	padding-left: $time-column-width + 5px;
+	padding-top: 40px;
 	position: relative;
 
-	.timetable {
-		height: calc(100vh - 350px);
-		margin-left: $time-column-width + 5px;
+	.tbody {
+		height: calc(100vh - 100px);
 		overflow: auto;
+
+		@media (min-width: $desktop) {
+			height: calc(100vh - 150px);
+		}
 
 		.time-column {
 			left: 0;
 			position: absolute;
-			top: 0;
+			top: 40px;
 		}
+
+		h2 {
+			display: none;
+		}
+	}
+
+	.thead {
+		height: auto;
+		left: $time-column-width + 5px;
+		overflow: visible;
+		position: absolute;
+		top: 0;
+	}
+
+	.corner {
+		height: auto;
+		left: 0;
+		overflow: visible;
+		position: absolute;
+		top: 0;
+		z-index: 99;
 	}
 }

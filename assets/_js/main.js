@@ -107,12 +107,26 @@ $(function() {
   /**
    * Timetable
    */
-  $('.js-timetable').wrap('<div class="table-outermost"><div class="table-scroll-box"></div></div>');
-  $('.js-timetable').on('scroll', function() {
-    var scrollTop = $(this).scrollTop();
-    console.log(scrollTop);
+  $('.js-timetable')
+    .clone()
+      .removeClass('js-timetable')
+      .addClass('thead')
+      .find('ol')
+        .remove()
+      .end()
+      .prependTo('.table-scroll-box')
+      .find('.time-column')
+        .prependTo('.table-scroll-box')
+        .wrap('<div class="timetable corner"></div>');
+
+  $('.js-timetable').addClass('tbody').on('scroll', function() {
+    var scrollTop  = $(this).scrollTop();
+    var scrollLeft = $(this).scrollLeft();
     $(this).find('.time-column').css({
       marginTop: - scrollTop,
+    });
+    $('.thead').css({
+      marginLeft: - scrollLeft,
     });
   });
 
