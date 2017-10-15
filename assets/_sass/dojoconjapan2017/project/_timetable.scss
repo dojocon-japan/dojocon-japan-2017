@@ -43,11 +43,15 @@ $time-column-width: 50px;
 				line-height: 1.5;
 				margin: 0 0 5px;
 				padding: 0;
+
+				// @media (min-width: $tablet-s) {
+				// 	font-size: 16px;
+				// }
 			}
 
 			p {
 				font-size: 12px;
-				margin: 0;
+				margin: 0 0 5px;
 			}
 
 			a {
@@ -68,8 +72,43 @@ $time-column-width: 50px;
 				border-radius: 26px;
 				color: $white;
 				display: inline-block;
-				margin-top: 10px;
+				margin: 10px 0 0;
 				padding: 0.5px 1.5em 1px;
+				position: relative;
+
+				// @media (min-width: $tablet-s) {
+				// 	font-size: 14px;
+				// 	padding-bottom: 2px;
+				// }
+			}
+
+			.label-entry {
+				background: $flamingo;
+			}
+
+			.label-for_ninja {
+				padding-left: 55px;
+
+				// @media (min-width: $tablet-s) {
+				// 	padding-left: 62px;
+				// }
+
+				&::before {
+					@include size(42px, 30px);
+					background: url(../images/8-bit-fuma.svg) no-repeat center center;
+					background-size: 42px 30px;
+					content: "";
+					display: block;
+					left: 0;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+
+					// @media (min-width: $tablet-s) {
+					// 	@include size(49px, 35px);
+					// 	background-size: 49px 35px;
+					// }
+				}
 			}
 		}
 

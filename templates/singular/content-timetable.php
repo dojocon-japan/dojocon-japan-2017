@@ -190,7 +190,7 @@
 					<li class="duration-160min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/848/">Dojo日本地図-日本全国のCoderDojoを探してみよう-</a></h3>
 						<p>[10:00-12:40]</p>
-						<p class="label">忍者向け</p>
+						<p class="label label-for_ninja">忍者向け</p>
 						<p class="label">メンター向け</p>
 					</li>
 					<li class="duration-60min">
@@ -200,7 +200,7 @@
 					<li class="duration-230min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/848/">Dojo日本地図-日本全国のCoderDojoを探してみよう-</a></h3>
 						<p>[10:00-12:40]</p>
-						<p class="label">忍者向け</p>
+						<p class="label label-for_ninja">忍者向け</p>
 						<p class="label">メンター向け</p>
 					</li>
 				</ol>
@@ -211,7 +211,7 @@
 					<li class="duration-160min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/312/">テクノ手芸に挑戦！！LEDで光るフェルトマスコットを作ろう</a></h3>
 						<p>[10:00-12:40]</p>
-						<p class="label">忍者向け</p>
+						<p class="label label-for_ninja">忍者向け</p>
 						<p class="label">要当日整理券</p>
 					</li>
 					<li class="duration-60min">
@@ -221,7 +221,7 @@
 					<li class="duration-230min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/312/">テクノ手芸に挑戦！！LEDで光るフェルトマスコットを作ろう</a></h3>
 						<p>[10:00-12:40]</p>
-						<p class="label">忍者向け</p>
+						<p class="label label-for_ninja">忍者向け</p>
 						<p class="label">要当日整理券</p>
 					</li>
 				</ol>
@@ -232,7 +232,7 @@
 					<li class="duration-160min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/840/">ボードゲームでプログラミング的思考を楽しもう</a></h3>
 						<p>[10:00-12:40]</p>
-						<p class="label">忍者向け</p>
+						<p class="label label-for_ninja">忍者向け</p>
 						<p class="label">要当日整理券</p>
 					</li>
 					<li class="duration-60min">
@@ -242,7 +242,7 @@
 					<li class="duration-230min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/840/">ボードゲームでプログラミング的思考を楽しもう</a></h3>
 						<p>[13:40-17:30]</p>
-						<p class="label">忍者向け</p>
+						<p class="label label-for_ninja">忍者向け</p>
 						<p class="label">要当日整理券</p>
 					</li>
 				</ol>
@@ -253,8 +253,8 @@
 					<li class="duration-145min blank-before-15min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/647/">Scratchで「迷路ゲーム」を作ろう！</a></h3>
 						<p>[10:15-12:40]</p>
-						<p class="label">忍者向け</p>
-						<p class="label">要事前申込</p>
+						<p class="label label-for_ninja">忍者向け</p>
+						<p class="label label-entry">要事前申込</p>
 					</li>
 					<li class="duration-20min">
 						<h3>お昼休み</h3>
@@ -264,31 +264,31 @@
 						<h3>Raspberry Pi展示+相談会</h3>
 						<p>[13:00-13:40]</p>
 						<p class="label">メンター向け</p>
-						<p class="label">要事前申込</p>
+						<p class="label label-entry">要事前申込</p>
 					</li>
 					<li class="duration-30min">
 						<h3>Raspberry Piを活用に導くためのおすすめアイテム&アイデア</h3>
 						<p>[13:40-14:10]</p>
 						<p class="label">メンター向け</p>
-						<p class="label">要事前申込</p>
+						<p class="label label-entry">要事前申込</p>
 					</li>
 					<li class="duration-30min blank-before-10min">
 						<h3>Raspberry PiとノートPCを繋げよう</h3>
 						<p>[14:20-14:50]</p>
 						<p class="label">メンター向け</p>
-						<p class="label">要事前申込</p>
+						<p class="label label-entry">要事前申込</p>
 					</li>
 					<li class="duration-50min blank-before-10min">
 						<h3>ScratchやPythonでフィジカルコンピューティング</h3>
 						<p>[15:00-15:50]</p>
 						<p class="label">メンター向け</p>
-						<p class="label">要事前申込</p>
+						<p class="label label-entry">要事前申込</p>
 					</li>
 					<li class="duration-60min blank-before-10min">
 						<h3>Raspberry Pi展示+相談会+LT大会</h3>
 						<p>[16:00-17:00]</p>
 						<p class="label">メンター向け</p>
-						<p class="label">要事前申込</p>
+						<p class="label label-entry">要事前申込</p>
 					</li>
 				</ol>
 			</div>
@@ -298,7 +298,7 @@
 					<li class="duration-160min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/498/">ふしぎマニューバーでふかし体験！</a></h3>
 						<p>[10:00-12:40]</p>
-						<p class="label">忍者向け</p>
+						<p class="label label-for_ninja">忍者向け</p>
 					</li>
 					<li class="duration-60min">
 						<h3>お昼休み</h3>
@@ -307,7 +307,7 @@
 					<li class="duration-230min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/498/">ふしぎマニューバーでふかし体験！</a></h3>
 						<p>[13:40-17:30]</p>
-						<p class="label">忍者向け</p>
+						<p class="label label-for_ninja">忍者向け</p>
 					</li>
 				</ol>
 			</div>
@@ -317,7 +317,7 @@
 					<li class="duration-160min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/344/">スクラッチでロボホンと遊ぼう！</a></h3>
 						<p>[10:00-12:40]</p>
-						<p class="label">忍者向け</p>
+						<p class="label label-for_ninja">忍者向け</p>
 						<p class="label">要当日整理券</p>
 					</li>
 					<li class="duration-60min">
@@ -327,7 +327,7 @@
 					<li class="duration-230min">
 						<h3><a href="https://dojocon2017.coderdojo.jp/workshops/344/">スクラッチでロボホンと遊ぼう！</a></h3>
 						<p>[13:40-17:30]</p>
-						<p class="label">忍者向け</p>
+						<p class="label label-for_ninja">忍者向け</p>
 						<p class="label">要当日整理券</p>
 					</li>
 				</ol>
