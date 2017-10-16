@@ -88,6 +88,18 @@
 			}
 		}
 	}
+
+	.entry-content {
+
+		.timetable-button-outer {
+			@extend %timetable-button-outer;
+		}
+
+		.timetable-button {
+			@extend %timetable-button;
+			color: $white;
+		}
+	}
 }
 
 .single-session {

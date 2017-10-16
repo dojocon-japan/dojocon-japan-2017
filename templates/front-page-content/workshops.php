@@ -104,7 +104,6 @@
 		setup_postdata( $post );
 
 		$timetable = get_page_by_path( 'timetable' );
-
 		if ( 'publish' == get_post_status( $timetable ) ) : ?>
 			<div class="timetable-button-outer">
 				<a href="<?php echo esc_url( get_the_permalink( $timetable ) ); ?>" class="button button-white button-block timetable-button">Timetable</a>

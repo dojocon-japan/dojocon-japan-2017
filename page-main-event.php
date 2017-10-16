@@ -2,7 +2,7 @@
 
 <main class="main">
 
-	<?php while( have_posts() ): the_post(); ?>
+	<?php while( have_posts() ) : the_post(); ?>
 
 		<div class="post-meta">
 			<h1 class="post-title"><?php the_title(); ?></h1>
@@ -18,7 +18,7 @@
 			</div>
 		<?php endif; ?>
 
-		<div class="entry-content">
+		<div class="entry-content main-event-content">
 			<?php the_content(); ?>
 
 			<?php $args = array(
@@ -68,6 +68,14 @@
 
 				<?php endforeach; ?>
 
+			<?php endif; ?>
+
+			<?php $timetable = get_page_by_path( 'timetable' );
+			if ( 'publish' == get_post_status( $timetable ) ) : ?>
+				<div class="timetable-button-outer">
+					<a href="<?php echo esc_url( get_the_permalink( $timetable ) ); ?>" class="button button-secondary button-block timetable-button">Timetable</a>
+					<p>セッション・ワークショップのタイムテーブル</p>
+				</div>
 			<?php endif; ?>
 		</div>
 
