@@ -161,4 +161,17 @@
 			}
 		}
 	}
+
+	.timetable-button-outer {
+		@extend %timetable-button-outer;
+		margin-top: calc(45vw - 144px);
+
+		@media (min-width: 500px) {
+			margin-top: 81px;
+		}
+	}
+
+	.timetable-button {
+		@extend %timetable-button;
+	}
 }

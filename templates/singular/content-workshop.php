@@ -43,6 +43,14 @@
 					<a href="<?php echo esc_url( $entry_url ); ?>" class="button button-primary workshop-entry-button" target="_blank">Entry</a>
 				</div>
 			<?php endif; ?>
+
+			<?php $timetable = get_page_by_path( 'timetable' );
+			if ( 'publish' == get_post_status( $timetable ) ) : ?>
+				<div class="timetable-button-outer">
+					<a href="<?php echo esc_url( get_the_permalink( $timetable ) ); ?>" class="button button-secondary button-block timetable-button">Timetable</a>
+					<p>セッション・ワークショップのタイムテーブル</p>
+				</div>
+			<?php endif; ?>
 		</div>
 
 	<?php endwhile ?>
